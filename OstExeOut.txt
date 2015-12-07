@@ -1,0 +1,15 @@
+
+C:\Users\Mike\OneDrive\Documents\School Terms\School Term 6B\Research Documents\Ostrich Example>abaqus cae nogui=abaqusTest.py 
+Abaqus JOB Job-1
+Abaqus 6.13-1
+Begin Analysis Input File Processor
+2015-12-03 4:43:09 PM
+Run pre.exe
+2015-12-03 4:43:20 PM
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+2015-12-03 4:43:20 PM
+Run standard.exe
+2015-12-03 4:43:37 PM
+End Abaqus/Standard Analysis
+Abaqus JOB Job-1 COMPLETED

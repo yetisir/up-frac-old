@@ -1,0 +1,66 @@
+#Configuration File for Ostrich Program
+ProgramType Levenberg-Marquardt
+#ProgramType GeneticAlgorithm
+
+BeginFilePairs    
+parameters.tpl	parameters.py
+EndFilePairs
+
+ModelExecutable    abaqusTest.bat
+
+#Parameter Specification
+BeginParams
+#parameter	init.	low	high	tx_in  tx_ost	tx_out
+$E		15e9	10e9	20e9	none	none	none
+$nu		0.3		0.20	0.5		none	none	none
+EndParams
+
+#Observation Configuration
+BeginObservations
+#observation	value	weight	file		keyword		line	column
+obs1		0					0	output.dat	S22		2	3 
+obs2		-0.352134508432e6	1	output.dat	S22		4	3 
+#obs3		-1.35501608298e6	1	output.dat	S22		10	3 
+#obs4		-2.34694065786e6	1	output.dat	S22		16	3 
+obs5		-3.18285789349e6	1	output.dat	S22		21	3 
+#obs6		-0.00474855999842	1	output.dat	LE22	4	6 
+#obs7		-0.0202285866495	1	output.dat	LE22	10	6 
+#obs8		-0.0362330838095	1	output.dat	LE22	16	6 
+#obs9		-0.0500245697312	1	output.dat	LE22	21	6 
+EndObservations
+
+#Configuration for Levenberg-Marquardt algorithm
+BeginLevMar
+InitialLambda    10.0
+LambdaScaleFactor    1.1
+MoveLimit    0.1
+AlgorithmConvergenceValue    0.0001
+LambdaPhiRatio    0.3
+LambdaRelReduction    0.01
+MaxLambdas    10
+MaxIterations    20
+EndLevMar
+
+BeginMathAndStats
+DiffType    forward
+DiffRelIncrement    0.01
+#Default
+AllStats
+#NoStats
+#StdDev
+#StdErr
+#CorrCoeff
+#Beale
+#Linssen
+#CooksD
+#DFBETAS
+#Confidence
+#Sensitivity
+EndMathAndStats
+
+BeginGeneticAlg
+PopulationSize 10
+MutationRate 0.05
+Survivors 1
+NumGenerations 50
+EndGeneticAlg

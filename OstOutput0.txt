@@ -1,0 +1,189 @@
+--------------------------------------------------------------------------
+ OSTRICH version 1.6 (Built Dec 20 2005 @ 14:11:53)
+
+ A computer program for model-independent calibration and optimization.
+
+ Author             L. Shawn Matott
+ Copyright (C) 2004 L. Shawn Matott
+
+ This program is free software; you can redistribute 
+ it and/or modify it under the terms of the GNU  
+ General Public License as published by the Free 
+ Software Foundation; either version 2 of the 
+ License, or(at your option) any later version. 
+
+ This program is distributed in the hope that it will 
+ be useful, but WITHOUT ANY WARRANTY; without even 
+ the implied warranty of MERCHANTABILITY or FITNESS 
+ FOR A PARTICULAR PURPOSE. See the GNU General Public 
+ License for more details. 
+
+ You should have received a copy of the GNU General 
+ Public License along with this program; if not, 
+ write to the Free Software Foundation, Inc., 59 
+ Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+--------------------------------------------------------------------------
+
+Ostrich Setup
+Model                  : abaqusTest.bat > OstExeOut.txt
+Algorithm              : Levenberg-Marquardt
+Objective Function     : WSSE
+Number of Parameters   : 2
+Number of Tied Params  : 0
+Number of Observations : 3
+
+Ostrich Run Record
+iter  obj. function  $E             $nu            lambda
+0     2.699540E+016  1.500000E+010  3.000000E-001  1.000000E+001
+1     2.430910E+016  1.500000E+010  2.050000E-001  6.830135E+000
+2     2.425647E+016  1.500000E+010  2.025000E-001  6.209213E+000
+3     2.423065E+016  1.500000E+010  2.012500E-001  5.644739E+000
+4     2.421744E+016  1.500000E+010  2.006250E-001  5.131581E+000
+5     2.421114E+016  1.500000E+010  2.003125E-001  4.665074E+000
+6     2.420799E+016  1.500000E+010  2.001563E-001  4.240976E+000
+7     2.420642E+016  1.500000E+010  2.000781E-001  3.855433E+000
+
+Optimal Parameter Set
+Objective Function : 2.420642E+016
+$E                 : 1.500000E+010
+$nu                : 2.000781E-001
+
+Observation Residuals
+Observation    Measured       Simulated      Weighted Residual
+obs1           0.000000E+000  -7.814710E+006  +0.000000E+000
+obs2           -3.521345E+005  -2.345590E+007  +2.310377E+007
+obs5           -3.182858E+006  -1.570420E+008  +1.538591E+008
+
+Correlation between measured and simulated observations
+Ry         :  0.999
+Ry-squared :  0.999
+
+Error Variance and Standard Error of the Regression
+S^2 : 2.420642E+016
+S   : 1.555841E+008
+
+Parameter Variance-Covariance
+               $E              $nu             
+$E             +2.615540E+027  -4.149375E+017  
+$nu            -4.149375E+017  +6.582700E+007  
+
+Parameter Standard Error
+$E              : 5.114235E+013 
+$nu             : 8.113384E+003 
+
+Parameter Correlation
+               $E             $nu            
+$E             +1.000         -1.000         
+$nu            -1.000         +1.000         
+
+Linear Confidence Intervals (95.00%)
+Parameter      Lower Limit     Upper Limit
+$E             -6.498025E+014  +6.498325E+014
+$nu            -1.030889E+005  +1.030893E+005
+Volume Ratio :  0.000
+
+Non-Linearity Measures
+Beale (N)     : 1.149283E+005
+Assessment    : Non-Linear
+
+Linssen (M^2) : 5.013762E-003
+Assessment    : Non-Linear
+
+Thresholds for N and/or M^2
+Non-linear : > 5.012924E-003
+Linear     : < 4.511632E-004
+
+Normalized Residuals
+r_expected      r_ordered
+-8.694236E-001  +0.000000E+000
++0.000000E+000  +2.310377E+007
++8.694236E-001  +1.538591E+008
+
+Normal probability correlation coefficient
+R2N :  0.860
+
+Measures of Observation Influence
+
+Cook's D
+Observation    Leverage   infl.?  Di         infl.?
+obs1           0.00E+000  no      0.00E+000  no
+obs2           1.00E+000  yes     4.76E+015  yes
+obs5           1.00E+000  yes     1.05E+018  yes
+
+Number of  influential Leverage : 2
+Number of influential Di        : 2
+
+Thresholds for Cook's D
+Di       > 1.33E+000
+Leverage > 6.67E-001
+
+DFBETAS
+Observation    $E             infl.?  $nu            infl.?  
+obs1           +0.00E+000     no      +0.00E+000     no      
+obs2           -1.#JE+000     no      -1.#JE+000     no      
+obs5           +0.00E+000     no      +0.00E+000     no      
+
+Number of influential DFBETAS : 0
+
+Threshold for DFBETAS
+|DFBETASij| > 1.15E+000
+
+Parameter Sensitivities
+
+Dimensionless Scaled Sensitivities
+Observation    $E             $nu            
+obs1           +0.00000E+000  +0.00000E+000  
+obs2           -2.34450E+007  -1.96743E+006  
+obs5           -1.57050E+008  -1.32052E+007  
+
+1-Percent Scaled Sensitivities
+Observation    $E             $nu            
+obs1           -7.81500E+004  -6.57590E+003  
+obs2           -2.34450E+005  -1.96743E+004  
+obs5           -1.57050E+006  -1.32052E+005  
+
+Composite Scaled Sensitivities
+$E              : 9.167764E+007
+$nu             : 7.708155E+006
+
+Matrices
+
+Jacobian Matrix
+Observation      $E             $nu            
+obs1           -5.210000E-004  -3.286667E+006  
+obs2           -1.563000E-003  -9.833333E+006  
+obs5           -1.047000E-002  -6.600000E+007  
+
+Normal Matrix
++1.120639E-004  +7.063895E+005  
++7.063895E+005  +4.452694E+015  
+
+Inverse Normal Matrix
++1.080515E+011  -1.714163E+001  
+-1.714163E+001  +2.719403E-009  
+
+Algorithm Metrics
+Algorithm         : Levenberg-Marquardt
+Max Iterations    : 20
+Actual Iterations : 7
+Convergence Val   : 0.000100
+LPRCV             : 0.300000
+LRRCV             : 0.010000
+Max Lambda Trials : 10
+Move Limit        : 0.100000
+Algorithm Evals   : 25
+Total Evals       : 47
+Upper Violations  : 0
+Lower Violations  : 19
+Move Limit Viols  : 24
+LPRCV : Lambda-Phi Ratio Convergence Value
+LRRCV : Lambda Relative Reduction Convergence Value
+
+Finite Difference Metrics
+Difference Type    : Forward
+Relative Increments
+$E            : 0.010000
+$nu           : 0.010000
+Jacobian Evals     : 16
+Optimal Step Evals : 0
+Statistics Evals   : 6

@@ -1,0 +1,195 @@
+;import parameter offsets
+call 'C:\Program Files (x86)\Itasca\UDEC500\Datafiles\Fish\FIN\CONTACT.FIN'
+call 'C:\Program Files (x86)\Itasca\UDEC500\Datafiles\Fish\FIN\DOMAIN.FIN'
+call 'C:\Program Files (x86)\Itasca\UDEC500\Datafiles\Fish\FIN\BLOCK.FIN'
+
+def setup
+	;**************************************************************************
+	;Function to initialize the numContacts and numBlocks variables. In order 
+	;to define an array size with a variable, the variable cannot be defined 
+	;within the same function. As such, this function serves the purpose of 
+	;facilitating the construction of an array with a length equal to the 
+	;number of contacts.
+	;**************************************************************************
+	
+	;Loop through all contacts and count each one
+	ci = contact_head
+	numContacts = 1
+	loop while ci # 0
+		numContacts = numContacts + 1
+		ci = c_next(ci)
+	endloop
+	
+	bi = block_head
+	numBlocks = 1
+	loop while bi # 0
+		numBlocks = numBlocks + 1
+		bi = b_next(bi)
+	endloop
+
+	;--------------------------------------------------------------------------
+	;Data Recording Variables - Change as required
+	modelName = 'ostrichTest'
+	simulationTime = 10.0	;**important: make sure value is specified as float
+	numberOfSteps = 100
+	;--------------------------------------------------------------------------
+	
+	numContactArray = (numContacts-1)*numberOfSteps+1
+	numBlockArray = (numBlocks-1)*numberOfSteps+1
+end
+setup
+
+
+def cycleModel
+	;**************************************************************************
+	;Function to collect contact data for each contact and block and write to 
+	;file at specified intervals during cycling. The contact and block data is 
+	;written to a separate file for each time step.
+	;**************************************************************************
+
+	;Define contact and block file headers
+	contactHeader = 'time cIndex x1 x2 y1 y2 nDisp sDisp nForce sForce cLength'
+	contactHeader = contactHeader + ' xNormCosine yNormCosine pp1 pp2 aperture'
+	contactHeader = contactHeader + ' flowRate'
+	
+	blockHeader = 'time bIndex bArea xCentForce yCentForce xCent yCent contacts'
+
+	;Initialize data arrays and insert headers
+	array contactData (numContactArray)
+	contactData(1) = contactHeader
+	
+	array blockData (numBlockArray)
+	blockData(1) = blockHeader
+	
+	;Loop for the specified number of time steps
+	timeStep = simulationTime/numberOfSteps
+	totalTime = 0.0
+	cCounter = 2
+	bCounter = 2
+	loop z (1, numberOfSteps+1)
+
+	
+		tt = string(totalTime)
+		
+		;Loop through all the contacts and extract the specified data.
+		ci = contact_head
+		loop while ci # 0
+			
+			;Extracting desired contact parameters
+			cIndex = string(ci)	
+			nDisp = string(fmem(ci+$KCN))		;relative normal displacement
+			sDisp = string(fmem(ci+$KCS))		;relative shear displacement
+			nForce = string(fmem(ci+$KCFN))		;normal force (compression +)
+			sForce = string(fmem(ci+$KCFS))		;shear force
+			cLength = string(fmem(ci+$KCL))		;contact length
+			xNormCosine = string(fmem(ci+$KCNX));contact normal x cosine
+			yNormCosine = string(fmem(ci+$KCNY));contact normal y cosine
+				
+			;Determining the pore pressures of the two bordering domains.
+			domain1 = imem(ci+$KD1)
+			domain2 = imem(ci+$KD2)
+			pp1 = fmem(domain1+$KPP)
+			pp2 = fmem(domain2+$KPP)
+			x1 = string(fmem(domain1+$KDX))
+			x2 = string(fmem(domain2+$KDX))
+			y1 = string(fmem(domain1+$KDY))
+			y2 = string(fmem(domain2+$KDY))
+			;averagePP = string((pp1*area1+pp2*area2)/(area1+area2))
+
+			;More contact parameters
+			aperture = string(fmem(ci+$KCAP))		;mean aperture for joint
+			flowRate = string(fmem(ci+$KCQ))		;flow rate through joint
+			
+			boundaryContacts = 0
+;			if pp1 # 0.0
+;				if pp2 # 0.0
+					pp1 = string(pp1)
+					pp2 = string(pp2)
+					;Combine all desired parameters into a single space
+					;delimited record
+					newRecord = tt+' '+cIndex+' '+x1+' '+x2+' '+y1+' '+y2+' '
+					newRecord = newRecord+nDisp+' '+sDisp+' '+nForce+' '+sForce
+					newRecord = newRecord+' '+cLength+' '+xNormCosine+' '
+					newRecord = newRecord+yNormCosine+' '+pp1+' '+pp2+' '
+					newRecord = newRecord+aperture+' '+flowRate
+;				else
+;					boundaryContacts = boundaryContacts + 1
+;				endif
+;			else
+;				boundaryContacts = boundaryContacts + 1
+;			endif
+
+			;Add record to data array
+			contactData(cCounter) = newRecord
+			
+			;Find next contact
+			ci = c_next(ci)
+			cCounter = cCounter + 1
+		endloop
+
+		;Loop through all the blocks and extract the specified data.
+		bi = block_head
+		loop while bi # 0
+			;Extracting desired contact parameters
+			bIndex = string(bi)	
+			bArea = string(fmem(bi+$KAREA))		;block area
+			xCentForce = string(fmem(bi+$KBFX))	;x-centroid force sum
+			yCentForce = string(fmem(bi+$KBFY))	;y-centroid force sum
+			xCent = string(fmem(bi+$KX))		;x coordinate of centroid
+			yCent = string(fmem(bi+$KY))		;y coordinate of centroid
+				
+			;Determining the contact forces for all block contacts.
+			cri = imem(bi+$KP)
+			ti = cri
+			contacts = ''
+			cri = imem(cri+$KR)
+			
+			first = 1
+			loop while cri # ti
+				ci = imem(cri+$KL)
+
+				if imem(ci) = 5
+					if first = 1
+						contacts = string(ci)
+						first = 0
+					else
+						contacts = contacts + ',' + string(ci)
+					endif
+				endif
+				cri = imem(cri+$KR)
+			endloop
+
+			newRecord = tt+' '+bIndex+' '+bArea+' '+xCentForce+' '+yCentForce
+			newRecord = newRecord+' '+xCent+' '+yCent+' '+contacts
+			
+			;Add record to data array
+			blockData(bCounter) = newRecord
+			
+			;Find next contact
+			bi = b_next(bi)
+			bCounter = bCounter + 1
+		endloop
+
+		totalTime = totalTime+timeStep
+		
+		;Cycle the model for the duration of each time step
+		command
+			cycle time timeStep
+			print totalTime
+		endcommand
+	endloop
+	;Write data array to file
+	fName = 'data\'+modelName+'___contact1.dat'
+	status = open(fName, 1, 1)
+	status = write(contactData, numContactArray)
+	status = close
+
+	fName = 'data\'+modelName+'___block1.dat'
+	status = open(fName, 1, 1)
+	status = write(blockData, numBlockArray)
+	status = close
+		
+	
+end
+
+cycleModel
