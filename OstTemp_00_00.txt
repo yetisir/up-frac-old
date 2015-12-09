@@ -1,6 +1,4 @@
-#Configuration File for Ostrich Program
 ProgramType Levenberg-Marquardt
-#ProgramType GeneticAlgorithm
 
 BeginFilePairs    
 parameters.tpl	parameters.py
@@ -12,16 +10,12 @@ ModelSubdir model
 
 ParallelModelExec
 
-#Parameter Specification
 BeginParams
-#parameter	init.	low		high	tx_in  tx_ost	tx_out
 $E			15e9	10e9	20e9	none	none	none
 $nu			0.25	0.20	0.5		none	none	none
 EndParams
 
-#Observation Configuration
 BeginObservations
-#observation	value		weight	file		keyword		line	column
 obs1 		-3466540.862500 	1 	output.dat 	OST_NULL 	2 		2
 obs2 		-8087978.987500 	1 	output.dat 	OST_NULL 	2 		3
 obs3 		-6941850.600300 	1 	output.dat 	OST_NULL 	3 		2
@@ -65,7 +59,6 @@ obs40 		-162848604.904742 	1 	output.dat 	OST_NULL 	21 		3
 
 EndObservations
 
-#Configuration for Levenberg-Marquardt algorithm
 BeginLevMar
 InitialLambda    10.0
 LambdaScaleFactor    1.1
@@ -81,17 +74,6 @@ BeginMathAndStats
 DiffType    forward
 DiffRelIncrement    0.01
 Default
-#AllStats
-#NoStats
-#StdDev
-#StdErr
-#CorrCoeff
-#Beale
-#Linssen
-#CooksD
-#DFBETAS
-#Confidence
-#Sensitivity
 EndMathAndStats
 
 BeginExtraFiles

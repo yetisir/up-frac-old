@@ -40,5 +40,3 @@ execfile('abaqusTest.py', __main__.__dict__)
 #: Number of Element Sets:       6
 #: Number of Node Sets:          6
 #: Number of Steps:              1
-print 'RT script done'
-#: RT script done

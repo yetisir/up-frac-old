@@ -1,9 +1,19 @@
 import os
+import shutil
 from math import *
 from caeModules import *
 from odbAccess import *
 from parameters import *
 
+def moveFiles():
+    files = os.listdir('.')
+    for fileName in files:
+        if '.rec' in fileName or '.rpy' in fileName:
+            try:
+                shutil.move(fileName, os.path.join('abaqus', fileName))
+            except: 
+                pass
+            
 def fWrite(stuff):
     with open('log.txt', 'a') as f:
         f.write(str(stuff)+'\n')
@@ -66,8 +76,8 @@ def applyBoundaryCondition(name, instance, step, location, v):
 
 def createStaticStep(name):
     mdb.models['Model-1'].StaticStep(name=name, previous='Initial', timePeriod=10.0,
-                                     maxNumInc=1000, initialInc=0.1, minInc=0.001,
-                                     maxInc=0.1, matrixSolver=DIRECT,
+                                     maxNumInc=1000, initialInc=0.5, minInc=0.001,
+                                     maxInc=0.5, matrixSolver=DIRECT,
                                      matrixStorage=UNSYMMETRIC, nlgeom=largeDef)
 
 def createExplicitDynamicStep(name):
@@ -85,14 +95,15 @@ def buildModel():
     meshPart(meshSize, partName, sectionLocation, elementType, elementShape)
     createInstance(instanceName, partName)
 
-    for i in range(len(v[0])):
-        applyBoundaryCondition(vNames[0][i], instanceName, steps[0],
-            boundaries[vNames[0][i]], v[0][i])
+    # for j in range(len(v[0])):
+        # applyBoundaryCondition(vNames[0][j], instanceName, steps[0],
+            # boundaries[vNames[0][j]], v[0][j])
     createStaticStep(steps[1])
     
-    for i in range(len(v[1])):
-        applyBoundaryCondition(vNames[1][i], instanceName, steps[1],
-            boundaries[vNames[1][i]], v[1][i])
+    for i in range(len(v)):
+        for j in range(len(v[i])):
+            applyBoundaryCondition(vNames[i][j], instanceName, steps[1],
+                boundaries[vNames[i][j]], v[i][j])
 		
     #applyGravity(gravityMagnitude, stepName)
    
@@ -136,8 +147,7 @@ def getTime(jobName, stepName, instanceName):
     return timeHistory
 
 def main():
-    
-    os.chdir('abaqus')
+    #os.chdir('abaqus')
     open('log.txt', 'w').close()
     buildModel()
     mdb.Job(name='Job-1', model='Model-1', description='', type=ANALYSIS, atTime=None,
@@ -152,8 +162,7 @@ def main():
     timeHistory = getTime('Job-1', steps[1], instanceName)
     stressHistory = getStress('Job-1', steps[1], instanceName)
     strainHistory = getStrain('Job-1', steps[1], instanceName)
-    os.chdir('..')     
-    
+    #os.chdir('..')     
     
     with open('output.dat', 'w') as f:
         f.write('time S11 S22 S12 LE11 LE22 LE12\n')
@@ -164,4 +173,9 @@ def main():
             for j in range(len(strainHistory[i])):
                 f.write(str(strainHistory[i][j])+' ')
             f.write('\n')
+            
+    with open('test.txt', 'a') as f:
+        f.write(str(stressHistory[-1][1]))
+        
+    moveFiles()
 if __name__ == '__main__': main()

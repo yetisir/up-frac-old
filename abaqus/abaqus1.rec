@@ -1,0 +1,93 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=10.0)
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0, 0), point2=(10, 
+    0))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(10, 0), point2=(10, 
+    10))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(10, 10), point2=(0, 
+    10))
+mdb.models['Model-1'].sketches['__profile__'].Line(point1=(0, 10), point2=(0, 
+    0))
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Block', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Block'].BaseShell(sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].Material(name='Material-1')
+mdb.models['Model-1'].materials['Material-1'].Density(table=((2700.0, ), ))
+mdb.models['Model-1'].materials['Material-1'].Elastic(table=((12035800000.0, 
+    0.300012), ))
+mdb.models['Model-1'].HomogeneousSolidSection(material='Material-1', name=
+    'Block', thickness=None)
+mdb.models['Model-1'].parts['Block'].Set(faces=
+    mdb.models['Model-1'].parts['Block'].faces.getSequenceFromMask(mask=(
+    '[#1 ]', ), ), name='Block')
+mdb.models['Model-1'].parts['Block'].SectionAssignment(offset=0.0, offsetField=
+    '', offsetType=MIDDLE_SURFACE, region=
+    mdb.models['Model-1'].parts['Block'].sets['Block'], sectionName='Block', 
+    thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].parts['Block'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=10)
+mdb.models['Model-1'].parts['Block'].setElementType(elemTypes=(ElemType(
+    elemCode=CPE4R, elemLibrary=STANDARD), ), regions=(
+    mdb.models['Model-1'].parts['Block'].faces.getSequenceFromMask(mask=(
+    '[#1 ]', ), ), ))
+mdb.models['Model-1'].parts['Block'].setMeshControls(elemShape=QUAD, regions=
+    mdb.models['Model-1'].parts['Block'].faces.getSequenceFromMask(mask=(
+    '[#1 ]', ), ))
+mdb.models['Model-1'].parts['Block'].generateMesh()
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='BLOCK-1', part=
+    mdb.models['Model-1'].parts['Block'])
+mdb.models['Model-1'].StaticStep(initialInc=0.5, matrixSolver=DIRECT, 
+    matrixStorage=UNSYMMETRIC, maxInc=0.5, maxNumInc=1000, minInc=0.001, name=
+    'Step-1', nlgeom=ON, previous='Initial', timePeriod=10.0)
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['BLOCK-1'].edges.getSequenceFromMask(
+    mask=('[#2 ]', ), ), name='Bottom')
+mdb.models['Model-1'].VelocityBC(amplitude=UNSET, createStepName='Step-1', 
+    distributionType=UNIFORM, fieldName='', localCsys=None, name='Bottom', 
+    region=mdb.models['Model-1'].rootAssembly.sets['Bottom'], v1=UNSET, v2=SET, 
+    vr3=UNSET)
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['BLOCK-1'].edges.getSequenceFromMask(
+    mask=('[#8 ]', ), ), name='Top')
+mdb.models['Model-1'].VelocityBC(amplitude=UNSET, createStepName='Step-1', 
+    distributionType=UNIFORM, fieldName='', localCsys=None, name='Top', region=
+    mdb.models['Model-1'].rootAssembly.sets['Top'], v1=UNSET, v2=-0.01, vr3=
+    UNSET)
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['BLOCK-1'].edges.getSequenceFromMask(
+    mask=('[#1 ]', ), ), name='Left')
+mdb.models['Model-1'].VelocityBC(amplitude=UNSET, createStepName='Step-1', 
+    distributionType=UNIFORM, fieldName='', localCsys=None, name='Left', 
+    region=mdb.models['Model-1'].rootAssembly.sets['Left'], v1=SET, v2=UNSET, 
+    vr3=UNSET)
+mdb.models['Model-1'].rootAssembly.Set(edges=
+    mdb.models['Model-1'].rootAssembly.instances['BLOCK-1'].edges.getSequenceFromMask(
+    mask=('[#4 ]', ), ), name='Right')
+mdb.models['Model-1'].VelocityBC(amplitude=UNSET, createStepName='Step-1', 
+    distributionType=UNIFORM, fieldName='', localCsys=None, name='Right', 
+    region=mdb.models['Model-1'].rootAssembly.sets['Right'], v1=SET, v2=UNSET, 
+    vr3=UNSET)
+mdb.Job(activateLoadBalancing=False, atTime=None, contactPrint=OFF, 
+    description='', echoPrint=OFF, explicitPrecision=SINGLE, 
+    getMemoryFromAnalysis=True, historyPrint=OFF, memory=90, memoryUnits=
+    PERCENTAGE, model='Model-1', modelPrint=OFF, multiprocessingMode=DEFAULT, 
+    name='Job-1', nodalOutputPrecision=SINGLE, numCpus=1, numDomains=1, 
+    numGPUs=0, parallelizationMethodExplicit=DOMAIN, queue=None, scratch='', 
+    type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)

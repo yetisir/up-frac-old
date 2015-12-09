@@ -5,8 +5,8 @@ gridPoints = [[0, 0], [10, 0], [10, 10], [0, 10], [0, 0]]
 
 materialName = 'Material-1'
 density = 2700.0
-elasticModulus = $E #12.0e9
-poissonsRatio = $nu #0.3
+elasticModulus = 1.339056E+10 #12.0e9
+poissonsRatio = 2.718008E-01 #0.3
 #frictionAngle = 27.0
 #cohesion = 20000.0
 

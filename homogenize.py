@@ -2,6 +2,7 @@ import os
 import numpy
 import math
 import copy
+import sys
 import matplotlib.pyplot as plt
 
 class Homogenize:
@@ -35,6 +36,10 @@ class Homogenize:
         
         self.centre = centre
         self.radius = radius
+        
+        self.singleBlock = False
+        if len(self.contactData) == 0:
+            self.singleBlock = True
     
     def parseDataFile(self, fileName):
         file = open(os.path.join('data', fileName))
@@ -295,7 +300,7 @@ class Homogenize:
         blocks = self.blockData[time].keys()
         return self.cornersOnBlocks(blocks)
         
-    def stress(self, singleBlock=False):
+    def stress(self):
         print('-'*70)
         print('Stress Homogenization')
         print('-'*70)
@@ -305,7 +310,7 @@ class Homogenize:
         print('\tCalculating inside blocks')
         self.insideBlocks = self.blocksInsideBoundary()
         print('\tCalculating inside boundary blocks')
-        if not singleBlock:
+        if not self.singleBlock:
             self.insideBoundaryBlocks = self.boundaryBlocks + self.insideBlocks
         else:
             self.insideBoundaryBlocks = self.blocksOutsideBoundary()
@@ -336,12 +341,13 @@ class Homogenize:
                         gp.append(gpCoordinates)
                     zoneArea = triangleArea(gp)
                     sigma += numpy.multiply(zoneArea,S)
-            sigmaHistory.append(sigma/area)
+            sigmaHistory.append(sigma/area*1e6)
         print('Finished assessing homogenized stress field')
         print('')
+        self.stressHistory = sigmaHistory
         return sigmaHistory
     
-    def strain(self, singleBlock=False):
+    def strain(self):
         print('-'*70)
         print('Calculating Strain Homogenization Parameters')
         print('-'*70)
@@ -352,7 +358,7 @@ class Homogenize:
         self.insideBlocks = self.blocksInsideBoundary()
         print('\tCalculating outside blocks')
         self.outsideBlocks = self.blocksOutsideBoundary()
-        if not singleBlock:
+        if not self.singleBlock:
             print('\tCalculating inside boundary blocks')
             self.insideBoundaryBlocks = self.boundaryBlocks + self.insideBlocks
             print('\tCalculating boundary contacts')
@@ -408,10 +414,13 @@ class Homogenize:
             epsilonHistory.append(epsilon/2/area)
         print('finished assessing the homogenized stresss field')
         print('')
+        self.strainHistory = epsilonHistory
         return epsilonHistory
 
     def time(self):
-        return sorted(self.blockData.keys())
+        t = sorted(self.blockData.keys());
+        self.timeHistory = t
+        return t
         
     def plot(self):
         # cornerX = []
@@ -479,42 +488,77 @@ def triangleArea(gp):
     
 def listIntersection(a, b):
     return list(set(a) & set(b))
-    
+
+def createOstIn(H, parameters):
+    import ostIn
+    observations = ''
+    numObservations = len(H.timeHistory)
+    for i in range(numObservations):
+        for j in range(len(parameters)):
+            if parameters[j] == 'S11':
+                o = H.stressHistory[i][0, 0]
+                c = 2
+            elif parameters[j] == 'S22':
+                o = H.stressHistory[i][1, 1]
+                c = 3
+            elif parameters[j] == 'S12':
+                o = H.stressHistory[i][0, 1]
+                c = 4
+            elif parameters[j] == 'LE11':
+                o = H.strainHistory[i][0, 0]
+                c = 5
+            elif parameters[j] == 'LE22':
+                o = H.strainHistory[i][1, 1]
+                c = 6
+            elif parameters[j] == 'LE12':
+                o = H.strainHistory[i][0, 1]
+                c = 7
+            l = i+2
+            obsNo = i*len(parameters)+j+1
+            newObservation = 'obs{} \t\t{:10f} \t1 \toutput.dat \tOST_NULL \t{} \t\t{}\n'.format(obsNo, o, l, c)
+            observations += newObservation
+    with open('OstIn.txt', 'w') as f:
+        f.write(ostIn.topText+observations+ostIn.bottomText)
         
 if __name__ == '__main__':
     os.system('cls')
-    fileName = 'ostrichTest3'
+    
+    fileName = 'ostrichTest'
+    clargs = sys.argv
+    if len(clargs) >= 2:
+        fileName = clargs[1]
     revCentre = {'x':5, 'y':5}
     revRadius = 4.5
     
     H = Homogenize(fileName, revCentre, revRadius)
 
-    stressHistory = H.stress(singleBlock=True)
-    strainHistory = H.strain(singleBlock=True)
+    stressHistory = H.stress()
+    strainHistory = H.strain()
     timeHistory = H.time()
     
 
-    f = open('input.dat', 'w')
-    f.write('time S11 S22 S12 LE11 LE22 LE12\n')
-    f.write('0.0 0.0 0.0 0.0 0.0 0.0 0.0\n')
-    for i in range(len(stressHistory)):
-        S11 = stressHistory[i][0,0]
-        S22 = stressHistory[i][1,1]
-        S12 = stressHistory[i][0,1]
-        LE11 = strainHistory[i][0,0]
-        LE22 = strainHistory[i][1,1]
-        LE12 = strainHistory[i][0,1]
-        time = timeHistory[i]
-        record = [time, S11, S22, S12, LE11, LE22, LE12]
-        record = ' '.join(map(str, record))
-        f.write(record + '\n')
-    f.close()
+    with open('observationUDEC.dat', 'w') as f:
+        f.write('time S11 S22 S12 LE11 LE22 LE12\n')
+        f.write('0.0 0.0 0.0 0.0 0.0 0.0 0.0\n')
+        for i in range(len(stressHistory)):
+            S11 = stressHistory[i][0,0]
+            S22 = stressHistory[i][1,1]
+            S12 = stressHistory[i][0,1]
+            LE11 = strainHistory[i][0,0]
+            LE22 = strainHistory[i][1,1]
+            LE12 = strainHistory[i][0,1]
+            time = timeHistory[i]
+            record = [time, S11, S22, S12, LE11, LE22, LE12]
+            record = ' '.join(map(str, record))
+            f.write(record + '\n')
+
+    createOstIn(H, ['S11', 'S22'])
+
     # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
     # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])
     # plt.plot(yStress, yStrain)
     #H.plot()
     #plt.show()
-
 # def cornersOnBoundary(boundaryContactData, boundaryBlockData, cornerData):
 # ######Needs to be fixed###########
     # boundaryCornerData = {}
