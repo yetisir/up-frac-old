@@ -1,3 +1,3 @@
-homogenize.py ostrichTest3
-clearFolder.py abaqus
-Ostrich.exe
+python homogenize.py ostrichTest3
+cd ostrich
+mpirun.bat

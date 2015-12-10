@@ -1,0 +1,98 @@
+#Configuration File for Ostrich Program
+ProgramType Levenberg-Marquardt
+#ProgramType GeneticAlgorithm
+
+BeginFilePairs    
+parameters.tpl	parameters.py
+EndFilePairs
+
+ModelExecutable    abaqusTest.bat
+
+#Parameter Specification
+BeginParams
+#parameter	init.	low		high	tx_in  tx_ost	tx_out
+$E			15e9	10e9	20e9	none	none	none
+$nu			0.25	0.20	0.5		none	none	none
+EndParams
+
+#Observation Configuration
+BeginObservations
+#observation	value		weight	file		keyword		line	column
+obs1 		-3466540.862500 	1 	output.dat 	OST_NULL 	2 		2
+obs2 		-8087978.987500 	1 	output.dat 	OST_NULL 	2 		3
+obs3 		-6941850.600300 	1 	output.dat 	OST_NULL 	3 		2
+obs4 		-16196643.571786 	1 	output.dat 	OST_NULL 	3 		3
+obs5 		-10418782.782783 	1 	output.dat 	OST_NULL 	4 		2
+obs6 		-24309077.202202 	1 	output.dat 	OST_NULL 	4 		3
+obs7 		-13897897.731597 	1 	output.dat 	OST_NULL 	5 		2
+obs8 		-32425429.574362 	1 	output.dat 	OST_NULL 	5 		3
+obs9 		-17378288.920731 	1 	output.dat 	OST_NULL 	6 		2
+obs10 		-40546675.482720 	1 	output.dat 	OST_NULL 	6 		3
+obs11 		-20860538.175821 	1 	output.dat 	OST_NULL 	7 		2
+obs12 		-48671590.582362 	1 	output.dat 	OST_NULL 	7 		3
+obs13 		-24344784.787209 	1 	output.dat 	OST_NULL 	8 		2
+obs14 		-56800249.967402 	1 	output.dat 	OST_NULL 	8 		3
+obs15 		-27830778.622967 	1 	output.dat 	OST_NULL 	9 		2
+obs16 		-64933402.673384 	1 	output.dat 	OST_NULL 	9 		3
+obs17 		-31317955.320837 	1 	output.dat 	OST_NULL 	10 		2
+obs18 		-73069815.188908 	1 	output.dat 	OST_NULL 	10 		3
+obs19 		-34807258.563708 	1 	output.dat 	OST_NULL 	11 		2
+obs20 		-81211939.160003 	1 	output.dat 	OST_NULL 	11 		3
+obs21 		-38298494.462200 	1 	output.dat 	OST_NULL 	12 		2
+obs22 		-89357073.468813 	1 	output.dat 	OST_NULL 	12 		3
+obs23 		-41791227.832636 	1 	output.dat 	OST_NULL 	13 		2
+obs24 		-97506701.376599 	1 	output.dat 	OST_NULL 	13 		3
+obs25 		-45286208.293929 	1 	output.dat 	OST_NULL 	14 		2
+obs26 		-105659323.628242 	1 	output.dat 	OST_NULL 	14 		3
+obs27 		-48782186.470790 	1 	output.dat 	OST_NULL 	15 		2
+obs28 		-113815190.089383 	1 	output.dat 	OST_NULL 	15 		3
+obs29 		-52280134.851659 	1 	output.dat 	OST_NULL 	16 		2
+obs30 		-121977319.633829 	1 	output.dat 	OST_NULL 	16 		3
+obs31 		-55780134.175340 	1 	output.dat 	OST_NULL 	17 		2
+obs32 		-130146899.805536 	1 	output.dat 	OST_NULL 	17 		3
+obs33 		-59281854.053046 	1 	output.dat 	OST_NULL 	18 		2
+obs34 		-138312748.621430 	1 	output.dat 	OST_NULL 	18 		3
+obs35 		-62785321.275480 	1 	output.dat 	OST_NULL 	19 		2
+obs36 		-146488588.257839 	1 	output.dat 	OST_NULL 	19 		3
+obs37 		-66290535.813395 	1 	output.dat 	OST_NULL 	20 		2
+obs38 		-154669421.173194 	1 	output.dat 	OST_NULL 	20 		3
+obs39 		-69796792.623704 	1 	output.dat 	OST_NULL 	21 		2
+obs40 		-162848604.904742 	1 	output.dat 	OST_NULL 	21 		3
+
+EndObservations
+
+#Configuration for Levenberg-Marquardt algorithm
+BeginLevMar
+InitialLambda    10.0
+LambdaScaleFactor    1.1
+MoveLimit    0.1
+AlgorithmConvergenceValue    0.0001
+LambdaPhiRatio    0.3
+LambdaRelReduction    0.01
+MaxLambdas    10
+MaxIterations    20
+EndLevMar
+
+BeginMathAndStats
+DiffType    forward
+DiffRelIncrement    0.01
+#Default
+AllStats
+#NoStats
+#StdDev
+#StdErr
+#CorrCoeff
+#Beale
+#Linssen
+#CooksD
+#DFBETAS
+#Confidence
+#Sensitivity
+EndMathAndStats
+
+BeginGeneticAlg
+PopulationSize 10
+MutationRate 0.05
+Survivors 1
+NumGenerations 50
+EndGeneticAlg

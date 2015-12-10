@@ -1,0 +1,15 @@
+
+C:\Users\Mike\Documents\GitHub\Up-Frac\testMPI\model0>abaqus cae nogui=abaqusTest.py 
+Abaqus JOB Job-1
+Abaqus 6.13-1
+Begin Analysis Input File Processor
+2015-12-09 4:37:51 PM
+Run pre.exe
+2015-12-09 4:38:02 PM
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+2015-12-09 4:38:02 PM
+Run standard.exe
+2015-12-09 4:38:14 PM
+End Abaqus/Standard Analysis
+Abaqus JOB Job-1 COMPLETED

@@ -1,0 +1,73 @@
+--------------------------------------------------------------------------
+ OSTRICH version 05.20.2015 (Built May 20 2015 @ 14:32:41)
+
+ A computer program for model-independent calibration and optimization.
+
+ Author             L. Shawn Matott
+ Copyright (C) 2007 L. Shawn Matott
+
+ This program is free software; you can redistribute 
+ it and/or modify it under the terms of the GNU  
+ General Public License as published by the Free 
+ Software Foundation; either version 2 of the 
+ License, or(at your option) any later version. 
+
+ This program is distributed in the hope that it will 
+ be useful, but WITHOUT ANY WARRANTY; without even 
+ the implied warranty of MERCHANTABILITY or FITNESS 
+ FOR A PARTICULAR PURPOSE. See the GNU General Public 
+ License for more details. 
+
+ You should have received a copy of the GNU General 
+ Public License along with this program; if not, 
+ write to the Free Software Foundation, Inc., 59 
+ Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+--------------------------------------------------------------------------
+
+Ostrich Setup
+Model                  : abaqusTest.bat > OstExeOut.txt
+Algorithm              : Levenberg-Marquardt
+Objective Function     : WSSE
+Number of Parameters   : 2
+Number of Tied Params  : 0
+Number of Observations : 40
+Seed for Random Nums.  : 1449693439
+
+Ostrich Run Record
+iter  obj. function  $E            $nu           lambda
+0     2.980921E+15  1.500000E+10  2.500000E-01  1.000000E+01
+
+Optimal Parameter Set
+Objective Function : 2.980921E+15
+$E                 : 1.203580E+10
+$nu                : 3.000120E-01
+
+Algorithm Metrics
+Algorithm         : Levenberg-Marquardt
+Max Iterations    : 20
+Actual Iterations : 6
+Convergence Val   : 0.000100
+LPRCV             : 0.300000
+LRRCV             : 0.010000
+Max Lambda Trials : 10
+Move Limit        : 0.100000
+Total Alg Evals   : 1
+Total Evals       : 9
+Upper Violations  : 0
+Lower Violations  : 0
+Move Limit Viols  : 0
+LPRCV : Lambda-Phi Ratio Convergence Value
+LRRCV : Lambda Relative Reduction Convergence Value
+Total Evals             : 9
+Telescoping Strategy    : none
+
+Finite Difference Metrics
+Difference Type    : Forward
+Increment Type    : Range-Relative
+Finite Difference Increments
+$E           : 0.010000
+$nu          : 0.010000
+Finite Difference Mimumum Increment : 1.000000E-10
+Jacobian Evals     : 7
+Optimal Step Evals : 0
+Statistics Evals   : 1

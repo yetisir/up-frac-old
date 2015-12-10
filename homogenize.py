@@ -517,7 +517,7 @@ def createOstIn(H, parameters):
             obsNo = i*len(parameters)+j+1
             newObservation = 'obs{} \t\t{:10f} \t1 \toutput.dat \tOST_NULL \t{} \t\t{}\n'.format(obsNo, o, l, c)
             observations += newObservation
-    with open('OstIn.txt', 'w') as f:
+    with open(os.path.join('ostrich', 'OstIn.txt'), 'w') as f:
         f.write(ostIn.topText+observations+ostIn.bottomText)
         
 if __name__ == '__main__':
@@ -537,7 +537,7 @@ if __name__ == '__main__':
     timeHistory = H.time()
     
 
-    with open('observationUDEC.dat', 'w') as f:
+    with open(os.path.join('ostrich', 'observationUDEC.dat'), 'w') as f:
         f.write('time S11 S22 S12 LE11 LE22 LE12\n')
         f.write('0.0 0.0 0.0 0.0 0.0 0.0 0.0\n')
         for i in range(len(stressHistory)):

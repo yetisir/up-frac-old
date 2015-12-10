@@ -1,0 +1,191 @@
+        1 file(s) copied.
+        1 file(s) copied.
+Starting up MPI required 1.036632 seconds
+--------------------------------------------------------------------------
+ OSTRICH version 05.20.2015 (Built May 20 2015 @ 14:32:41)
+
+ A computer program for model-independent calibration and optimization.
+
+ Author             L. Shawn Matott
+ Copyright (C) 2007 L. Shawn Matott
+
+ This program is free software; you can redistribute 
+ it and/or modify it under the terms of the GNU  
+ General Public License as published by the Free 
+ Software Foundation; either version 2 of the 
+ License, or(at your option) any later version. 
+
+ This program is distributed in the hope that it will 
+ be useful, but WITHOUT ANY WARRANTY; without even 
+ the implied warranty of MERCHANTABILITY or FITNESS 
+ FOR A PARTICULAR PURPOSE. See the GNU General Public 
+ License for more details. 
+
+ You should have received a copy of the GNU General 
+ Public License along with this program; if not, 
+ write to the Free Software Foundation, Inc., 59 
+ Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+--------------------------------------------------------------------------
+
+Ostrich Setup
+Model                  : abaqusTest.bat > OstExeOut.txt
+Algorithm              : Levenberg-Marquardt
+Objective Function     : WSSE
+Number of Parameters   : 2
+Number of Tied Params  : 0
+Number of Observations : 40
+Seed for Random Nums.  : 1449693438
+
+Ostrich Run Record
+iter  obj. function  $E            $nu           lambda
+0     2.980921E+15  1.500000E+10  2.500000E-01  1.000000E+01
+
+Adjusting Lambda Parameter (max of 10 evals)
+   1...   2---   3+++   4---   5---   6---   7---   8---   9---  10---
+Operation is complete
+
+1     7.240846E+14  1.349988E+10  2.765640E-01  4.665074E+00
+
+Adjusting Lambda Parameter (max of 10 evals)
+   1...   2---   3+++   4---   5---   6---   7---   8---   9---  10---
+Operation is complete
+
+2     6.306255E+13  1.246257E+10  2.934828E-01  2.176291E+00
+
+Adjusting Lambda Parameter (max of 10 evals)
+   1...   2---   3+++   4---   5---   6---   7---   8---   9---  10---
+Operation is complete
+
+3     8.874915E+11  1.208525E+10  2.992849E-01  1.015256E+00
+
+Adjusting Lambda Parameter (max of 10 evals)
+   1...   2---   3+++   4---   5---   6---   7---   8---   9---  10---
+Operation is complete
+
+4     1.984103E+09  1.203681E+10  2.999984E-01  4.736244E-01
+
+Adjusting Lambda Parameter (max of 10 evals)
+   1...   2---   3+++   4---   5---   6---
+Operation is complete
+
+5     1.580187E+09  1.203580E+10  3.000120E-01  3.558410E-01
+
+Adjusting Lambda Parameter (max of 10 evals)
+   1...   2---   3+++
+Operation is complete
+
+6     1.580187E+09  1.203580E+10  3.000120E-01  3.234918E-01
+
+Optimal Parameter Set
+Objective Function : 1.580187E+09
+$E                 : 1.203580E+10
+$nu                : 3.000120E-01
+
+Statistical Output
+
+Untransformed WSSE : 1.580187E+09
+
+Observation Residuals
+Observation    Measured       Simulated      Weight          Residual(Transformed and Weighted)   Sensitive?
+obs1          -3.466541E+06  -3.473050E+06  1.000000E+00  +6.509138E+03      YES
+obs2          -8.087979E+06  -8.103320E+06  1.000000E+00  +1.534101E+04      YES
+obs3          -6.941851E+06  -6.947840E+06  1.000000E+00  +5.989400E+03      YES
+obs4          -1.619664E+07  -1.621070E+07  1.000000E+00  +1.405643E+04      YES
+obs5          -1.041878E+07  -1.042440E+07  1.000000E+00  +5.617217E+03      YES
+obs6          -2.430908E+07  -2.432210E+07  1.000000E+00  +1.302280E+04      YES
+obs7          -1.389790E+07  -1.390260E+07  1.000000E+00  +4.702268E+03      YES
+obs8          -3.242543E+07  -3.243760E+07  1.000000E+00  +1.217043E+04      YES
+obs9          -1.737829E+07  -1.738260E+07  1.000000E+00  +4.311079E+03      YES
+obs10         -4.054668E+07  -4.055720E+07  1.000000E+00  +1.052452E+04      YES
+obs11         -2.086054E+07  -2.086440E+07  1.000000E+00  +3.861824E+03      YES
+obs12         -4.867159E+07  -4.868080E+07  1.000000E+00  +9.209418E+03      YES
+obs13         -2.434478E+07  -2.434790E+07  1.000000E+00  +3.115213E+03      YES
+obs14         -5.680025E+07  -5.680850E+07  1.000000E+00  +8.250033E+03      YES
+obs15         -2.783078E+07  -2.783310E+07  1.000000E+00  +2.321377E+03      YES
+obs16         -6.493340E+07  -6.494030E+07  1.000000E+00  +6.897327E+03      YES
+obs17         -3.131796E+07  -3.132010E+07  1.000000E+00  +2.144679E+03      YES
+obs18         -7.306982E+07  -7.307620E+07  1.000000E+00  +6.384811E+03      YES
+obs19         -3.480726E+07  -3.480890E+07  1.000000E+00  +1.641436E+03      YES
+obs20         -8.121194E+07  -8.121610E+07  1.000000E+00  +4.160840E+03      YES
+obs21         -3.829849E+07  -3.829940E+07  1.000000E+00  +9.055378E+02      YES
+obs22         -8.935707E+07  -8.936020E+07  1.000000E+00  +3.126531E+03      YES
+obs23         -4.179123E+07  -4.179170E+07  1.000000E+00  +4.721674E+02      YES
+obs24         -9.750670E+07  -9.750830E+07  1.000000E+00  +1.598623E+03      YES
+obs25         -4.528621E+07  -4.528570E+07  1.000000E+00  -5.082939E+02      YES
+obs26         -1.056593E+08  -1.056610E+08  1.000000E+00  +1.676372E+03      YES
+obs27         -4.878219E+07  -4.878150E+07  1.000000E+00  -6.864708E+02      YES
+obs28         -1.138152E+08  -1.138170E+08  1.000000E+00  +1.809911E+03      YES
+obs29         -5.228013E+07  -5.227900E+07  1.000000E+00  -1.134852E+03      YES
+obs30         -1.219773E+08  -1.219770E+08  1.000000E+00  -3.196338E+02      YES
+obs31         -5.578013E+07  -5.577830E+07  1.000000E+00  -1.834175E+03      YES
+obs32         -1.301469E+08  -1.301420E+08  1.000000E+00  -4.899806E+03      YES
+obs33         -5.928185E+07  -5.927940E+07  1.000000E+00  -2.454053E+03      YES
+obs34         -1.383127E+08  -1.383110E+08  1.000000E+00  -1.748621E+03      YES
+obs35         -6.278532E+07  -6.278220E+07  1.000000E+00  -3.121275E+03      YES
+obs36         -1.464886E+08  -1.464830E+08  1.000000E+00  -5.588258E+03      YES
+obs37         -6.629054E+07  -6.628680E+07  1.000000E+00  -3.735813E+03      YES
+obs38         -1.546694E+08  -1.546600E+08  1.000000E+00  -9.421173E+03      YES
+obs39         -6.979679E+07  -6.979320E+07  1.000000E+00  -3.592624E+03      YES
+obs40         -1.628486E+08  -1.628410E+08  1.000000E+00  -7.604905E+03      YES
+
+Correlation between raw measured and simulated observations (no transformation or weighting)
+Ry         :  1.000
+Ry-squared :  1.000
+
+Correlation between measured and simulated observations (with transformation and weighting)
+Rw         :  1.000
+Rw-squared :  1.000
+
+Error Variance and Standard Error of the Regression
+S^2 : 4.158388E+07
+S   : 6.448556E+03
+
+Parameter Variance-Covariance
+               $E             $nu            
+$E            +1.406847E+11  -2.628812E+00  
+$nu           -2.628812E+00  +6.068746E-11  
+
+Parameter Standard Error
+$E             : 3.750796E+05 
+$nu            : 7.790216E-06 
+
+Parameter Correlation
+               $E            $nu           
+$E            +1.000         -0.900         
+$nu           -0.900         +1.000         
+
+Algorithm Metrics
+Algorithm         : Levenberg-Marquardt
+Max Iterations    : 20
+Actual Iterations : 6
+Convergence Val   : 0.000100
+LPRCV             : 0.300000
+LRRCV             : 0.010000
+Max Lambda Trials : 10
+Move Limit        : 0.100000
+Total Alg Evals   : 50
+Total Evals       : 71
+Upper Violations  : 0
+Lower Violations  : 0
+Move Limit Viols  : 0
+LPRCV : Lambda-Phi Ratio Convergence Value
+LRRCV : Lambda Relative Reduction Convergence Value
+Total Evals             : 71
+Telescoping Strategy    : none
+
+Finite Difference Metrics
+Difference Type    : Forward
+Increment Type    : Range-Relative
+Finite Difference Increments
+$E           : 0.010000
+$nu          : 0.010000
+Finite Difference Mimumum Increment : 1.000000E-10
+Jacobian Evals     : 7
+Optimal Step Evals : 0
+Statistics Evals   : 1
+Shutting down MPI required 0.034485 seconds
+Ostrich Error Report for Processor 0 
+A total of 1 errors and/or warnings were reported
+FILE CLEANUP               : Ostrich deleted model0/abaqusTest.py 
+num CTORS: 61 
+num DTORS: 61 
