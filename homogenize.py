@@ -177,7 +177,16 @@ class Homogenize:
                 if block in blocks:
                     newBlocks.append(block)
         return list(set(newBlocks))
-
+        
+    def blocksWithCorners(self, blocks, corners):
+        time = min(self.cornerData.keys())
+        newBlocks = []
+        for corner in corners:
+            for block in blocks:
+                if corner in self.blockData[time][block]['corners']:
+                    newBlocks.append(block)
+        return list(set(newBlocks))
+        
     def orderBlocks(self, blocks, relaventContacts):
         blocks = copy.deepcopy(blocks)
         time = min(self.contactData.keys())
@@ -250,6 +259,7 @@ class Homogenize:
                         minDistance = distance
                         nextCorner = blockCorners[k]
                         nextCornerIndex = k
+                
                 newCorners.append(nextCorner)
                 blockCorners.pop(nextCornerIndex)
         return newCorners
@@ -294,6 +304,22 @@ class Homogenize:
             xEdge.append(None)
             yEdge.append(None)
         return (xEdge, yEdge)
+        
+    def duplicateCorners(self, corners, blocks):
+        time = min(self.blockData.keys())
+        newCorners = copy.deepcopy(corners)
+        allCorners = self.cornersOnBlocks(blocks)
+        for i in range(len(corners)):
+            for j in range(len(allCorners)):
+                gridPoint1 = self.cornerData[time][corners[i]]['gridPoint']
+                gridPoint2 = self.cornerData[time][allCorners[j]]['gridPoint']
+                x1 = self.gridPointData[time][gridPoint1]['x']
+                y1 = self.gridPointData[time][gridPoint1]['y']
+                x2 = self.gridPointData[time][gridPoint2]['x']
+                y2 = self.gridPointData[time][gridPoint2]['y']
+                if x1 == x2 and y1 == y2:
+                    newCorners.append(allCorners[j])
+        return list(set(newCorners))
         
     def singleElementCorners(self):
         time = min(self.blockData.keys())
@@ -375,10 +401,12 @@ class Homogenize:
             self.boundaryBlockCorners = self.cornersOnBlocks(self.boundaryContactBlocks)
             print('\tCalculating boundary corners')
             self.boundaryCorners = listIntersection(self.boundaryContactCorners, self.boundaryBlockCorners)
+            print('\tCalculating missing boundary corners')
+            self.allBoundaryCorners = self.duplicateCorners(self.boundaryCorners, self.boundaryContactBlocks)
             print('\tCalculating boundary block order')
             self.boundaryBlocksOrdered = self.orderBlocks(self.boundaryContactBlocks, self.outsideContacts)
             print('\tCalculating boundary corner order')
-            self.boundaryCornersOrdered = self.orderCorners(self.boundaryBlocksOrdered, self.boundaryCorners)
+            self.boundaryCornersOrdered = self.orderCorners(self.boundaryBlocksOrdered, self.allBoundaryCorners)
         else:
             print('\tCalculating boundary block order')
             self.boundaryBlocksOrdered = self.outsideBlocks
@@ -446,9 +474,12 @@ class Homogenize:
         # for i in c:
             # bb += contactData[time][i]['blocks']
         # cr = cornersOnBlocks(blockData, [b])
-        # cc = contactsOnBlocks(contactData, [b])
-        # xxcc = [contactData[time][contact]['x'] for contact in cc]
-        # yycc = [contactData[time][contact]['y'] for contact in cc]
+        cc = self.outsideBlocks
+        xxcc = [self.blockData[time][contact]['x'] for contact in cc]
+        yycc = [self.blockData[time][contact]['y'] for contact in cc]
+        # cc = self.boundaryContactCorners
+        # xxcc = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in cc]
+        # yycc = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in cc]
         # print(c)
         # print(bb)
         # print(cr)
@@ -458,19 +489,19 @@ class Homogenize:
         
         be = self.blockEdges(self.boundaryContactBlocks)
         plt.figure(1)
-        plt.plot(be[0], be[1], 'b-', xxcro, yycro, 'g-', xxcro, yycro, 'go', xxb, yyb, 'y-', xxb, yyb, 'yo')
+        plt.plot(be[0], be[1], 'b-', xxcro, yycro, 'g-', xxcro, yycro, 'go', xxb, yyb, 'y-')
         boundary = plt.Circle((self.centre['x'], self.centre['y']),self.radius,color='r', fill=False)
         plt.gcf().gca().add_artist(boundary)
         plt.axis([0, 10, 0, 10])
         plt.axis('equal')
         plt.show(block = False)
         
-        plt.figure(2)
-        be = self.blockEdges(self.boundaryContactBlocks)
-        plt.plot(be[0], be[1], 'b-', xxcro, yycro, 'g-', xxcro, yycro, 'go')
-        plt.axis([0, 10, 0, 10])
-        plt.axis('equal')
-        plt.show(block = False)
+        #plt.figure(2)
+        #be = self.blockEdges(self.boundaryContactBlocks)
+        #plt.plot(be[0], be[1], 'b-', xxcro, yycro, 'g-', xxcro, yycro, 'go')
+        #plt.axis([0, 10, 0, 10])
+        #plt.axis('equal')
+        #plt.show(block = False)
 
         
         # # cornerX = [cornerData[time][corner]['x'] for corner in cornerData[time]]
@@ -528,7 +559,7 @@ if __name__ == '__main__':
     if len(clargs) >= 2:
         fileName = clargs[1]
     revCentre = {'x':5, 'y':5}
-    revRadius = 4.5
+    revRadius = 4
     
     H = Homogenize(fileName, revCentre, revRadius)
 
@@ -557,8 +588,8 @@ if __name__ == '__main__':
     # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
     # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])
     # plt.plot(yStress, yStrain)
-    #H.plot()
-    #plt.show()
+    H.plot()
+    plt.show()
 # def cornersOnBoundary(boundaryContactData, boundaryBlockData, cornerData):
 # ######Needs to be fixed###########
     # boundaryCornerData = {}
