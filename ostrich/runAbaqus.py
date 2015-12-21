@@ -25,17 +25,22 @@ def defineMaterial(name, density, elasticModulus, poissonsRatio):
     mat = mdb.models['Model-1'].Material(name=name)
     mat.Density(table=((density, ), ))
     mat.Elastic(table=((elasticModulus, poissonsRatio), ))
-    #mat.DuctileDamageInitiation(table=((fractureStrain, stressTriaxiality, strainRate), ))
-    #mat.ductileDamageInitiation.DamageEvolution(type=DISPLACEMENT, 
-    #    table=((displacementAtFailure, ), ))    
-    #mat.Plastic(table=((yeildStress, plasticStrain), ))
+    
+    #****Ductile Damage Plasticity
+    mat.DuctileDamageInitiation(table=((fractureStrain, stressTriaxiality, strainRate), ))
+    mat.ductileDamageInitiation.DamageEvolution(type=DISPLACEMENT, 
+        table=((displacementAtFailure, ), ))    
+    mat.Plastic(table=((yeildStress, plasticStrain), ))
 
-    mat.ConcreteDamagedPlasticity(table=
-        ((dilationAngle, eccentricity, fb0fc0, variableK, viscousParameter), ))
-    mat.concreteDamagedPlasticity.ConcreteCompressionHardening(
-        table=((compressiveYeildStress, inelasticStrain), ))
-    mat.concreteDamagedPlasticity.ConcreteTensionStiffening(
-        table=((tensileYeildStress, crackingStrain), ))
+    #****Concrete Damage Plasticity
+    #mat.ConcreteDamagedPlasticity(table=
+    #    ((dilationAngle, eccentricity, fb0fc0, variableK, viscousParameter), ))
+    #mat.concreteDamagedPlasticity.ConcreteCompressionHardening(
+    #    table=((compressiveYeildStress, inelasticStrain), ))
+    #mat.concreteDamagedPlasticity.ConcreteTensionStiffening(
+    #    table=((tensileYeildStress, crackingStrain), ))
+    
+    #****Mohr-Coulomb Plasticity
     #mat.MohrCoulombPlasticity(table=((frictionAngle, 5.0), ))
     #mat.mohrCoulombPlasticity.MohrCoulombHardening(table=((cohesion, 0.0), ))
     #mat.mohrCoulombPlasticity.TensionCutOff(temperatureDependency=OFF, dependencies=0,

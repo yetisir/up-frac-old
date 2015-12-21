@@ -60,6 +60,7 @@ EndMathAndStats
 BeginExtraFiles
 runAbaqus.py
 interpolateData.py
+simulationData.py
 EndExtraFiles
 
 BeginGeneticAlg
