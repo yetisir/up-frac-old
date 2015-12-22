@@ -6,7 +6,7 @@ BeginFilePairs
 parameters.tpl	parameters.py
 EndFilePairs
 
-ModelExecutable    simulationData.bat
+ModelExecutable    simulationData
 
 ModelSubdir model
 
