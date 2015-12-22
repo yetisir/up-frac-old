@@ -27,19 +27,23 @@ def defineMaterial(name, density, elasticModulus, poissonsRatio):
     mat.Elastic(table=((elasticModulus, poissonsRatio), ))
     
     #****Ductile Damage Plasticity
-    mat.DuctileDamageInitiation(table=((fractureStrain, stressTriaxiality, strainRate), ))
-    mat.ductileDamageInitiation.DamageEvolution(type=DISPLACEMENT, 
-        table=((displacementAtFailure, ), ))    
-    mat.Plastic(table=((yeildStress, plasticStrain), ))
+    #mat.DuctileDamageInitiation(table=((fractureStrain, stressTriaxiality, strainRate), ))
+    #mat.ductileDamageInitiation.DamageEvolution(type=DISPLACEMENT, 
+    #    table=((displacementAtFailure, ), ))    
+    #mat.Plastic(table=((yeildStress, plasticStrain), ))
 
     #****Concrete Damage Plasticity
-    #mat.ConcreteDamagedPlasticity(table=
-    #    ((dilationAngle, eccentricity, fb0fc0, variableK, viscousParameter), ))
-    #mat.concreteDamagedPlasticity.ConcreteCompressionHardening(
-    #    table=((compressiveYeildStress, inelasticStrain), ))
-    #mat.concreteDamagedPlasticity.ConcreteTensionStiffening(
-    #    table=((tensileYeildStress, crackingStrain), ))
-    
+    mat.ConcreteDamagedPlasticity(table=
+        ((dilationAngle, eccentricity, fb0fc0, variableK, viscousParameter), ))
+    mat.concreteDamagedPlasticity.ConcreteCompressionHardening(
+        table=((compressiveYeildStress[0], inelasticStrain[0]), (compressiveYeildStress[1], inelasticStrain[1])))
+    mat.concreteDamagedPlasticity.ConcreteTensionStiffening(
+        table=((tensileYeildStress, crackingStrain), ))
+    mat.concreteDamagedPlasticity.ConcreteCompressionDamage(
+        table=((compressiveDamage[0], inelasticStrain[0]), (compressiveDamage[1], inelasticStrain[1])))
+    mat.concreteDamagedPlasticity.ConcreteTensionDamage(
+        table=((tensileDamage, crackingStrain), (compressiveDamage[1], inelasticStrain[1]))) #currenlty using cs params
+        
     #****Mohr-Coulomb Plasticity
     #mat.MohrCoulombPlasticity(table=((frictionAngle, 5.0), ))
     #mat.mohrCoulombPlasticity.MohrCoulombHardening(table=((cohesion, 0.0), ))

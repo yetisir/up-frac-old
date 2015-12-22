@@ -561,7 +561,7 @@ if __name__ == '__main__':
     if len(clargs) >= 2:
         fileName = clargs[1]
     revCentre = {'x':5, 'y':5}
-    revRadius = 4
+    revRadius = 3.5
     
     H = Homogenize(fileName, revCentre, revRadius)
     stressHistory = H.stress()
