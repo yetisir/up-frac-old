@@ -12,12 +12,12 @@ ModelSubdir model
 
 #Parameter Specification
 BeginParams
-#parameter	init.	low		high	tx_in  tx_ost	tx_out
-$E			15e9	10e9	20e9	none	none	none
-$nu			0.25	0.20	0.5		none	none	none
-$psi		6		2		12		none	none	none
-$cys		50e6	10e6	100e6	none	none	none
-$K			0.67	0.55	0.95	none	none	none
+#parameter	init.	low	high	tx_in  tx_ost	tx_out
+$E		    12e9	5e9	    20e9	none	none	none
+$nu		    0.3 	0.10	0.5	    none	none	none
+$cys1		5e6	    1e6	    20e6	none	none	none
+$cys2		25e6	10e6	50e6	none	none	none
+$is         0.005	0.001	0.01	none	none	none
 EndParams
 
 #Observation Configuration
@@ -43,8 +43,8 @@ EndLevMar
 BeginMathAndStats
 DiffType    forward
 DiffRelIncrement    0.01
-#Default
-AllStats
+Default
+#AllStats
 #NoStats
 #StdDev
 #StdErr
@@ -60,6 +60,7 @@ EndMathAndStats
 BeginExtraFiles
 runAbaqus.py
 interpolateData.py
+simulationData.py
 EndExtraFiles
 
 BeginGeneticAlg

@@ -1,3 +1,3 @@
-python homogenize.py ostrichTest3
+python homogenize.py ostrichTest2
 cd ostrich
 mpirun.bat

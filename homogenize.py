@@ -40,6 +40,8 @@ class Homogenize:
         self.singleBlock = False
         if len(self.contactData) == 0:
             self.singleBlock = True
+            
+        self.calculateHomogenizationParameters()
     
     def parseDataFile(self, fileName):
         file = open(os.path.join('data', fileName))
@@ -326,58 +328,20 @@ class Homogenize:
         blocks = self.blockData[time].keys()
         return self.cornersOnBlocks(blocks)
         
-    def stress(self):
-        print('-'*70)
-        print('Stress Homogenization')
-        print('-'*70)
-        print('Preparing to calculate stress homogenization parameters:')
-        print('\tCalculating boundary blocks')
-        self.boundaryBlocks = self.blocksOnBoundary()
-        print('\tCalculating inside blocks')
-        self.insideBlocks = self.blocksInsideBoundary()
-        print('\tCalculating inside boundary blocks')
-        if not self.singleBlock:
-            self.insideBoundaryBlocks = self.boundaryBlocks + self.insideBlocks
-        else:
-            self.insideBoundaryBlocks = self.blocksOutsideBoundary()
-            
-            
-        print('Finished calculating stress homogenization parameters')
-        print('Assessing homogenized stress fields:')
+    def cornerCoordinates(self, corners, time):
+        points = []
+        for corner in corners:
+            gridPoint = self.cornerData[time][corner]['gridPoint']
+            x = self.gridPointData[time][gridPoint]['x']
+            y = self.gridPointData[time][gridPoint]['y']
+            points.append([x,y])
+        return points
         
-        sigmaHistory = []
-        for time in sorted(self.blockData.keys()):
-            print('\tAt time {}s'.format(time))
-            sigma = numpy.array([[0.,0.],[0.,0.]])
-            area = 0
-            for blockIndex in self.insideBoundaryBlocks:
-                block = self.blockData[time][blockIndex]
-                zones = block['zones']
-                area += block['area']
-                for zoneIndex in zones:
-                    zone = self.zoneData[time][zoneIndex]
-                    S11 = zone['S11']
-                    S22 = zone['S22']
-                    S12 = zone['S12']
-                    S = numpy.array([[S11,S12],[S12,S22]])
-                    gridPoints = zone['gridPoints']
-                    gp = []
-                    for gridPoint in gridPoints:
-                        gpCoordinates = [self.gridPointData[time][gridPoint][var] for var in ['x', 'y']]
-                        gp.append(gpCoordinates)
-                    zoneArea = triangleArea(gp)
-                    sigma += numpy.multiply(zoneArea,S)
-            sigmaHistory.append(sigma/area*1e6)
-        print('Finished assessing homogenized stress field')
-        print('')
-        self.stressHistory = sigmaHistory
-        return sigmaHistory
-    
-    def strain(self):
+    def calculateHomogenizationParameters(self):
         print('-'*70)
-        print('Calculating Strain Homogenization Parameters')
+        print('Calculating Homogenization Parameters')
         print('-'*70)
-        print('Preparing to calculate strain homogenization parameters:')
+        print('Preparing to calculate homogenization parameters:')
         print('\tCalculating boundary blocks')
         self.boundaryBlocks = self.blocksOnBoundary()
         print('\tCalculating inside blocks')
@@ -415,9 +379,41 @@ class Homogenize:
             print('\tCalculating inside boundary blocks')
             self.insideBoundaryBlocks = self.outsideBlocks
            
-        print('Finished calculating strain homogenization parameters')
+        print('Finished calculating homogenization parameters')
+        
+    def stress(self):
         print('Assessing homogenized stress fields:')
-
+        sigmaHistory = []
+        for time in sorted(self.blockData.keys()):
+            print('\tAt time {}s'.format(time))
+            sigma = numpy.array([[0.,0.],[0.,0.]])
+            #area = 0
+            for blockIndex in self.insideBoundaryBlocks:
+                block = self.blockData[time][blockIndex]
+                zones = block['zones']
+                #area += block['area']
+                for zoneIndex in zones:
+                    zone = self.zoneData[time][zoneIndex]
+                    S11 = zone['S11']
+                    S22 = zone['S22']
+                    S12 = zone['S12']
+                    S = numpy.array([[S11,S12],[S12,S22]])
+                    gridPoints = zone['gridPoints']
+                    gp = []
+                    for gridPoint in gridPoints:
+                        gpCoordinates = [self.gridPointData[time][gridPoint][var] for var in ['x', 'y']]
+                        gp.append(gpCoordinates)
+                    zoneArea = triangleArea(gp)
+                    sigma += numpy.multiply(zoneArea,S)
+            totalArea = area(self.cornerCoordinates(self.boundaryCornersOrdered, time))
+            sigmaHistory.append(sigma/totalArea*1e6)
+        print('Finished assessing homogenized stress field')
+        print('')
+        self.stressHistory = sigmaHistory
+        return sigmaHistory
+    
+    def strain(self):
+        print('Assessing homogenized stress fields:')
         epsilonHistory = []
         for time in sorted(self.cornerData.keys()):
             print('\tAt time {}s'.format(time))
@@ -440,7 +436,7 @@ class Homogenize:
 
             area = sum([self.blockData[time][b]['area'] for b in self.insideBoundaryBlocks])
             epsilonHistory.append(epsilon/2/area)
-        print('finished assessing the homogenized stresss field')
+        print('finished assessing the homogenized stress field')
         print('')
         self.strainHistory = epsilonHistory
         return epsilonHistory
@@ -519,6 +515,12 @@ def triangleArea(gp):
     
 def listIntersection(a, b):
     return list(set(a) & set(b))
+    
+def area(p):
+    return 0.5 * abs(sum(x0*y1 - x1*y0 for ((x0, y0), (x1, y1)) in segments(p)))
+
+def segments(p):
+    return zip(p, p[1:] + [p[0]])
 
 def createOstIn(H, parameters):
     import ostIn
@@ -559,10 +561,9 @@ if __name__ == '__main__':
     if len(clargs) >= 2:
         fileName = clargs[1]
     revCentre = {'x':5, 'y':5}
-    revRadius = 4
+    revRadius = 3.5
     
     H = Homogenize(fileName, revCentre, revRadius)
-
     stressHistory = H.stress()
     strainHistory = H.strain()
     timeHistory = H.time()

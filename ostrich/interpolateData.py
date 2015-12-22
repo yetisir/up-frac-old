@@ -3,12 +3,19 @@ from parameters import *
 import numpy
 from scipy.interpolate import griddata
 import sys  
+import os
 
 def interpolateData(binaryDataFile):
     file = open(binaryDataFile, 'rb')
-    rawTimeHistory = numpy.array(pickle.load(file, encoding='latin1')).transpose()
-    rawStressHistory = numpy.array(pickle.load(file, encoding='latin1')).transpose()
-    rawStrainHistory = numpy.array(pickle.load(file, encoding='latin1')).transpose()
+    if os.name == 'nt':
+        rawTimeHistory = numpy.array(pickle.load(file, encoding='latin1')).transpose()
+        rawStressHistory = numpy.array(pickle.load(file, encoding='latin1')).transpose()
+        rawStrainHistory = numpy.array(pickle.load(file, encoding='latin1')).transpose()
+    elif os.name == 'posix':
+        rawTimeHistory = numpy.array(pickle.load(file)).transpose()
+        rawStressHistory = numpy.array(pickle.load(file)).transpose()
+        rawStrainHistory = numpy.array(pickle.load(file)).transpose()
+    
     timeHistory = numpy.linspace(0, simulationTime, numberOfSteps+1)
     stressHistory = numpy.empty([3, numberOfSteps+1]);
     strainHistory = numpy.empty([3, numberOfSteps+1]);
@@ -27,4 +34,5 @@ def interpolateData(binaryDataFile):
             for j in range(len(strainHistory[i])):
                 f.write(str(strainHistory[i][j])+' ')
             f.write('\n')
-interpolateData('C:/Users/Mike/Documents/GitHub/Up-Frac/ostrich/model0/rawHistory.pkl')
+if __name__ == '__main__':            
+    interpolateData(os.path.join(os.getcwd(), 'rawHistory.pkl'))
