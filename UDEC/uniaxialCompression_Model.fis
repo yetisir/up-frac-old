@@ -15,8 +15,8 @@ vor edge 0.5 round 0.005
 gen edge 0.5
 zone model elastic density 2.7E-3 bulk 10e3 shear 4.615e3
 group joint 'User:ID75'
-joint model area jks 1E3 jkn 1E7 jfriction 30 jcohesion 0.1 jtension 10 jdilation 10 range group 'User:ID75'
-set jcondf joint model area jks=1000 jkn=1E7 jfriction=30 jcohesion=0.1 jtension=10 jdilation=10
+joint model area jks 1E3 jkn 1E7 jfriction 30 jcohesion 100 jtension 10 jdilation 10 range group 'User:ID75'
+set jcondf joint model area jks=1000 jkn=1E7 jfriction=30 jcohesion=100 jtension=10 jdilation=10
 table 1 delete
 table 1 0 -1 0.99 -1 1.01 1 2 1;.99 1 3.01 -1 4 -1
 
