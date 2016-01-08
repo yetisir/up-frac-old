@@ -28,7 +28,7 @@ boundary yvelocity 0 range -0.001,10.001 -0.001,0.001
 boundary xvelocity 0 range -0.001,0.001 -0.001,10.001
 
 ;*****Right Boundary
-boundary xvelocity 10E-1 history=table 1 range 9.999,10.001 -0.001,10.001
+boundary xvelocity 4E-1 history=table 1 range 9.999,10.001 -0.001,10.001
 
 ;*****Top Boundary
 boundary yvelocity -10E-1 history=table 1 range -0.001,10.001 9.999,10.001
