@@ -36,13 +36,14 @@ def defineMaterial(name, density, elasticModulus, poissonsRatio):
     mat.ConcreteDamagedPlasticity(table=
         ((dilationAngle, eccentricity, fb0fc0, variableK, viscousParameter), ))
     mat.concreteDamagedPlasticity.ConcreteCompressionHardening(
-        table=((compressiveYeildStress[0], inelasticStrain[0]), (compressiveYeildStress[1], inelasticStrain[1])))
+        table=((compressiveYeildStress[0], inelasticStrain[0]), (compressiveYeildStress[1], inelasticStrain[1]), (compressiveYeildStress[2], inelasticStrain[2])))
     mat.concreteDamagedPlasticity.ConcreteTensionStiffening(
-        table=((tensileYeildStress, crackingStrain), ))
+        table=((tensileYeildStress[0], crackingStrain[0]), (tensileYeildStress[1], crackingStrain[1]), (tensileYeildStress[2], crackingStrain[2])))
+        
     mat.concreteDamagedPlasticity.ConcreteCompressionDamage(
-        table=((compressiveDamage[0], inelasticStrain[0]), (compressiveDamage[1], inelasticStrain[1])))
+        table=((compressiveDamage[0], inelasticStrain[0]), (compressiveDamage[1], inelasticStrain[1]), (compressiveDamage[2], inelasticStrain[2])))
     mat.concreteDamagedPlasticity.ConcreteTensionDamage(
-        table=((tensileDamage, crackingStrain), (compressiveDamage[1], inelasticStrain[1]))) #currenlty using cs params
+        table=((tensileDamage[0], crackingStrain[0]), (tensileDamage[1], crackingStrain[1]), (tensileDamage[2], crackingStrain[2])))
         
     #****Mohr-Coulomb Plasticity
     #mat.MohrCoulombPlasticity(table=((frictionAngle, 5.0), ))
@@ -84,7 +85,7 @@ def applyBoundaryCondition(name, instance, step, location, v):
     # mdb.models['Model-1'].PeriodicAmplitude(name='Amp-1', timeSpan=STEP, 
         # frequency=pi/simulationTime, start=0.0, a_0=0, data=((0.0, 1.0), ))
     mdb.models['Model-1'].TabularAmplitude(name='Amp-1', timeSpan=STEP, 
-        smooth=SOLVER_DEFAULT, data=((0.0, 1.0), (9.999, 1.0), (10.001, -1.0), (20, -1.0)))
+        smooth=SOLVER_DEFAULT, data=velocityTable)
     mdb.models['Model-1'].VelocityBC(name=name, createStepName=step, 
         region=region, v1=v[0], v2=v[1], vr3=v[2], amplitude='Amp-1', 
         localCsys=None, distributionType=UNIFORM, fieldName='')          
@@ -113,7 +114,7 @@ def buildModel():
     # for j in range(len(v[0])):
         # applyBoundaryCondition(vNames[0][j], instanceName, steps[0],
             # boundaries[vNames[0][j]], v[0][j])
-    createStaticStep(steps[1])
+    createExplicitDynamicStep(steps[1])
     
     for i in range(len(v)):
         for j in range(len(v[i])):

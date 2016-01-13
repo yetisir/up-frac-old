@@ -44,7 +44,7 @@ class Homogenize:
         self.calculateHomogenizationParameters()
     
     def parseDataFile(self, fileName):
-        file = open(os.path.join('data', fileName))
+        file = open(os.path.join('UDEC', 'data', fileName))
         header = file.readline()[0:-1].split(' ')
         types = file.readline()[0:-1].split(' ')
         data = {}
@@ -234,36 +234,75 @@ class Homogenize:
         return newBlocks
         
     def orderCorners(self, orderedBlocks, corners):
-        corners = copy.deepcopy(corners)
-        orderedBlocks = copy.deepcopy(orderedBlocks)
-        orderedBlocks.append(orderedBlocks[0])
-        newCorners = []
         time = min(self.contactData.keys())
         
-        for i in range(1, len(orderedBlocks)):
-            blockCorners = listIntersection(corners, self.blockData[time][orderedBlocks[i]]['corners'])
-            xDistance = [self.blockData[time][orderedBlocks[i-1]]['x'] - self.gridPointData[time][self.cornerData[time][c]['gridPoint']]['x'] for c in blockCorners] 
-            yDistance = [self.blockData[time][orderedBlocks[i-1]]['y'] - self.gridPointData[time][self.cornerData[time][c]['gridPoint']]['y'] for c in blockCorners] 
-            distance = [math.hypot(xDistance[z], yDistance[z]) for z in range(len(blockCorners))]
-            index = distance.index(min(distance))
-            newCorners.append(blockCorners[index])
-            blockCorners.pop(index)
-            iterations = len(blockCorners)
-            for j in range(iterations):
-                lastGridPoint = self.cornerData[time][newCorners[-1]]['gridPoint']
-                minDistance = -1
-                for k in range(len(blockCorners)):
-                    nextGridPoint = self.cornerData[time][blockCorners[k]]['gridPoint']
-                    xDistance = self.gridPointData[time][lastGridPoint]['x'] - self.gridPointData[time][nextGridPoint]['x'] 
-                    yDistance = self.gridPointData[time][lastGridPoint]['y'] - self.gridPointData[time][nextGridPoint]['y'] 
-                    distance = math.hypot(xDistance, yDistance)
-                    if minDistance < 0 or distance < minDistance:
-                        minDistance = distance
-                        nextCorner = blockCorners[k]
-                        nextCornerIndex = k
+        directionSign = 0
+        for i in range(len(orderedBlocks)):
+            x1 = self.blockData[time][orderedBlocks[i-2]]['x']
+            y1 = self.blockData[time][orderedBlocks[i-2]]['y']
+            x2 = self.blockData[time][orderedBlocks[i-1]]['x']
+            y2 = self.blockData[time][orderedBlocks[i-1]]['y']
+            x3 = self.blockData[time][orderedBlocks[i]]['x']
+            y3 = self.blockData[time][orderedBlocks[i]]['y']
+            xVec1 = x1-x2
+            yVec1 = y1-y2
+            xVec2 = x3-x2
+            yVec2 = y3-y2
+            vecAngle = angle(xVec1, yVec1, xVec2, yVec2)
+            vecSign = xVec1*yVec2-xVec2*yVec1
+            directionSign += vecSign
+        if directionSign > 0:
+            directionSign = -directionSign
+            orderedBlocks = orderedBlocks[::-1]
+        corners = copy.deepcopy(corners)
+        orderedBlocks = copy.deepcopy(orderedBlocks)
+        newCorners = []
+        
+        for i in range(len(orderedBlocks)):
+            allBlockCorners = self.blockData[time][orderedBlocks[i]]['corners']
+            blockCorners = listIntersection(corners, allBlockCorners)           
+            orderedBlockCorners = []
+            for corner in allBlockCorners:
+                if corner in blockCorners:
+                    orderedBlockCorners.append(corner)
+            blockCorners = orderedBlockCorners
+            
+            blockDirection = 0
+         
+            for j in range(len(allBlockCorners)):
+                x1 = self.gridPointData[time][self.cornerData[time][allBlockCorners[j-2]]['gridPoint']]['x']
+                y1 = self.gridPointData[time][self.cornerData[time][allBlockCorners[j-2]]['gridPoint']]['y']
+                x2 = self.gridPointData[time][self.cornerData[time][allBlockCorners[j-1]]['gridPoint']]['x']
+                y2 = self.gridPointData[time][self.cornerData[time][allBlockCorners[j-1]]['gridPoint']]['y']
+                x3 = self.gridPointData[time][self.cornerData[time][allBlockCorners[j]]['gridPoint']]['x']
+                y3 = self.gridPointData[time][self.cornerData[time][allBlockCorners[j]]['gridPoint']]['y']
+                xVec1 = x1-x2
+                yVec1 = y1-y2
+                xVec2 = x3-x2
+                yVec2 = y3-y2
+                vecAngle = angle(xVec1, yVec1, xVec2, yVec2)
+                vecSign = xVec1*yVec2-xVec2*yVec1
+                blockDirection += vecSign
+            if math.copysign(1, blockDirection) != math.copysign(1, directionSign):
+                blockCorners = blockCorners[::-1]
                 
-                newCorners.append(nextCorner)
-                blockCorners.pop(nextCornerIndex)
+            previousBlockCorners = self.blockData[time][orderedBlocks[i-1]]['corners']
+            startingCornerDistance = -1
+            for corner in blockCorners:
+                gridPoint = self.cornerData[time][corner]['gridPoint']
+                for previousCorner in previousBlockCorners:
+                    previousGridPoint = self.cornerData[time][previousCorner]['gridPoint']
+                    xDistance = self.gridPointData[time][previousGridPoint]['x'] - self.gridPointData[time][gridPoint]['x']
+                    yDistance = self.gridPointData[time][previousGridPoint]['y'] - self.gridPointData[time][gridPoint]['y']
+                    distance = math.hypot(xDistance, yDistance)
+                    if startingCornerDistance < 0 or distance < startingCornerDistance:
+                        startingCornerDistance = distance
+                        startingCorner = corner
+                    
+                    
+            index = blockCorners.index(startingCorner)
+            blockCorners = blockCorners[index:] + blockCorners[:index]
+            newCorners += blockCorners
         return newCorners
     
         
@@ -311,6 +350,8 @@ class Homogenize:
         time = min(self.blockData.keys())
         newCorners = copy.deepcopy(corners)
         allCorners = self.cornersOnBlocks(blocks)
+        blockSizes = [self.blockData[time][block]['area'] for block in blocks]
+        averageBlockSize = math.sqrt(float(sum(blockSizes))/len(blockSizes))
         for i in range(len(corners)):
             for j in range(len(allCorners)):
                 gridPoint1 = self.cornerData[time][corners[i]]['gridPoint']
@@ -319,7 +360,7 @@ class Homogenize:
                 y1 = self.gridPointData[time][gridPoint1]['y']
                 x2 = self.gridPointData[time][gridPoint2]['x']
                 y2 = self.gridPointData[time][gridPoint2]['y']
-                if x1 == x2 and y1 == y2:
+                if abs(x1-x2)/averageBlockSize <0.01 and abs(y1-y2)/averageBlockSize < 0.01:
                     newCorners.append(allCorners[j])
         return list(set(newCorners))
         
@@ -332,6 +373,14 @@ class Homogenize:
         points = []
         for corner in corners:
             gridPoint = self.cornerData[time][corner]['gridPoint']
+            x = self.gridPointData[time][gridPoint]['x']
+            y = self.gridPointData[time][gridPoint]['y']
+            points.append([x,y])
+        return points
+
+    def gridPointCoordinates(self, gridPoints, time):
+        points = []
+        for gridPoint in gridPoints:
             x = self.gridPointData[time][gridPoint]['x']
             y = self.gridPointData[time][gridPoint]['y']
             points.append([x,y])
@@ -415,11 +464,11 @@ class Homogenize:
     def strain(self):
         print('Assessing homogenized stress fields:')
         epsilonHistory = []
+        corners = self.boundaryCornersOrdered
+        corners.append(corners[0])
         for time in sorted(self.cornerData.keys()):
             print('\tAt time {}s'.format(time))
             epsilon = numpy.array([[0.,0.],[0.,0.]])
-            corners = self.boundaryCornersOrdered
-            corners.append(corners[0])
             for i in range(len(corners)-1):
                 gridPoint1 = self.gridPointData[time][self.cornerData[time][corners[i]]['gridPoint']]
                 gridPoint2 = self.gridPointData[time][self.cornerData[time][corners[i+1]]['gridPoint']]
@@ -522,6 +571,16 @@ def area(p):
 def segments(p):
     return zip(p, p[1:] + [p[0]])
 
+def angle(x1, y1, x2, y2):
+    inner_product = x1*x2 + y1*y2
+    len1 = math.hypot(x1, y1)
+    len2 = math.hypot(x2, y2)
+    cosine = inner_product/(len1*len2)
+    if abs(cosine) > 1:
+        cosine = math.copysign(1, cosine)
+    return math.acos(cosine)
+
+
 def createOstIn(H, parameters):
     import ostIn
     observations = ''
@@ -556,12 +615,13 @@ def createOstIn(H, parameters):
 if __name__ == '__main__':
     os.system('cls')
     
-    fileName = 'ostrichTest'
     clargs = sys.argv
     if len(clargs) >= 2:
         fileName = clargs[1]
+    #else: error message
+    #add other cl args for centre and radius
     revCentre = {'x':5, 'y':5}
-    revRadius = 3.5
+    revRadius = 3
     
     H = Homogenize(fileName, revCentre, revRadius)
     stressHistory = H.stress()
@@ -589,22 +649,7 @@ if __name__ == '__main__':
     # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
     # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])
     # plt.plot(yStress, yStrain)
-    H.plot()
-    plt.show()
-# def cornersOnBoundary(boundaryContactData, boundaryBlockData, cornerData):
-# ######Needs to be fixed###########
-    # boundaryCornerData = {}
-    # for time in boundaryContactData:
-        # boundaryCorners = {}
-        # #boundaryContact = boundaryContactData[time][boundaryContactData.keys()[0]]
-        # for contact in boundaryContactData[time]:
-            # boundaryContactCorners = boundaryContactData[time][contact]['corners']
-            # boundaryContactBlocks = boundaryContactData[time][contact]['blocks']
-            # for block in boundaryContactBlocks:
-                # if block in boundaryBlockData[time].keys():
-                    # for corner in boundaryBlockData[time][block]['corners']:
-                        # if corner in boundaryContactCorners:
-                            # boundaryCorners[corner] = cornerData[time][corner]
-        # boundaryCornerData[time] = boundaryCorners
-    # return boundaryCornerData
     
+    
+    #H.plot()
+    #plt.show()
