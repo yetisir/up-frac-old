@@ -34,6 +34,6 @@ table 1 0 -1 1.99 -1 2.01 1 4.00 1
 ;boundary yvelocity -1.0 history=table 1 range -0.001,10.001 9.999,10.001
 ;boundary xvelocity 1E-2 range -0.001,10.001 9.999,10.001
 
-boundary gvel 0,0 0,0 -0.1,0 history=table 1
+boundary gvel 0,0 0,-0.1 0,0 history=table 1
 
 call cycleModel.fis
