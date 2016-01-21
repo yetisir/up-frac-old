@@ -8,11 +8,11 @@ modelParameters
 
 config
 round 0.5E-2
-edge 2E-2
+edge 0.5E-2
 block 0,0 0,10 10,10 10,0
-vor edge 1 round 0.005
+vor edge 0.5 round 0.005
  jdelete
-gen edge 1
+gen edge 0.5
 zone model elastic density 2.7E-3 bulk 10e3 shear 4.615e3
 group joint 'User:ID75'
 joint model area jks 1E3 jkn 1E7 jfriction 30 jcohesion 0.1 jtension 100 jdilation 10 range group 'User:ID75'
