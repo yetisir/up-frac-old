@@ -1,0 +1,35 @@
+def modelParameters
+	modelName = 'test'
+	simulationTime = 10.0
+	numberOfSteps = 100
+end	
+modelParameters
+
+config
+round 0.01
+edge 0.01
+block 0,0 0,10 10,10 10,0
+vor edge 1 round 0.01
+ jdelete
+gen edge 1
+zone model elastic density 0.0027 bulk 9999999999.999998 shear 4615384615.384615
+group joint 'User:ID75'
+joint model area jks 1000.0 jkn 10000000.0 jfriction 30 jcohesion 10 jtension 100 jdilation $jDilation range group 'User:ID75'
+set jcondf joint model area jks=1000.0 jkn=10000000.0 jfriction=30 jcohesion=10 jtension=100 jdilation=$jDilation
+table 1 delete
+table 1 0 -10.0 -1 2.0 15.0 1 7.0 -110 -1
+
+;*****Bottom Boundary
+boundary yvelocity 0 range -0.001,10.001 -0.001,0.001
+
+;*****Left Boundary
+boundary xvelocity 0 range -0.001,0.001 -0.001,10.001
+
+;*****Right Boundary
+;boundary xvelocity 0 history=table 1 range 9.999,10.001 -0.001,10.001
+
+;*****Top Boundary
+boundary yvelocity -0.05 history=table 1 range -0.001,10.001 9.999,10.001
+
+
+call cycleModel.fis
