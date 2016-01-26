@@ -22,6 +22,13 @@ def sketchPart(name, gp):
     del mdb.models['Model-1'].sketches['__profile__']
     
 def defineMaterial(name, density, elasticModulus, poissonsRatio):
+    def tablulateVectors(vec1, vec2):
+        vecLength = min(len(vec1), len(vec2))
+        tabulatedData = []
+        for i in range(vecLength):
+            tabulatedData.append((vec1[i], vec2[i]))
+        return tabulatedData
+            
     mat = mdb.models['Model-1'].Material(name=name)
     mat.Density(table=((density, ), ))
     mat.Elastic(table=((elasticModulus, poissonsRatio), ))
@@ -36,14 +43,14 @@ def defineMaterial(name, density, elasticModulus, poissonsRatio):
     mat.ConcreteDamagedPlasticity(table=
         ((dilationAngle, eccentricity, fb0fc0, variableK, viscousParameter), ))
     mat.concreteDamagedPlasticity.ConcreteCompressionHardening(
-        table=((compressiveYeildStress[0], inelasticStrain[0]), (compressiveYeildStress[1], inelasticStrain[1]), (compressiveYeildStress[2], inelasticStrain[2])))
+        table=(tablulateVectors(compressiveYeildStress, inelasticStrain)))
     mat.concreteDamagedPlasticity.ConcreteTensionStiffening(
-        table=((tensileYeildStress[0], crackingStrain[0]), (tensileYeildStress[1], crackingStrain[1]), (tensileYeildStress[2], crackingStrain[2])))
+        table=(tablulateVectors(tensileYeildStress, crackingStrain)))
         
     mat.concreteDamagedPlasticity.ConcreteCompressionDamage(
-        table=((compressiveDamage[0], inelasticStrain[0]), (compressiveDamage[1], inelasticStrain[1]), (compressiveDamage[2], inelasticStrain[2])))
+        table=(tablulateVectors(compressiveDamage, inelasticStrain)))
     mat.concreteDamagedPlasticity.ConcreteTensionDamage(
-        table=((tensileDamage[0], crackingStrain[0]), (tensileDamage[1], crackingStrain[1]), (tensileDamage[2], crackingStrain[2])))
+        table=(tablulateVectors(tensileDamage, crackingStrain)))
         
     #****Mohr-Coulomb Plasticity
     #mat.MohrCoulombPlasticity(table=((frictionAngle, 5.0), ))

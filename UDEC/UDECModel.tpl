@@ -1,38 +1,35 @@
 def modelParameters
-	modelName = 'uniaxialCompression'
-	simulationTime = 10.0 ;**important: make sure value is specified as float
-	numberOfSteps = 100
-	units = 'm-MPa-Gg-s'
+	modelName = $mName
+	simulationTime = $sTime
+	numberOfSteps = $nSteps
 end	
 modelParameters
 
 config
-round 0.5E-2
-edge 0.5E-2
-block 0,0 0,10 10,10 10,0
-vor edge 1 round 0.005
+round $round
+edge $edge
+block 0,0 0,$mSize $mSize,$mSize $mSize,0
+vor edge $bSize round $round
  jdelete
-gen edge 1
-zone model elastic density 2.7E-3 bulk 10e3 shear 4.615e3
+gen edge $bSize
+zone model elastic density $rho bulk $bulk shear $shear
 group joint 'User:ID75'
-joint model area jks 1E3 jkn 1E7 jfriction 30 jcohesion 0.1 jtension 100 jdilation 10 range group 'User:ID75'
-set jcondf joint model area jks=1000 jkn=1E7 jfriction=30 jcohesion=0.1 jtension=100 jdilation=10
+joint model area jks $jks jkn $jkn jfriction $jFriction jcohesion $jCohesion jtension $jTension jdilation $jDilation range group 'User:ID75'
+set jcondf joint model area jks=$jks jkn=$jkn jfriction=$jFriction jcohesion=$jCohesion jtension=$jTension jdilation=$jDilation
 table 1 delete
-table 1 0 -1 0.99 -1 1.01 1 5.99 1 6.01 -1 10.0 -1
+table 1 $vTable
 
 ;*****Bottom Boundary
-boundary yvelocity 0 range -0.001,10.001 -0.001,0.001
-;boundary xvelocity 0 range -0.001,10.001 -0.001,0.001
+boundary yvelocity 0 range $bRange
 
 ;*****Left Boundary
-boundary xvelocity 0 range -0.001,0.001 -0.001,10.001
+boundary xvelocity 0 range $lRange
 
 ;*****Right Boundary
-;boundary xvelocity 1E-1 history=table 1 range 9.999,10.001 -0.001,10.001
+;boundary xvelocity 0 history=table 1 range $rRange
 
 ;*****Top Boundary
-boundary yvelocity -0.5E-1 history=table 1 range -0.001,10.001 9.999,10.001
-;boundary xvelocity 1E-2 range -0.001,10.001 9.999,10.001
+boundary yvelocity $vel history=table 1 range $tRange
 
 
 call cycleModel.fis

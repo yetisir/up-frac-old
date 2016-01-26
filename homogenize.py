@@ -621,7 +621,7 @@ if __name__ == '__main__':
     #else: error message
     #add other cl args for centre and radius
     revCentre = {'x':5, 'y':5}
-    revRadius = 3
+    revRadius = 4
     
     H = Homogenize(fileName, revCentre, revRadius)
     stressHistory = H.stress()
@@ -644,7 +644,7 @@ if __name__ == '__main__':
             record = ' '.join(map(str, record))
             f.write(record + '\n')
 
-    createOstIn(H, ['S11', 'S22'])
+    createOstIn(H, ['S22', 'LE11'])
 
     # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
     # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])

@@ -1,4 +1,10 @@
-def process(lista, listb):
+import math
+def process1(lista):
+    import numbers
+    if isinstance(lista, numbers.Real):
+        lista = (lista, )
+    return lista
+def process2(lista, listb):
     import numbers
     if isinstance(lista, numbers.Real):
         lista = (lista, )*len(listb)
@@ -6,37 +12,40 @@ def process(lista, listb):
         listb = (listb, )*len(lista)
     return lista, listb
 def multiply(lista, listb):
-    lista, listb = process(lista, listb)
+    lista, listb = process2(lista, listb)
     return [a*b for a,b in zip(lista,listb)]
 def divide(lista, listb):
-    lista, listb = process(lista, listb)
-    return [a/b for a,b in zip(lista,listb)]
+    lista, listb = process2(lista, listb)
+    return [a/b if b != 0 else float('NaN') for a,b in zip(lista,listb)]
 def add(lista, listb):
-    lista, listb = process(lista, listb)
+    lista, listb = process2(lista, listb)
     return [a+b for a,b in zip(lista,listb)]
 def subtract(lista, listb):
-    lista, listb = process(lista, listb)
-    return [a+b for a,b in zip(lista,listb)]
+    lista, listb = process2(lista, listb)
+    return [a-b for a,b in zip(lista,listb)]
+def exp(lista):
+    import math
+    lista = process1(lista)
+    return [math.exp(x) for x in lista]
+def log(lista):
+    import math
+    lista = process1(lista)
+    return [math.log(x) if x > 0 else float('NaN') for x in lista]
+def power(lista, listb):
+    import math
+    lista, listb = process2(lista, listb)
+    return [a**b for a, b in zip(lista,listb)]
+def fWrite(stuff):
+    with open('log.txt', 'a') as f:
+        f.write(str(stuff)+'\n')
     
 partName = 'Block'
 gridPoints = [[0, 0], [10, 0], [10, 10], [0, 10], [0, 0]]
 
 materialName = 'Material-1'
 density = 2700.0
-elasticModulus = $E #12.0e9
+elasticModulus = 12.0e9
 poissonsRatio = $nu #0.3
-
-#****Mohr-Coulomb Plasticity
-#frictionAngle = 27.0
-#cohesion = 20000.0
-
-#*****Ductile Damage Plasticity
-#fractureStrain = 0.001
-#stressTriaxiality = 1
-#strainRate = 0.001
-#displacmentAtFailure = 1
-#yeildStress = 500000000
-#plasticStrain = 0
 
 #****Concrete Damage Plasticity
 dilationAngle = 10.000000E+00 #this will be same as UDEC
@@ -45,26 +54,36 @@ fb0fc0 = 1.16 #default
 variableK = 6.700000E-01 #default
 viscousParameter = 0 #default
 
-compressiveYeildStress = ($cys1, $cys2, $cys3)
-inelasticStrain = (0, $is2, 0.01)
-
-tensileYeildStress = ($tys1, $tys2, $tys3)
-crackingStrain = (0, $cs2, 0.01)
-
+inelasticStrain = divide(range(0, 11), 1e3)
+h = $h
+k = $k
+d = $d
+a = (d - k)/h**2
+compressiveYeildStress = add(multiply(a, power(subtract(inelasticStrain, h), 2)), k)
 compressiveDamageScaling = $cd
+E = elasticModulus
+ei = inelasticStrain[-1]
+# m = compressiveDamageScaling*(b + 2*E*ei - (b**2 + 4*a**2*ei**2 + 4*E*b*ei + 4*a*b*ei + 4*E*a*ei**2)**(1/2) + 2*a*ei)/(2*(E*ei**2 + a*ei**2))
+m = compressiveDamageScaling*((3*d*ei**2 + d*h**2 - 3*ei**2*k - math.sqrt(9*d**2*ei**4 + d**2*h**4 + 9*ei**4*k**2 - 8*d**2*ei*h**3 - 24*d**2*ei**3*h - 24*ei**3*h*k**2 + 22*d**2*ei**2*h**2 + 16*ei**2*h**2*k**2 - 18*d*ei**4*k + 4*E*d*ei*h**4 + 8*d*ei*h**3*k + 48*d*ei**3*h*k - 8*E*d*ei**2*h**3 + 4*E*d*ei**3*h**2 + 8*E*ei**2*h**3*k - 4*E*ei**3*h**2*k - 38*d*ei**2*h**2*k) - 4*d*ei*h + 4*ei*h*k + 2*E*ei*h**2)/(2*(2*d*ei**3 - 2*ei**3*k + E*ei**2*h**2 - 2*d*ei**2*h + 2*ei**2*h*k)))
+compressiveDamage = multiply(m, inelasticStrain)
+
+crackingStrain = divide(range(0, 11), 1e3)
+N = $N
+tLambda = $tLambda
+tensileYeildStress = multiply(N, exp(multiply(tLambda, crackingStrain)))
 tensileDamageScaling = $td
-
-compressiveDamage = multiply(compressiveDamageScaling, divide(inelasticStrain, add(divide(compressiveYeildStress,elasticModulus), inelasticStrain)))
-tensileDamage = multiply(tensileDamageScaling, divide(crackingStrain, add(divide(tensileYeildStress,elasticModulus), crackingStrain)))
-
+n = multiply(tensileDamageScaling, multiply(divide(log(subtract(1.005, divide(crackingStrain, add(divide(tensileYeildStress, elasticModulus), crackingStrain)))), log(add(1, crackingStrain))), -1))
+n[0] = elasticModulus/N
+n = min(n)
+tensileDamage = subtract(1, divide(1, power(add(1, crackingStrain), n)))
     
 #gravityMagnitude = -9.8
 
 sectionName = 'Block'
 sectionLocation = (5.0, 5.0, 0.0)
 
-simulationTime = 4
-numberOfSteps = 40
+simulationTime = 10
+numberOfSteps = 100
 
 try:
     from abaqusConstants import *
@@ -78,11 +97,9 @@ try:
     boundaries = {'Bottom': (5.0, 0.0, 0.0), 'Top':(5.0, 10.0, 0.0), 'Left':(0.0, 5.0, 0.0), 'Right':(10.0, 5.0, 0.0)}
 
     steps = ('Initial', 'Step-1', 'Step-2')
-    v = (((UNSET, SET, UNSET), ), ((UNSET, 0.1, UNSET), ), ((SET, UNSET, UNSET), ), ((UNSET, UNSET, UNSET), ))
+    v = (((UNSET, SET, UNSET), ), ((UNSET, -0.05, UNSET), ), ((SET, UNSET, UNSET), ), ((UNSET, UNSET, UNSET), ))
     vNames = (('Bottom', ), ('Top', ), ('Left', ), ('Right', ))
-    velocityTable = ((0.0, 1.0), (0.99, 1.0), (1.01, -1.0), (2.9, -1.0), (3.01, 1.0), (4, 1.0))
+    velocityTable = ((0.0, -1.0), (0.99, -1.0), (1.01, 1.0), (5.99, 1.0), (6.01, -1.0), (10.0, -1.0))
 
     largeDef=ON
 except ImportError: pass
-
-

@@ -1,9 +1,11 @@
+#Add cmd output and error handling
 sTime = 10
-mName = 'uniaxialCompression'
+mName = 'test'
 mSize = 10
 bSize = 1
 vorSeed = 1
-E = 2.7e-3
+rho = 2.7e-3
+E = 12e9
 nu = 0.3
 
 jks = 1e3
@@ -27,15 +29,15 @@ for i in range(len(velTable)-1):
 	amp = amp*-1
 vString += '{0} {1}'.format(velTable[-1], amp)
 
-rangeOffset = mSize/1000
+rangeOffset = bSize/1000
 bRange = '{0},{1} {0},{2}'.format(-rangeOffset, mSize+rangeOffset, rangeOffset)
 tRange = '{0},{1} {2},{1}'.format(-rangeOffset, mSize+rangeOffset, mSize-rangeOffset)
 lRange = '{0},{1} {0},{2}'.format(-rangeOffset, rangeOffset, mSize+rangeOffset)
-rRange = '{0},{1} {2},{1}'.format(msize-rangeOffset, mSize+rangeOffset, -rangeOffset)
+rRange = '{0},{1} {2},{1}'.format(mSize-rangeOffset, mSize+rangeOffset, -rangeOffset)
 
 
 UDECParameters = {
-	'$mName': mName, 
+	'$mName': '\''+mName+'\'', 
 	'$sTime': float(sTime),
 	'$nSteps': sTime *10,
 	'$mSize': mSize,
@@ -43,11 +45,12 @@ UDECParameters = {
 	'$round': float(bSize)/100,
 	'$edge': float(bSize)/100,
 	'$vSeed': 1,
-	'$E': E,
+	'$rho': rho,
 	'$bulk': E/(3*(1-2*nu)),
 	'$shear': E/(2*(1+nu)),
 	'$jks': jks,
-	'$jFriction': jFriciton,
+	'$jkn': jkn,
+	'$jFriction': jFriction,
 	'$jCohesion': jCohesion,
 	'$jTension': jTension,
 	'$jCohesion': jDilation,
@@ -61,8 +64,8 @@ UDECParameters = {
 with open('UDECModel.tpl', 'r') as templateFile:
 	template = templateFile.read()
 	for i in UDECParameters.keys():
-		template = template.replace(i, UDECParameters[i])
-	with open('{0}_Model.dat'.format(mName), w) as modelFile:
+		template = template.replace(i, str(UDECParameters[i]))
+	with open('{0}_Model.dat'.format(mName), 'w') as modelFile:
 		modelFile.write(template)
 		
 		
