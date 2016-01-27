@@ -40,22 +40,22 @@ def fWrite(stuff):
         f.write(str(stuff)+'\n')
     
 partName = 'Block'
-gridPoints = [[0, 0], [10, 0], [10, 10], [0, 10], [0, 0]]
+gridPoints = [[0, 0], [$$mSize, 0], [$$mSize, $$mSize], [0, $$mSize], [0, 0]]
 
 materialName = 'Material-1'
-density = 2700000.0
-elasticModulus = 12000000000.0
-poissonsRatio = 0.3 #0.3
+density = $$rho
+elasticModulus = $$E
+poissonsRatio = $$nu #0.3
 
 #****Concrete Damage Plasticity
-dilationAngle = 10 #this will be same as UDEC
+dilationAngle = $$dAngle #this will be same as UDEC
 eccentricity = 0.1 #default
 fb0fc0 = 1.16 #default
 variableK = 6.700000E-01 #default
 viscousParameter = 0 #default
 
 numStrainPoints = 100
-inelasticStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0308197036409)
+inelasticStrain = divide(range(0, numStrainPoints+1), numStrainPoints/$$maxStrain)
 h = $h
 k = $k
 d = $d
@@ -68,7 +68,7 @@ ei = inelasticStrain[-1]
 m = compressiveDamageScaling*((3*d*ei**2 + d*h**2 - 3*ei**2*k - math.sqrt(9*d**2*ei**4 + d**2*h**4 + 9*ei**4*k**2 - 8*d**2*ei*h**3 - 24*d**2*ei**3*h - 24*ei**3*h*k**2 + 22*d**2*ei**2*h**2 + 16*ei**2*h**2*k**2 - 18*d*ei**4*k + 4*E*d*ei*h**4 + 8*d*ei*h**3*k + 48*d*ei**3*h*k - 8*E*d*ei**2*h**3 + 4*E*d*ei**3*h**2 + 8*E*ei**2*h**3*k - 4*E*ei**3*h**2*k - 38*d*ei**2*h**2*k) - 4*d*ei*h + 4*ei*h*k + 2*E*ei*h**2)/(2*(2*d*ei**3 - 2*ei**3*k + E*ei**2*h**2 - 2*d*ei**2*h + 2*ei**2*h*k)))
 compressiveDamage = multiply(m, inelasticStrain)
 
-crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0308197036409)
+crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/$$maxStrain)
 N = $N
 tLambda = $tLambda
 tensileYeildStress = multiply(N, exp(multiply(tLambda, crackingStrain)))
@@ -81,9 +81,9 @@ tensileDamage = subtract(1, divide(1, power(add(1, crackingStrain), n)))
 #gravityMagnitude = -9.8
 
 sectionName = 'Block'
-sectionLocation = (10/2, 10/2, 0.0)
+sectionLocation = ($$mSize/2, $$mSize/2, 0.0)
 
-simulationTime = 10
+simulationTime = $$sTime
 numberOfSteps = simulationTime*10
 
 try:
@@ -95,12 +95,12 @@ try:
 
     instanceName = 'BLOCK-1'
 
-    boundaries = {'Bottom': (10/2, 0.0, 0.0), 'Top':(10/2, 10, 0.0), 'Left':(0.0, 10/2, 0.0), 'Right':(10, 10/2, 0.0)}
+    boundaries = {'Bottom': ($$mSize/2, 0.0, 0.0), 'Top':($$mSize/2, $$mSize, 0.0), 'Left':(0.0, $$mSize/2, 0.0), 'Right':($$mSize, $$mSize/2, 0.0)}
 
     steps = ('Initial', 'Step-1', 'Step-2')
-    v = (((UNSET, SET, UNSET), ), ((UNSET, -0.05, UNSET), ), ((SET, UNSET, UNSET), ), ((UNSET, UNSET, UNSET), ))
+    v = (((UNSET, SET, UNSET), ), ((UNSET, $$vel, UNSET), ), ((SET, UNSET, UNSET), ), ((UNSET, UNSET, UNSET), ))
     vNames = (('Bottom', ), ('Top', ), ('Left', ), ('Right', ))
-    velocityTable = ((0, -1)(0.0, -1), (2.0, 1)(5.0, 1), (7.0, -1)(10, -1))
+    velocityTable = $$vString
 
     largeDef=ON
 except ImportError: pass

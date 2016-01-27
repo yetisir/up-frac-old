@@ -644,7 +644,8 @@ if __name__ == '__main__':
             record = ' '.join(map(str, record))
             f.write(record + '\n')
 
-    createOstIn(H, ['S22', 'LE11'])
+    createOstIn(H, ['S22', 'LE11', 'LE22'])
+    os.system('python createParameters.py ' + fileName)
 
     # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
     # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])
