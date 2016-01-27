@@ -19,3 +19,5 @@ velTable = [1, 6, 10]
 vel = -0.05
 
 units = 'm-MPa-Gg-s'
+testMode = 't' #c, t, or all
+relVars = ['S22']

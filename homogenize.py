@@ -582,7 +582,7 @@ def angle(x1, y1, x2, y2):
 
 
 def createOstIn(H, parameters):
-    import ostIn
+    import ostrich.ostIn
     observations = ''
     numObservations = len(H.timeHistory)
     for i in range(numObservations):
@@ -610,7 +610,7 @@ def createOstIn(H, parameters):
             newObservation = 'obs{} \t\t{:10f} \t1 \toutput.dat \tOST_NULL \t{} \t\t{}\n'.format(obsNo, o, l, c)
             observations += newObservation
     with open(os.path.join('ostrich', 'OstIn.txt'), 'w') as f:
-        f.write(ostIn.topText+observations+ostIn.bottomText)
+        f.write(ostrich.ostIn.topText+observations+ostrich.ostIn.bottomText)
         
 if __name__ == '__main__':
     os.system('cls')
@@ -620,8 +620,11 @@ if __name__ == '__main__':
         fileName = clargs[1]
     #else: error message
     #add other cl args for centre and radius
-    revCentre = {'x':5, 'y':5}
-    revRadius = 4
+    module = __import__('UDEC.modelData.'+fileName+'_modelData', globals(), locals(), ['*'])
+    for k in dir(module):
+        locals()[k] = getattr(module, k)
+    revCentre = {'x':mSize/2, 'y':mSize/2}
+    revRadius = mSize/2-bSize*2
     
     H = Homogenize(fileName, revCentre, revRadius)
     stressHistory = H.stress()
@@ -644,8 +647,8 @@ if __name__ == '__main__':
             record = ' '.join(map(str, record))
             f.write(record + '\n')
 
-    createOstIn(H, ['S22', 'LE11', 'LE22'])
     os.system('python createParameters.py ' + fileName)
+    createOstIn(H, relVars)
 
     # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
     # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])

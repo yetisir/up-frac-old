@@ -55,10 +55,10 @@ variableK = 6.700000E-01 #default
 viscousParameter = 0 #default
 
 numStrainPoints = 100
-inelasticStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0308197036409)
+inelasticStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0226546490851)
 h = $h
 k = $k
-d = $d
+d = $dd
 a = (d - k)/h**2
 compressiveYeildStress = add(multiply(a, power(subtract(inelasticStrain, h), 2)), k)
 compressiveDamageScaling = $cd
@@ -68,11 +68,11 @@ ei = inelasticStrain[-1]
 m = compressiveDamageScaling*((3*d*ei**2 + d*h**2 - 3*ei**2*k - math.sqrt(9*d**2*ei**4 + d**2*h**4 + 9*ei**4*k**2 - 8*d**2*ei*h**3 - 24*d**2*ei**3*h - 24*ei**3*h*k**2 + 22*d**2*ei**2*h**2 + 16*ei**2*h**2*k**2 - 18*d*ei**4*k + 4*E*d*ei*h**4 + 8*d*ei*h**3*k + 48*d*ei**3*h*k - 8*E*d*ei**2*h**3 + 4*E*d*ei**3*h**2 + 8*E*ei**2*h**3*k - 4*E*ei**3*h**2*k - 38*d*ei**2*h**2*k) - 4*d*ei*h + 4*ei*h*k + 2*E*ei*h**2)/(2*(2*d*ei**3 - 2*ei**3*k + E*ei**2*h**2 - 2*d*ei**2*h + 2*ei**2*h*k)))
 compressiveDamage = multiply(m, inelasticStrain)
 
-crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0308197036409)
-N = $N
-tLambda = $tLambda
+crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0226546490851)
+N = 30000000.0
+tLambda = -250.0
 tensileYeildStress = multiply(N, exp(multiply(tLambda, crackingStrain)))
-tensileDamageScaling = $td
+tensileDamageScaling = 0.95
 n = multiply(tensileDamageScaling, multiply(divide(log(subtract(1.005, divide(crackingStrain, add(divide(tensileYeildStress, elasticModulus), crackingStrain)))), log(add(1, crackingStrain))), -1))
 n[0] = elasticModulus/N
 n = min(n)
@@ -83,7 +83,7 @@ tensileDamage = subtract(1, divide(1, power(add(1, crackingStrain), n)))
 sectionName = 'Block'
 sectionLocation = (10/2, 10/2, 0.0)
 
-simulationTime = 10
+simulationTime = 8
 numberOfSteps = simulationTime*10
 
 try:
@@ -98,9 +98,9 @@ try:
     boundaries = {'Bottom': (10/2, 0.0, 0.0), 'Top':(10/2, 10, 0.0), 'Left':(0.0, 10/2, 0.0), 'Right':(10, 10/2, 0.0)}
 
     steps = ('Initial', 'Step-1', 'Step-2')
-    v = (((UNSET, SET, UNSET), ), ((UNSET, -0.05, UNSET), ), ((SET, UNSET, UNSET), ), ((UNSET, UNSET, UNSET), ))
+    v = (((UNSET, SET, UNSET), ), ((UNSET, 0.05, UNSET), ), ((SET, UNSET, UNSET), ), ((UNSET, UNSET, UNSET), ))
     vNames = (('Bottom', ), ('Top', ), ('Left', ), ('Right', ))
-    velocityTable = ((0, -1)(0.0, -1), (2.0, 1)(5.0, 1), (7.0, -1)(10, -1))
+    velocityTable = ((0, -1), (3.2, -1), (4.8, 1), (8, 1))
 
     largeDef=ON
 except ImportError: pass

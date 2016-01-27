@@ -15,7 +15,9 @@ jCohesion = 0.1
 jTension = 100
 jDilation = 10
 
-velTable = [1, 6, 10]
+velTable = [1, 6, sTime]
 vel = -0.05
 
 units = 'm-MPa-Gg-s'
+testMode = 'all' #c, t, or all
+relVars = ['S22']

@@ -15,7 +15,7 @@ BeginParams
 #parameter	init.	low	    high	tx_in  tx_ost	tx_out
 $h          0.008   0.001   0.01    none    none    none
 $k          90e6    50e6    200e6   none    none    none
-$d          20e6    10e6    100e6   none    none    none
+$dd         20e6    10e6    100e6   none    none    none
 $cd         0.4     0       0.5    none    none    none
 $N		    30e6    10e6    100e6   none    none    none
 $tLambda    -270    -1e3    -100    none    none    none
