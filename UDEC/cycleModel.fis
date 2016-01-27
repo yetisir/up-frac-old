@@ -345,46 +345,10 @@ def cycleModel
 	status = write(domainData, dCounter)
 	status = close
 	
-	
+	fName = 'savFiles\'+modelName+'.sav'
+	command
+		save fName
+	endCommand
 end
 
 cycleModel
-
-			;cc1 = imem(ci+$KL1)
-			;cb1 = imem(ci+$KB1)
-			;loop while imem(cc1) # 4
-			;	if imem(cc1) = 5
-			;		if imem(cc1+$KB1) = cb1
-			;			cc1 = imem(cc1+$KL1)
-			;		else
-			;			if imem(cc1+$KB2) = cb1
-			;				cc1 = imem(cc1+$KL2)
-			;			endif
-			;		endif
-			;	endif
-			;endloop
-			;cc2 = string(imem(cc1+$KR))
-			;cc1 = string(cc1)
-			
-			;contactCorners = cc1+','+cc2
-			
-			;cc1 = imem(ci+$KL2)
-			;cb1 = imem(ci+$KB2)
-			;loop while imem(cc1) # 4
-			;	if imem(cc1) = 5
-			;			fff1 = imem(cc1+$KB1)
-			;			fff2 = imem(cc1+$KB2)
-			;		if imem(cc1+$KB1) = cb1
-			;			cc1 = imem(cc1+$KL1)
-			;		else
-			;			if imem(cc1+$KB2) = cb1
-			;				cc1 = imem(cc1+$KL2)
-			;			endif
-			;		endif
-			;	endif
-			;endloop
-			;cc2 = string(imem(cc1+$KR))
-			;cc1 = string(cc1)
-			
-			;contactCorners = contactCorners+','+cc1+','+cc2
-
