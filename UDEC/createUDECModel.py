@@ -11,9 +11,9 @@ for k in dir(module):
 
 accelTime = velTable[-1]/10
 amp = -1
-vString = '0 {0}'.format(amp)
+vString = '0 {0} '.format(amp)
 for i in range(len(velTable)-1):
-    vString += '{0} {1} {2} {3}'.format(velTable[i]-accelTime, amp, velTable[i]+accelTime, amp*-1)
+    vString += '{0} {1} {2} {3} '.format(velTable[i]-accelTime, amp, velTable[i]+accelTime, amp*-1)
     amp = amp*-1
 vString += '{0} {1}'.format(velTable[-1], amp)
 
