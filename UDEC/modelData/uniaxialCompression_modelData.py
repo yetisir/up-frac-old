@@ -1,6 +1,6 @@
 #Add cmd output and error handling
 sTime = 10
-mName = 'test'
+mName = 'uniaxialCompression'
 mSize = 10
 bSize = 1
 vorSeed = 1
