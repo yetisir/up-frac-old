@@ -40,7 +40,7 @@ UDECParameters = {
     '$jFriction': jFriction,
     '$jCohesion': jCohesion,
     '$jTension': jTension,
-    '$jCohesion': jDilation,
+    '$jDilation': jDilation,
     '$vTable': vString,
     '$bRange': bRange,
     '$tRange': tRange,
