@@ -1,0 +1,34 @@
+config fluid
+set flow clear steady off
+round 1E-2
+edge 2E-2
+block 0,0 0,10 10,10 10,0
+crack (0,0) (5,5) join
+arc (5,5) (6,5) 360 24
+vor edge 0.5 round 0.01
+ jdelete
+delete range annulus (5,5) 0 1
+gen edge 0.5
+zone model elastic density 0.0027 bulk 9999.999999999998 shear 4615.384615384615
+group joint 'User:ID75'
+joint model area jks 1000.0 jkn 10000000.0 jfriction 30 jcohesion 0.1 jtension 100 jdilation 10 ares 1e-4 azero 3e-4 range group 'User:ID75'
+set jcondf joint model area jks=1000.0 jkn=10000000.0 jfriction=30 jcohesion=0.1 jtension=100 jdilation=10 ares=1e-4 azero=3e-4
+
+boundary xvelocity 0 range -0.5,0.1638 -0.1839,10.1207
+boundary xvelocity 0 range 9.8678,10.4368 -0.2945,10.1681
+boundary yvelocity 0 range -0.6106,10.5632 -0.3736,6.897E-2
+	;struct gen begin 4.9273,5.9904 end 4.9273,5.9904 max=100.0 min=0.02 mat 1
+	;struct apply pressure 50 0 range 6.4698277 3.4511495 3.2931035 6.533046
+	;property mat 1 st_density 1.5E-3 st_prat 0.15 st_ycomp 40 st_yield 2.006E-5 st_ymod 21 st_yresid 10 st_thexp 1E-5 st_area 1 st_inertia 8.333E-2 st_shape 0.8333 st_spacing 1 st_thickness 1 st_width 1 if_friction 20 if_cohesion 1 if_tensile 100 if_dilation 10 if_kn 1E6 if_ks 1E6
+table 1 delete
+table 1 0 0 10 1 20 1
+table 2 delete
+table 2 0 0 10 0 20 1
+boundary stress 0.0,0.0,20.0 history=table 1 range -0.421,10.342 9.9152,10.3261
+set flow=off
+cycle time 10
+set flow=on
+fluid density=0.0010
+fluid bulkw=2000.0
+pfix pressure 20  history=table 2 range 4.4784,5.5532 4.5891,5.3003
+cycle ftime 10
