@@ -26,7 +26,7 @@ rRange = '{0},{1} {2},{1}'.format(mSize-rangeOffset, mSize+rangeOffset, -rangeOf
 UDECParameters = {
     '$mName': '\''+mName+'\'', 
     '$sTime': float(sTime),
-    '$nSteps': sTime *10,
+    '$nSteps': 50, #depending on the number of contacts, the memory is exceeded with too many steps. future iteration of cycleModel.fis shall write to file after each step rather than after all steps to reduce the memory load. 
     '$mSize': mSize,
     '$bSize': bSize,
     '$round': float(bSize)/100,
@@ -52,6 +52,5 @@ with open('UDECModel.tpl', 'r') as templateFile:
     template = templateFile.read()
     for i in UDECParameters.keys():
         template = template.replace(i, str(UDECParameters[i]))
-    import os
     with open('{0}_Model.dat'.format(mName), 'w') as modelFile:
         modelFile.write(template)

@@ -23,7 +23,7 @@ table 1 $vTable
 boundary yvelocity 0 range $bRange
 
 ;*****Left Boundary
-boundary xvelocity 0 range $lRange
+;boundary xvelocity 0 range $lRange
 
 ;*****Right Boundary
 ;boundary xvelocity 0 history=table 1 range $rRange

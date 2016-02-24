@@ -2,7 +2,7 @@
 sTime = 10
 mName = 'test'
 mSize = 10
-bSize = 1
+bSize = 0.5
 vorSeed = 1
 rho = 2.7e-3
 E = 12e3
@@ -15,7 +15,7 @@ jCohesion = 0.1
 jTension = 100
 jDilation = 10
 
-velTable = [1, 6, 10]
+velTable = [10, 20]
 vel = -0.05
 
 units = 'm-MPa-Gg-s'
