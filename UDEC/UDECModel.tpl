@@ -9,7 +9,7 @@ config
 round $round
 edge $edge
 block 0,0 0,$mSize $mSize,$mSize $mSize,0
-vor edge $bSize round $round
+vor edge $bSize round $round seed $vSeed
  jdelete
 gen edge $bSize
 zone model elastic density $rho bulk $bulk shear $shear

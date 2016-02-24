@@ -1,5 +1,5 @@
 #Add cmd output and error handling
-sTime = 20
+sTime = 10
 mName = 'voronoiTension'
 mSize = 10
 bSize = 0.5
@@ -12,10 +12,10 @@ jks = 1e3
 jkn = 1e7
 jFriction = 30
 jCohesion = 0.1
-jTension = 100
+jTension = 10
 jDilation = 10
 
-velTable = [10, 20]
+velTable = [5, 10]
 vel = -0.01
 
 units = 'm-MPa-Gg-s'

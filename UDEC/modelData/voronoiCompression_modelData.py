@@ -12,11 +12,11 @@ jks = 1e3
 jkn = 1e7
 jFriction = 30
 jCohesion = 0.1
-jTension = 100
+jTension = 10
 jDilation = 10
 
 velTable = [10, 20]
-vel = -0.01
+vel = 0.01
 
 units = 'm-MPa-Gg-s'
 testMode = 'c' #c, t, or all
