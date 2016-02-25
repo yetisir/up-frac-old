@@ -16,7 +16,7 @@ jTension = 10
 jDilation = 10
 
 velTable = [5, 10]
-vel = -0.01
+vel = -0.001
 
 units = 'm-MPa-Gg-s'
 testMode = 't' #c, t, or all

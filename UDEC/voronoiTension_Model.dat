@@ -29,7 +29,7 @@ boundary yvelocity 0 range -0.0005,10.0005 -0.0005,0.0005
 ;boundary xvelocity 0 history=table 1 range 9.9995,10.0005 -0.0005,10.0005
 
 ;*****Top Boundary
-boundary yvelocity -0.01 history=table 1 range -0.0005,10.0005 9.9995,10.0005
+boundary yvelocity -0.001 history=table 1 range -0.0005,10.0005 9.9995,10.0005
 
 
 call cycleModel.fis
