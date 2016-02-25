@@ -46,7 +46,8 @@ UDECParameters = {
     '$tRange': tRange,
     '$lRange': lRange,
     '$rRange': rRange,
-    '$vel': vel}
+    '$vel': vel
+    '$cStress': confiningStress}
     
 with open('UDECModel.tpl', 'r') as templateFile:
     template = templateFile.read()

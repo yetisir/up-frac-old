@@ -24,9 +24,11 @@ boundary yvelocity 0 range $bRange
 
 ;*****Left Boundary
 ;boundary xvelocity 0 range $lRange
+boundary stress $cStress 0 0 $lRange
 
 ;*****Right Boundary
 ;boundary xvelocity 0 history=table 1 range $rRange
+boundary stress $cStress 0 0 $rRange
 
 ;*****Top Boundary
 boundary yvelocity $vel history=table 1 range $tRange

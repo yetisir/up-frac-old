@@ -18,6 +18,8 @@ jDilation = 10
 velTable = [10, 20]
 vel = 0.01
 
+confiningStress = 0
+
 units = 'm-MPa-Gg-s'
 testMode = 'c' #c, t, or all
 relVars = ['S22']
