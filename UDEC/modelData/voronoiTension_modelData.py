@@ -18,7 +18,7 @@ jDilation = 10
 velTable = [5, 10]
 vel = -0.001
 
-confiningStress = 0
+confiningStress = 10
 
 units = 'm-MPa-Gg-s'
 testMode = 't' #c, t, or all

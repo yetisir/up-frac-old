@@ -9,13 +9,20 @@ for k in dir(module):
     locals()[k] = getattr(module, k)
 #from modelData.test_modelData import *
 
-accelTime = velTable[-1]/10
+accelTime_t = velTable_t[-1]/10
+accelTime_c = velTable_c[-1]/10
 amp = -1
-vString = '0 {0} '.format(amp)
-for i in range(len(velTable)-1):
-    vString += '{0} {1} {2} {3} '.format(velTable[i]-accelTime, amp, velTable[i]+accelTime, amp*-1)
+vString_t = '0 {0} '.format(amp)
+vString_c = '0 {0} '.format(amp)
+for i in range(len(velTable_t)-1):
+    vString_t += '{0} {1} {2} {3} '.format(velTable_t[i]-accelTime_t, amp, velTable_t[i]+accelTime_t, amp*-1)
     amp = amp*-1
-vString += '{0} {1}'.format(velTable[-1], amp)
+amp = -1
+for i in range(len(velTable_c)-1):
+    vString_c += '{0} {1} {2} {3} '.format(velTable_c[i]-accelTime_c, amp, velTable_c[i]+accelTime_c, amp*-1)
+    amp = amp*-1
+vString_t += '{0} {1}'.format(velTable_t[-1], amp)
+vString_c += '{0} {1}'.format(velTable_c[-1], amp)
 
 rangeOffset = bSize/1000
 bRange = '{0},{1} {0},{2}'.format(-rangeOffset, mSize+rangeOffset, rangeOffset)
@@ -23,9 +30,10 @@ tRange = '{0},{1} {2},{1}'.format(-rangeOffset, mSize+rangeOffset, mSize-rangeOf
 lRange = '{0},{1} {0},{2}'.format(-rangeOffset, rangeOffset, mSize+rangeOffset)
 rRange = '{0},{1} {2},{1}'.format(mSize-rangeOffset, mSize+rangeOffset, -rangeOffset)
 
+
 UDECParameters = {
-    '$mName': '\''+mName+'\'', 
-    '$sTime': float(sTime),
+    '$mName': '\''+mName+'(t)'+'\'', 
+    '$sTime': float(sTime_t),
     '$nSteps': 50, #depending on the number of contacts, the memory is exceeded with too many steps. future iteration of cycleModel.fis shall write to file after each step rather than after all steps to reduce the memory load. 
     '$mSize': mSize,
     '$bSize': bSize,
@@ -41,17 +49,29 @@ UDECParameters = {
     '$jCohesion': jCohesion,
     '$jTension': jTension,
     '$jDilation': jDilation,
-    '$vTable': vString,
+    '$vTable': vString_t,
     '$bRange': bRange,
     '$tRange': tRange,
     '$lRange': lRange,
     '$rRange': rRange,
-    '$vel': vel
+    '$vel': vel_t,
     '$cStress': confiningStress}
     
 with open('UDECModel.tpl', 'r') as templateFile:
     template = templateFile.read()
     for i in UDECParameters.keys():
         template = template.replace(i, str(UDECParameters[i]))
-    with open('{0}_Model.dat'.format(mName), 'w') as modelFile:
+    with open('{0}(t)_Model.dat'.format(mName), 'w') as modelFile:
+        modelFile.write(template)
+        
+UDECParameters['$sTime'] = float(sTime_c)
+UDECParameters['$vTable'] = vString_c
+UDECParameters['$vel'] = vel_c
+UDECParameters['$mName'] = '\''+mName+'(c)'+'\''
+        
+with open('UDECModel.tpl', 'r') as templateFile:
+    template = templateFile.read()
+    for i in UDECParameters.keys():
+        template = template.replace(i, str(UDECParameters[i]))
+    with open('{0}(c)_Model.dat'.format(mName), 'w') as modelFile:
         modelFile.write(template)
