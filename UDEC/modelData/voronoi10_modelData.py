@@ -15,7 +15,7 @@ jCohesion = 0.1
 jTension = 10
 jDilation = 10
 
-confiningStress = 0
+confiningStress = -10
 
 units = 'm-MPa-Gg-s'
 relVars = ['S22']

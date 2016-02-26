@@ -10,18 +10,19 @@ for k in dir(module):
 #from modelData.test_modelData import *
 
 accelTime_t = velTable_t[-1]/10
-accelTime_c = velTable_c[-1]/10
 amp = -1
 vString_t = '0 {0} '.format(amp)
-vString_c = '0 {0} '.format(amp)
 for i in range(len(velTable_t)-1):
     vString_t += '{0} {1} {2} {3} '.format(velTable_t[i]-accelTime_t, amp, velTable_t[i]+accelTime_t, amp*-1)
     amp = amp*-1
+vString_t += '{0} {1}'.format(velTable_t[-1], amp)
+
+accelTime_c = velTable_c[-1]/10
 amp = -1
+vString_c = '0 {0} '.format(amp)
 for i in range(len(velTable_c)-1):
     vString_c += '{0} {1} {2} {3} '.format(velTable_c[i]-accelTime_c, amp, velTable_c[i]+accelTime_c, amp*-1)
     amp = amp*-1
-vString_t += '{0} {1}'.format(velTable_t[-1], amp)
 vString_c += '{0} {1}'.format(velTable_c[-1], amp)
 
 rangeOffset = bSize/1000
