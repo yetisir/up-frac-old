@@ -1,0 +1,37 @@
+def modelParameters
+	modelName = 'voronoi5(c)'
+	simulationTime = 20.0
+	numberOfSteps = 50
+end	
+modelParameters
+
+config
+round 0.005
+edge 0.005
+block 0,0 0,10 10,10 10,0
+vor edge 0.5 round 0.005 seed 1
+ jdelete
+gen edge 0.5
+zone model elastic density 0.0027 bulk 9999.999999999998 shear 4615.384615384615
+group joint 'User:ID75'
+joint model area jks 1000.0 jkn 10000000.0 jfriction 30 jcohesion 0.1 jtension 10 jdilation 10 range group 'User:ID75'
+set jcondf joint model area jks=1000.0 jkn=10000000.0 jfriction=30 jcohesion=0.1 jtension=10 jdilation=10
+table 1 delete
+table 1 0 -1 8.0 -1 12.0 1 20 1
+
+;*****Bottom Boundary
+boundary yvelocity 0 range -0.0005,10.0005 -0.0005,0.0005
+
+;*****Left Boundary
+;boundary xvelocity 0 range -0.0005,0.0005 -0.0005,10.0005
+boundary stress -5 0 0 range -0.0005,0.0005 -0.0005,10.0005
+
+;*****Right Boundary
+;boundary xvelocity 0 history=table 1 range 9.9995,10.0005 -0.0005,10.0005
+boundary stress -5 0 0 range 9.9995,10.0005 -0.0005,10.0005
+
+;*****Top Boundary
+boundary yvelocity 0.01 history=table 1 range -0.0005,10.0005 9.9995,10.0005
+
+
+call cycleModel.fis
