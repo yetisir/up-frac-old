@@ -4212,7 +4212,7 @@ Set-4, 6, 6
 ** 
 ** Name: Predefined Field-2   Type: Geostatic stress
 *Initial Conditions, type=STRESS, GEOSTATIC
-Set-1, 1e+07, 0., 9.8e+06, 20., 0.4, 0.4
+Set-1, 1e+07, 0., 9.8e+06, 20., 0.2, 0.2
 ** ----------------------------------------------------------------
 ** 
 ** STEP: Step-1

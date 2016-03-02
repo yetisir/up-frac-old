@@ -103,7 +103,7 @@ def applyBoundaryCondition(instance):
         # sigma12=20.0e4, sigma13=None, sigma23=None)
     mdb.models['Model-1'].GeostaticStress(name='Predefined Field-2', region=region, 
         stressMag1=10000000.0, vCoord1=0.0, stressMag2=9800000.0, vCoord2=20.0, 
-        lateralCoeff1=0.4, lateralCoeff2=None)    
+        lateralCoeff1=0.2, lateralCoeff2=None)    
 
     edges1 = a.instances[instance].edges.findAt(((0, 10, 0), ))
     region = a.Set(edges=edges1, name='Set-2')

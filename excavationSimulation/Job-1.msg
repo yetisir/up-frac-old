@@ -1,6 +1,6 @@
 1
 
-   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:17:50
+   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:50:19
    For use by  under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -81,23 +81,92 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.594E+05   TIME AVG. FORCE       1.594E+05
- LARGEST RESIDUAL FORCE            -1.562E-07   AT NODE        823   DOF  2
+ AVERAGE FORCE                      3.783E+05   TIME AVG. FORCE       3.783E+05
+ LARGEST RESIDUAL FORCE            -2.621E+05   AT NODE        509   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.638E-02   AT NODE        452   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.657E-02   AT NODE        452   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.638E-02   AT NODE        452   DOF  2
+ LARGEST CORRECTION TO DISP.       -1.657E-02   AT NODE        452   DOF  2
    INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      3.714E+05   TIME AVG. FORCE       3.714E+05
+ LARGEST RESIDUAL FORCE             1.545E+05   AT NODE        931   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.650E-02   AT NODE         55   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.215E-04   AT NODE        896   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      3.713E+05   TIME AVG. FORCE       3.713E+05
+ LARGEST RESIDUAL FORCE            -1.337E+04   AT NODE        307   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.649E-02   AT NODE        452   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.041E-05   AT NODE        931   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      3.713E+05   TIME AVG. FORCE       3.713E+05
+ LARGEST RESIDUAL FORCE              335.       AT NODE       1609   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.649E-02   AT NODE        452   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.513E-06   AT NODE        839   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
 
  TIME INCREMENT COMPLETED   1.00    ,  FRACTION OF STEP COMPLETED   1.00    
  STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         1.00    
 1
 
-   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:17:51
+   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:50:19
    For use by  under license from Dassault Systemes or its subsidiary.
 
                                                                                  
@@ -208,9 +277,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
@@ -219,9 +288,9 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
 
@@ -241,12 +310,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.576E+06   TIME AVG. FORCE       1.576E+06
- LARGEST RESIDUAL FORCE            -1.301E+06   AT NODE          4   DOF  1
+ AVERAGE FORCE                      1.689E+06   TIME AVG. FORCE       1.689E+06
+ LARGEST RESIDUAL FORCE             2.343E+06   AT NODE        661   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.239E-02   AT NODE         65   DOF  2
+ LARGEST INCREMENT OF DISP.        -3.248E-02   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.239E-02   AT NODE         65   DOF  2
+ LARGEST CORRECTION TO DISP.       -3.248E-02   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -264,12 +333,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.574E+06   TIME AVG. FORCE       1.574E+06
- LARGEST RESIDUAL FORCE             2.893E+05   AT NODE        502   DOF  2
+ AVERAGE FORCE                      1.680E+06   TIME AVG. FORCE       1.680E+06
+ LARGEST RESIDUAL FORCE            -3.234E+05   AT NODE          4   DOF  1
    INSTANCE: BLOCK-1                                                                         
  LARGEST INCREMENT OF DISP.        -3.307E-02   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.297E-03   AT NODE          6   DOF  2
+ LARGEST CORRECTION TO DISP.       -1.236E-03   AT NODE          6   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -287,12 +356,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      1.573E+06   TIME AVG. FORCE       1.573E+06
- LARGEST RESIDUAL FORCE             2.936E+04   AT NODE       1662   DOF  2
+ AVERAGE FORCE                      1.679E+06   TIME AVG. FORCE       1.679E+06
+ LARGEST RESIDUAL FORCE            -2.673E+04   AT NODE          4   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.315E-02   AT NODE         65   DOF  2
+ LARGEST INCREMENT OF DISP.        -3.313E-02   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.326E-04   AT NODE        403   DOF  2
+ LARGEST CORRECTION TO DISP.       -1.928E-04   AT NODE        403   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -310,12 +379,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      1.573E+06   TIME AVG. FORCE       1.573E+06
- LARGEST RESIDUAL FORCE             1.260E+03   AT NODE        661   DOF  1
+ AVERAGE FORCE                      1.679E+06   TIME AVG. FORCE       1.679E+06
+ LARGEST RESIDUAL FORCE             -741.       AT NODE          4   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.315E-02   AT NODE         65   DOF  2
+ LARGEST INCREMENT OF DISP.        -3.314E-02   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.211E-05   AT NODE          4   DOF  1
+ LARGEST CORRECTION TO DISP.       -1.912E-05   AT NODE        403   DOF  2
    INSTANCE: BLOCK-1                                                                         
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
@@ -325,41 +394,7 @@
  ***NOTE: THE TIME INTEGRATION ACCURACY TOLERANCE HAS BEEN EXCEEDED.
 
 
-  INCREMENT     1 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  9.805E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      3.737E+05   TIME AVG. FORCE       3.737E+05
- LARGEST RESIDUAL FORCE             3.399E-08   AT NODE       1011   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.290E-03   AT NODE         65   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -5.290E-03   AT NODE         65   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.280E+08 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  9.805E-02,  FRACTION OF STEP COMPLETED  9.805E-02
- STEP TIME COMPLETED       9.805E-02,  TOTAL TIME COMPLETED         1.10    
-
-
-  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.805E-02
+  INCREMENT     1 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  0.105    
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -375,12 +410,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      6.424E+05   TIME AVG. FORCE       5.081E+05
- LARGEST RESIDUAL FORCE            -7.474E+04   AT NODE          4   DOF  1
+ AVERAGE FORCE                      4.936E+05   TIME AVG. FORCE       4.936E+05
+ LARGEST RESIDUAL FORCE            -3.138E+04   AT NODE        116   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.795E-03   AT NODE        827   DOF  2
+ LARGEST INCREMENT OF DISP.        -5.656E-03   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.079E-02   AT NODE         72   DOF  2
+ LARGEST CORRECTION TO DISP.       -5.656E-03   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -393,17 +428,74 @@
        ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
        ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      4.934E+05   TIME AVG. FORCE       4.934E+05
+ LARGEST RESIDUAL FORCE              353.       AT NODE        494   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -5.656E-03   AT NODE         65   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        7.387E-06   AT NODE         13   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.462E+08 AND OCCURS AT NODE         72 INSTANCE BLOCK-1                                                                         
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  0.105    ,  FRACTION OF STEP COMPLETED  0.105    
+ STEP TIME COMPLETED       0.105    ,  TOTAL TIME COMPLETED         1.10    
+
+
+  INCREMENT     2 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.105    
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      7.743E+05   TIME AVG. FORCE       6.339E+05
+ LARGEST RESIDUAL FORCE            -8.291E+04   AT NODE          4   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -7.313E-03   AT NODE        827   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.156E-02   AT NODE         72   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      6.422E+05   TIME AVG. FORCE       5.080E+05
- LARGEST RESIDUAL FORCE            -3.915E+03   AT NODE          4   DOF  1
+ AVERAGE FORCE                      7.740E+05   TIME AVG. FORCE       6.337E+05
+ LARGEST RESIDUAL FORCE             4.190E+03   AT NODE       1662   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.796E-03   AT NODE        827   DOF  2
+ LARGEST INCREMENT OF DISP.        -7.313E-03   AT NODE        827   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -4.829E-05   AT NODE          4   DOF  1
+ LARGEST CORRECTION TO DISP.       -5.987E-05   AT NODE          4   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -421,38 +513,25 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      6.422E+05   TIME AVG. FORCE       5.079E+05
- LARGEST RESIDUAL FORCE             -23.2       AT NODE          4   DOF  1
+ AVERAGE FORCE                      7.740E+05   TIME AVG. FORCE       6.337E+05
+ LARGEST RESIDUAL FORCE             -30.3       AT NODE        501   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.796E-03   AT NODE        827   DOF  2
+ LARGEST INCREMENT OF DISP.        -7.313E-03   AT NODE        827   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.892E-06   AT NODE          4   DOF  1
+ LARGEST CORRECTION TO DISP.       -2.078E-06   AT NODE          4   DOF  1
    INSTANCE: BLOCK-1                                                                         
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   2.313E+07 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   2.466E+07 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
 
  ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  9.805E-02,  FRACTION OF STEP COMPLETED  0.196    
- STEP TIME COMPLETED       0.196    ,  TOTAL TIME COMPLETED         1.20    
+ TIME INCREMENT COMPLETED  0.105    ,  FRACTION OF STEP COMPLETED  0.209    
+ STEP TIME COMPLETED       0.209    ,  TOTAL TIME COMPLETED         1.21    
 
 
-  INCREMENT     3 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.805E-02
-
- ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
-             AT 6 POINTS
- 
-
- ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
-          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
-
- ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
-             WITH A TIME INCREMENT OF 2.45128E-02
-
-
-  INCREMENT     3 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  2.451E-02
+  INCREMENT     3 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  0.105    
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -466,45 +545,21 @@
        ELAPSED WALLCLOCK TIME (SEC) =          0
  
 
- ***WARNING: THE SYSTEM MATRIX HAS 9 NEGATIVE EIGENVALUES.
+ ***WARNING: THE SYSTEM MATRIX HAS 11 NEGATIVE EIGENVALUES.
 
      NEGATIVE EIGENVALUES MEAN THAT THE SYSTEM MATRIX IS NOT 
      POSITIVE DEFINITE:
      FOR EXAMPLE, A BIFURCATION (BUCKLING) LOAD MAY HAVE BEEN EXCEEDED.
 
- ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
-             AT 1 POINTS
- 
-
- ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
-          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
-
- ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
-             WITH A TIME INCREMENT OF 6.12819E-03
-
-
-  INCREMENT     3 STARTS. ATTEMPT NUMBER  3, TIME INCREMENT  6.128E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      6.480E+05   TIME AVG. FORCE       5.546E+05
- LARGEST RESIDUAL FORCE            -2.158E+04   AT NODE        662   DOF  1
+ AVERAGE FORCE                      1.450E+06   TIME AVG. FORCE       9.057E+05
+ LARGEST RESIDUAL FORCE             1.600E+08   AT NODE       1062   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.317E-04   AT NODE       1294   DOF  2
+ LARGEST INCREMENT OF DISP.        -7.295E-02   AT NODE       1062   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -5.317E-04   AT NODE       1294   DOF  2
+ LARGEST CORRECTION TO DISP.       -6.313E-02   AT NODE       1062   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -514,759 +569,24 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      6.480E+05   TIME AVG. FORCE       5.546E+05
- LARGEST RESIDUAL FORCE              3.38       AT NODE        409   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.317E-04   AT NODE       1294   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        6.885E-07   AT NODE        409   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -5.795E+05 AND OCCURS AT NODE         72 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    7.660E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  6.128E-03,  FRACTION OF STEP COMPLETED  0.202    
- STEP TIME COMPLETED       0.202    ,  TOTAL TIME COMPLETED         1.20    
-
-
-  INCREMENT     4 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.660E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      6.663E+05   TIME AVG. FORCE       5.826E+05
- LARGEST RESIDUAL FORCE             -25.6       AT NODE          4   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.799E-04   AT NODE       1503   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.586E-04   AT NODE         72   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    4.710E-10
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -7.871E+05 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    9.575E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  7.660E-03,  FRACTION OF STEP COMPLETED  0.210    
- STEP TIME COMPLETED       0.210    ,  TOTAL TIME COMPLETED         1.21    
-
-
-  INCREMENT     5 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.575E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
        ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      6.922E+05   TIME AVG. FORCE       6.045E+05
- LARGEST RESIDUAL FORCE             -27.4       AT NODE       1660   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.993E-04   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.825E-04   AT NODE         71   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    9.351E-10
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.087E+06 AND OCCURS AT NODE        565 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.197E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  9.575E-03,  FRACTION OF STEP COMPLETED  0.219    
- STEP TIME COMPLETED       0.219    ,  TOTAL TIME COMPLETED         1.22    
-
-
-  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.197E-02
-
- ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
-             AT 3 POINTS
- 
-
- ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
-          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
-
- ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
-             WITH A TIME INCREMENT OF 2.99228E-03
-
-
-  INCREMENT     6 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  2.992E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      6.948E+05   TIME AVG. FORCE       6.195E+05
- LARGEST RESIDUAL FORCE             -2.99       AT NODE          4   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -2.977E-04   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.676E-05   AT NODE       1641   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -9.093E-12
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -9.807E+04 AND OCCURS AT NODE        383 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    3.740E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.992E-03,  FRACTION OF STEP COMPLETED  0.222    
- STEP TIME COMPLETED       0.222    ,  TOTAL TIME COMPLETED         1.22    
-
-
-  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.740E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.019E+05   TIME AVG. FORCE       6.313E+05
- LARGEST RESIDUAL FORCE            -0.265       AT NODE         11   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.830E-04   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.777E-05   AT NODE         72   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    1.762E-12
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   2.873E+05 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    4.675E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.740E-03,  FRACTION OF STEP COMPLETED  0.226    
- STEP TIME COMPLETED       0.226    ,  TOTAL TIME COMPLETED         1.23    
-
-
-  INCREMENT     8 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.675E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.105E+05   TIME AVG. FORCE       6.412E+05
- LARGEST RESIDUAL FORCE              1.16       AT NODE        662   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -4.952E-04   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.417E-05   AT NODE        467   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -9.877E-12
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.620E+05 AND OCCURS AT NODE        635 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    5.844E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  4.675E-03,  FRACTION OF STEP COMPLETED  0.231    
- STEP TIME COMPLETED       0.231    ,  TOTAL TIME COMPLETED         1.23    
-
-
-  INCREMENT     9 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.844E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.229E+05   TIME AVG. FORCE       6.503E+05
- LARGEST RESIDUAL FORCE             -223.       AT NODE        503   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.433E-04   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -5.897E-05   AT NODE        639   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -2.082E-09
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   4.527E+05 AND OCCURS AT NODE       1641 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    7.305E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.844E-03,  FRACTION OF STEP COMPLETED  0.237    
- STEP TIME COMPLETED       0.237    ,  TOTAL TIME COMPLETED         1.24    
-
-
-  INCREMENT    10 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.305E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.433E+05   TIME AVG. FORCE       6.596E+05
- LARGEST RESIDUAL FORCE             2.192E+03   AT NODE          8   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.379E-04   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.018E-04   AT NODE         71   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -2.954E-08
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -8.240E+05 AND OCCURS AT NODE        627 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    9.132E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  7.305E-03,  FRACTION OF STEP COMPLETED  0.244    
- STEP TIME COMPLETED       0.244    ,  TOTAL TIME COMPLETED         1.24    
-
-
-  INCREMENT    11 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.132E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.600E+05   TIME AVG. FORCE       6.687E+05
- LARGEST RESIDUAL FORCE              81.9       AT NODE        502   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.088E-03   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.363E-04   AT NODE        384   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -1.283E-09
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -9.964E+05 AND OCCURS AT NODE       1641 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.141E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  9.132E-03,  FRACTION OF STEP COMPLETED  0.253    
- STEP TIME COMPLETED       0.253    ,  TOTAL TIME COMPLETED         1.25    
-
-
-  INCREMENT    12 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.141E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.832E+05   TIME AVG. FORCE       6.783E+05
- LARGEST RESIDUAL FORCE             -293.       AT NODE        493   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.401E-03   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.051E-04   AT NODE         71   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    5.382E-09
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.421E+06 AND OCCURS AT NODE        635 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.427E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.141E-02,  FRACTION OF STEP COMPLETED  0.265    
- STEP TIME COMPLETED       0.265    ,  TOTAL TIME COMPLETED         1.26    
-
-
-  INCREMENT    13 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.427E-02
-
- ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
-             AT 1 POINTS
- 
-
- ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
-          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
-
- ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
-             WITH A TIME INCREMENT OF 3.56708E-03
-
-
-  INCREMENT    13 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  3.567E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      7.916E+05   TIME AVG. FORCE       6.870E+05
- LARGEST RESIDUAL FORCE             -21.4       AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -4.493E-04   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.664E-05   AT NODE        968   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -9.318E-11
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.707E+05 AND OCCURS AT NODE       1641 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    4.459E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  3.567E-03,  FRACTION OF STEP COMPLETED  0.268    
- STEP TIME COMPLETED       0.268    ,  TOTAL TIME COMPLETED         1.27    
-
-
-  INCREMENT    14 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.459E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.035E+05   TIME AVG. FORCE       6.953E+05
- LARGEST RESIDUAL FORCE             -5.42       AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.634E-04   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.520E-05   AT NODE        457   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    3.724E-11
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -3.094E+05 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    5.574E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  4.459E-03,  FRACTION OF STEP COMPLETED  0.273    
- STEP TIME COMPLETED       0.273    ,  TOTAL TIME COMPLETED         1.27    
-
-
-  INCREMENT    15 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.574E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.158E+05   TIME AVG. FORCE       7.033E+05
- LARGEST RESIDUAL FORCE             -18.3       AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.988E-04   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.966E-05   AT NODE       1641   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -1.755E-10
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -3.714E+05 AND OCCURS AT NODE        635 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    6.967E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.574E-03,  FRACTION OF STEP COMPLETED  0.278    
- STEP TIME COMPLETED       0.278    ,  TOTAL TIME COMPLETED         1.28    
-
-
-  INCREMENT    16 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.967E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.309E+05   TIME AVG. FORCE       7.113E+05
- LARGEST RESIDUAL FORCE             4.589E+04   AT NODE        319   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.479E-04   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        7.257E-05   AT NODE        563   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      8.309E+05   TIME AVG. FORCE       7.113E+05
- LARGEST RESIDUAL FORCE             -3.06       AT NODE       1008   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.479E-04   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        9.929E-07   AT NODE        319   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   6.790E+05 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    8.709E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  6.967E-03,  FRACTION OF STEP COMPLETED  0.285    
- STEP TIME COMPLETED       0.285    ,  TOTAL TIME COMPLETED         1.29    
-
-
-  INCREMENT    17 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.709E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.516E+05   TIME AVG. FORCE       7.196E+05
- LARGEST RESIDUAL FORCE             2.470E+04   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.908E-04   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.005E-04   AT NODE       1718   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      8.516E+05   TIME AVG. FORCE       7.196E+05
- LARGEST RESIDUAL FORCE             -30.0       AT NODE        505   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.905E-04   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.534E-06   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   7.588E+05 AND OCCURS AT NODE        635 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.089E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  8.709E-03,  FRACTION OF STEP COMPLETED  0.294    
- STEP TIME COMPLETED       0.294    ,  TOTAL TIME COMPLETED         1.29    
-
-
-  INCREMENT    18 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.089E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.813E+05   TIME AVG. FORCE       7.285E+05
- LARGEST RESIDUAL FORCE             1.659E+05   AT NODE        928   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.105E-03   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.691E-04   AT NODE        563   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      8.813E+05   TIME AVG. FORCE       7.285E+05
- LARGEST RESIDUAL FORCE              88.9       AT NODE        812   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.105E-03   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        5.956E-06   AT NODE        928   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.363E+06 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.361E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.089E-02,  FRACTION OF STEP COMPLETED  0.305    
- STEP TIME COMPLETED       0.305    ,  TOTAL TIME COMPLETED         1.30    
-
-
-  INCREMENT    19 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.361E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      9.194E+05   TIME AVG. FORCE       7.386E+05
- LARGEST RESIDUAL FORCE             1.817E+06   AT NODE       1735   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.193E-03   AT NODE       1762   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.424E-04   AT NODE       1735   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      9.194E+05   TIME AVG. FORCE       7.386E+05
- LARGEST RESIDUAL FORCE             -275.       AT NODE        131   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.193E-03   AT NODE       1762   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.220E-04   AT NODE       1735   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -1.846E-08
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.892E+06 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.701E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.361E-02,  FRACTION OF STEP COMPLETED  0.318    
- STEP TIME COMPLETED       0.318    ,  TOTAL TIME COMPLETED         1.32    
-
-
-  INCREMENT    20 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.701E-02
-
- ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
-             AT 1 POINTS
  
 
- ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
-          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
+ ***WARNING: THE SYSTEM MATRIX HAS 4 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
 
- ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
-             WITH A TIME INCREMENT OF 4.25229E-03
-
-
-  INCREMENT    20 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  4.252E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      9.316E+05   TIME AVG. FORCE       7.482E+05
- LARGEST RESIDUAL FORCE             4.369E+04   AT NODE        897   DOF  2
+ AVERAGE FORCE                      1.082E+06   TIME AVG. FORCE       7.830E+05
+ LARGEST RESIDUAL FORCE             3.557E+07   AT NODE       1158   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.876E-04   AT NODE       1844   DOF  2
+ LARGEST INCREMENT OF DISP.        -5.032E-02   AT NODE        920   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.378E-05   AT NODE       1901   DOF  2
+ LARGEST CORRECTION TO DISP.        8.389E-02   AT NODE       1062   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -1280,88 +600,22 @@
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
        ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+ ***WARNING: THE SYSTEM MATRIX HAS 6 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      9.318E+05   TIME AVG. FORCE       7.482E+05
- LARGEST RESIDUAL FORCE             -1.60       AT NODE        130   DOF  1
+ AVERAGE FORCE                      1.139E+06   TIME AVG. FORCE       8.021E+05
+ LARGEST RESIDUAL FORCE             1.258E+08   AT NODE       1158   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.876E-04   AT NODE       1844   DOF  2
+ LARGEST INCREMENT OF DISP.         9.464E-02   AT NODE       1766   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.856E-07   AT NODE        130   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   2.261E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    5.315E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  4.252E-03,  FRACTION OF STEP COMPLETED  0.323    
- STEP TIME COMPLETED       0.323    ,  TOTAL TIME COMPLETED         1.32    
-
-
-  INCREMENT    21 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.315E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      9.490E+05   TIME AVG. FORCE       7.578E+05
- LARGEST RESIDUAL FORCE             3.314E+04   AT NODE        840   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -4.795E-04   AT NODE       1844   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.578E-05   AT NODE       1641   DOF  2
+ LARGEST CORRECTION TO DISP.        0.118       AT NODE       1766   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      9.490E+05   TIME AVG. FORCE       7.578E+05
- LARGEST RESIDUAL FORCE              1.12       AT NODE        840   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -4.795E-04   AT NODE       1844   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        5.689E-07   AT NODE        840   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.011E+05 AND OCCURS AT NODE        383 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    6.644E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.315E-03,  FRACTION OF STEP COMPLETED  0.328    
- STEP TIME COMPLETED       0.328    ,  TOTAL TIME COMPLETED         1.33    
-
-
-  INCREMENT    22 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.644E-03
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -1373,197 +627,41 @@
        ELAPSED SYSTEM TIME (SEC)    =  0.10000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+ ***WARNING: THE SYSTEM MATRIX HAS 6 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      9.719E+05   TIME AVG. FORCE       7.675E+05
- LARGEST RESIDUAL FORCE            -2.782E+04   AT NODE        502   DOF  1
+ AVERAGE FORCE                      1.202E+06   TIME AVG. FORCE       8.231E+05
+ LARGEST RESIDUAL FORCE             1.394E+08   AT NODE       1076   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.830E-04   AT NODE       1427   DOF  2
+ LARGEST INCREMENT OF DISP.         7.117E-02   AT NODE        917   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -6.641E-05   AT NODE       1901   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      9.719E+05   TIME AVG. FORCE       7.675E+05
- LARGEST RESIDUAL FORCE             -1.28       AT NODE        405   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.830E-04   AT NODE       1427   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -7.936E-07   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -5.396E+05 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    8.305E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  6.644E-03,  FRACTION OF STEP COMPLETED  0.335    
- STEP TIME COMPLETED       0.335    ,  TOTAL TIME COMPLETED         1.33    
-
-
-  INCREMENT    23 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.305E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.003E+06   TIME AVG. FORCE       7.778E+05
- LARGEST RESIDUAL FORCE            -1.052E+03   AT NODE          3   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -7.286E-04   AT NODE       1013   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -9.506E-05   AT NODE        383   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -1.544E-08
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -6.678E+05 AND OCCURS AT NODE        383 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.038E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  8.305E-03,  FRACTION OF STEP COMPLETED  0.343    
- STEP TIME COMPLETED       0.343    ,  TOTAL TIME COMPLETED         1.34    
-
-
-  INCREMENT    24 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.038E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.041E+06   TIME AVG. FORCE       7.887E+05
- LARGEST RESIDUAL FORCE            -2.792E+03   AT NODE       1050   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.106E-04   AT NODE       1901   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.825E-04   AT NODE       1901   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -6.145E-08
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.126E+06 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.298E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.038E-02,  FRACTION OF STEP COMPLETED  0.353    
- STEP TIME COMPLETED       0.353    ,  TOTAL TIME COMPLETED         1.35    
-
-
-  INCREMENT    25 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.298E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.089E+06   TIME AVG. FORCE       8.007E+05
- LARGEST RESIDUAL FORCE            -5.238E+06   AT NODE       1641   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.140E-03   AT NODE        847   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.553E-04   AT NODE        516   DOF  2
+ LARGEST CORRECTION TO DISP.       -0.111       AT NODE       1766   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
 
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+ ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
 
 
- AVERAGE FORCE                      1.088E+06   TIME AVG. FORCE       8.007E+05
- LARGEST RESIDUAL FORCE              8.02       AT NODE          1   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.140E-03   AT NODE        847   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.469E-04   AT NODE        516   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -2.249E-10
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.708E+06 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.622E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.298E-02,  FRACTION OF STEP COMPLETED  0.366    
- STEP TIME COMPLETED       0.366    ,  TOTAL TIME COMPLETED         1.37    
-
-
-  INCREMENT    26 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.622E-02
+  INCREMENT     3 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  2.616E-02
 
  ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
-             AT 1 POINTS
+             AT 5 POINTS
  
 
  ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
           OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
 
  ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
-             WITH A TIME INCREMENT OF 4.05530E-03
+             WITH A TIME INCREMENT OF 6.54072E-03
 
 
-  INCREMENT    26 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  4.055E-03
+  INCREMENT     3 STARTS. ATTEMPT NUMBER  3, TIME INCREMENT  6.541E-03
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -1579,12 +677,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.105E+06   TIME AVG. FORCE       8.124E+05
- LARGEST RESIDUAL FORCE            -1.063E+04   AT NODE        405   DOF  2
+ AVERAGE FORCE                      7.798E+05   TIME AVG. FORCE       6.824E+05
+ LARGEST RESIDUAL FORCE            -7.947E+04   AT NODE          4   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.722E-04   AT NODE          8   DOF  2
+ LARGEST INCREMENT OF DISP.        -5.794E-04   AT NODE       1427   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.234E-05   AT NODE          5   DOF  2
+ LARGEST CORRECTION TO DISP.       -5.794E-04   AT NODE       1427   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -1602,49 +700,26 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.105E+06   TIME AVG. FORCE       8.124E+05
- LARGEST RESIDUAL FORCE            -0.568       AT NODE          6   DOF  2
+ AVERAGE FORCE                      7.797E+05   TIME AVG. FORCE       6.824E+05
+ LARGEST RESIDUAL FORCE             -59.5       AT NODE        504   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.722E-04   AT NODE          8   DOF  2
+ LARGEST INCREMENT OF DISP.        -5.794E-04   AT NODE       1427   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.539E-07   AT NODE        405   DOF  2
+ LARGEST CORRECTION TO DISP.       -3.562E-06   AT NODE          4   DOF  1
    INSTANCE: BLOCK-1                                                                         
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.943E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    5.069E-03
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -6.251E+05 AND OCCURS AT NODE         72 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    8.176E-03
 
  ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  4.055E-03,  FRACTION OF STEP COMPLETED  0.370    
- STEP TIME COMPLETED       0.370    ,  TOTAL TIME COMPLETED         1.37    
+ TIME INCREMENT COMPLETED  6.541E-03,  FRACTION OF STEP COMPLETED  0.216    
+ STEP TIME COMPLETED       0.216    ,  TOTAL TIME COMPLETED         1.22    
 
 
-  INCREMENT    27 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.069E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.125E+06   TIME AVG. FORCE       8.240E+05
- LARGEST RESIDUAL FORCE            -9.416E+03   AT NODE        131   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -4.519E-04   AT NODE        391   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.112E-05   AT NODE        383   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+  INCREMENT     4 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  8.176E-03
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -1657,239 +732,30 @@
        ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.125E+06   TIME AVG. FORCE       8.240E+05
- LARGEST RESIDUAL FORCE             0.627       AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -4.519E-04   AT NODE        391   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.544E-07   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   2.569E+05 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    6.336E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  5.069E-03,  FRACTION OF STEP COMPLETED  0.375    
- STEP TIME COMPLETED       0.375    ,  TOTAL TIME COMPLETED         1.38    
-
-
-  INCREMENT    28 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.336E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.149E+06   TIME AVG. FORCE       8.356E+05
- LARGEST RESIDUAL FORCE            -3.508E+03   AT NODE          8   DOF  1
+ AVERAGE FORCE                      8.005E+05   TIME AVG. FORCE       7.119E+05
+ LARGEST RESIDUAL FORCE             1.508E+03   AT NODE          8   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.655E-04   AT NODE        634   DOF  2
+ LARGEST INCREMENT OF DISP.        -7.519E-04   AT NODE          7   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        5.029E-05   AT NODE       1716   DOF  2
+ LARGEST CORRECTION TO DISP.        1.982E-04   AT NODE         72   DOF  2
    INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -3.861E-08
+ ESTIMATE OF DISP.    CORRECTION   -3.170E-08
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   4.294E+05 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    7.920E-03
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -9.790E+05 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.022E-02
 
  ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  6.336E-03,  FRACTION OF STEP COMPLETED  0.382    
- STEP TIME COMPLETED       0.382    ,  TOTAL TIME COMPLETED         1.38    
+ TIME INCREMENT COMPLETED  8.176E-03,  FRACTION OF STEP COMPLETED  0.224    
+ STEP TIME COMPLETED       0.224    ,  TOTAL TIME COMPLETED         1.22    
 
 
-  INCREMENT    29 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.920E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.180E+06   TIME AVG. FORCE       8.475E+05
- LARGEST RESIDUAL FORCE            -6.295E+04   AT NODE        499   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.922E-04   AT NODE        632   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        9.190E-05   AT NODE       1901   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.180E+06   TIME AVG. FORCE       8.475E+05
- LARGEST RESIDUAL FORCE              7.53       AT NODE          5   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.922E-04   AT NODE        632   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.282E-06   AT NODE        499   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -5.276E+05 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    9.901E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  7.920E-03,  FRACTION OF STEP COMPLETED  0.390    
- STEP TIME COMPLETED       0.390    ,  TOTAL TIME COMPLETED         1.39    
-
-
-  INCREMENT    30 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.901E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.219E+06   TIME AVG. FORCE       8.599E+05
- LARGEST RESIDUAL FORCE             6.013E+04   AT NODE       1051   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.426E-04   AT NODE         67   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.242E-04   AT NODE         61   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.219E+06   TIME AVG. FORCE       8.599E+05
- LARGEST RESIDUAL FORCE              10.3       AT NODE        502   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.426E-04   AT NODE         67   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.428E-06   AT NODE        403   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -9.072E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.238E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  9.901E-03,  FRACTION OF STEP COMPLETED  0.399    
- STEP TIME COMPLETED       0.399    ,  TOTAL TIME COMPLETED         1.40    
-
-
-  INCREMENT    31 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.238E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.266E+06   TIME AVG. FORCE       8.729E+05
- LARGEST RESIDUAL FORCE             1.436E+05   AT NODE       1051   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.015E-03   AT NODE        699   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.971E-04   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.266E+06   TIME AVG. FORCE       8.729E+05
- LARGEST RESIDUAL FORCE              77.8       AT NODE        408   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.015E-03   AT NODE        699   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        8.157E-06   AT NODE        408   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.237E+06 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.547E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.238E-02,  FRACTION OF STEP COMPLETED  0.412    
- STEP TIME COMPLETED       0.412    ,  TOTAL TIME COMPLETED         1.41    
-
-
-  INCREMENT    32 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.547E-02
+  INCREMENT     5 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.022E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -1905,14 +771,27 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.322E+06   TIME AVG. FORCE       8.870E+05
- LARGEST RESIDUAL FORCE             4.872E+06   AT NODE       1047   DOF  1
+ AVERAGE FORCE                      8.255E+05   TIME AVG. FORCE       7.346E+05
+ LARGEST RESIDUAL FORCE              30.7       AT NODE       1051   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.193E-03   AT NODE        742   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.016E-03   AT NODE          7   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.335E-04   AT NODE        406   DOF  2
+ LARGEST CORRECTION TO DISP.        3.052E-04   AT NODE        467   DOF  2
    INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ ESTIMATE OF DISP.    CORRECTION   -1.159E-09
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.039E+06 AND OCCURS AT NODE        636 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.277E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.022E-02,  FRACTION OF STEP COMPLETED  0.234    
+ STEP TIME COMPLETED       0.234    ,  TOTAL TIME COMPLETED         1.23    
+
+
+  INCREMENT     6 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.277E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -1920,127 +799,24 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.321E+06   TIME AVG. FORCE       8.870E+05
- LARGEST RESIDUAL FORCE            -6.556E+04   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.193E-03   AT NODE        742   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.962E-04   AT NODE        979   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.321E+06   TIME AVG. FORCE       8.869E+05
- LARGEST RESIDUAL FORCE             -200.       AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.193E-03   AT NODE        742   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.021E-05   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.374E+06 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.934E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.547E-02,  FRACTION OF STEP COMPLETED  0.427    
- STEP TIME COMPLETED       0.427    ,  TOTAL TIME COMPLETED         1.43    
-
-
-  INCREMENT    33 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.934E-02
-
- ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
-             AT 1 POINTS
  
 
- ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
-          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
-
- ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
-             WITH A TIME INCREMENT OF 4.83429E-03
-
-
-  INCREMENT    33 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  4.834E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
+ ***WARNING: THE SYSTEM MATRIX HAS 2 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.339E+06   TIME AVG. FORCE       9.007E+05
- LARGEST RESIDUAL FORCE             2.633E+03   AT NODE        663   DOF  2
+ AVERAGE FORCE                      9.740E+05   TIME AVG. FORCE       7.745E+05
+ LARGEST RESIDUAL FORCE             2.952E+08   AT NODE        452   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -3.798E-04   AT NODE       1735   DOF  2
+ LARGEST INCREMENT OF DISP.        -2.054E-02   AT NODE         75   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.946E-05   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    2.938E-08
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.116E+05 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    6.043E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  4.834E-03,  FRACTION OF STEP COMPLETED  0.432    
- STEP TIME COMPLETED       0.432    ,  TOTAL TIME COMPLETED         1.43    
-
-
-  INCREMENT    34 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  6.043E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.361E+06   TIME AVG. FORCE       9.142E+05
- LARGEST RESIDUAL FORCE             4.398E+04   AT NODE        493   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -4.522E-04   AT NODE        936   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -4.790E-05   AT NODE       1351   DOF  2
+ LARGEST CORRECTION TO DISP.       -2.014E-02   AT NODE         75   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2058,84 +834,108 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.361E+06   TIME AVG. FORCE       9.142E+05
- LARGEST RESIDUAL FORCE            -0.631       AT NODE        493   DOF  1
+ AVERAGE FORCE                      8.522E+05   TIME AVG. FORCE       7.542E+05
+ LARGEST RESIDUAL FORCE             8.064E+06   AT NODE        462   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -4.522E-04   AT NODE        936   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.379E-03   AT NODE          7   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        4.978E-07   AT NODE        493   DOF  1
+ LARGEST CORRECTION TO DISP.        1.977E-02   AT NODE         75   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      8.480E+05   TIME AVG. FORCE       7.535E+05
+ LARGEST RESIDUAL FORCE            -1.593E-03   AT NODE          4   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.379E-03   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.562E-04   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.880E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    7.554E-03
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   2.511E+06 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.597E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.277E-02,  FRACTION OF STEP COMPLETED  0.247    
+ STEP TIME COMPLETED       0.247    ,  TOTAL TIME COMPLETED         1.25    
+
+
+  INCREMENT     7 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.597E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      8.948E+05   TIME AVG. FORCE       7.737E+05
+ LARGEST RESIDUAL FORCE             2.179E+07   AT NODE        562   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.862E-03   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.241E-03   AT NODE         70   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      8.814E+05   TIME AVG. FORCE       7.718E+05
+ LARGEST RESIDUAL FORCE              4.80       AT NODE        495   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.862E-03   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        8.961E-04   AT NODE         70   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION    3.568E-10
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.635E+06 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.996E-02
 
  ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  6.043E-03,  FRACTION OF STEP COMPLETED  0.438    
- STEP TIME COMPLETED       0.438    ,  TOTAL TIME COMPLETED         1.44    
+ TIME INCREMENT COMPLETED  1.597E-02,  FRACTION OF STEP COMPLETED  0.263    
+ STEP TIME COMPLETED       0.263    ,  TOTAL TIME COMPLETED         1.26    
 
 
-  INCREMENT    35 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.554E-03
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.386E+06   TIME AVG. FORCE       9.277E+05
- LARGEST RESIDUAL FORCE            -1.141E+05   AT NODE          5   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.607E-04   AT NODE       1351   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -6.246E-05   AT NODE        469   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.386E+06   TIME AVG. FORCE       9.277E+05
- LARGEST RESIDUAL FORCE              14.6       AT NODE        403   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -5.607E-04   AT NODE       1351   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.506E-06   AT NODE          5   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.995E+05 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    9.442E-03
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  7.554E-03,  FRACTION OF STEP COMPLETED  0.446    
- STEP TIME COMPLETED       0.446    ,  TOTAL TIME COMPLETED         1.45    
-
-
-  INCREMENT    36 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.442E-03
+  INCREMENT     8 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.996E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -2151,12 +951,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.414E+06   TIME AVG. FORCE       9.412E+05
- LARGEST RESIDUAL FORCE             1.782E+05   AT NODE        841   DOF  2
+ AVERAGE FORCE                      9.729E+05   TIME AVG. FORCE       7.969E+05
+ LARGEST RESIDUAL FORCE             9.059E+07   AT NODE        700   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.971E-04   AT NODE       1896   DOF  2
+ LARGEST INCREMENT OF DISP.        -4.733E-03   AT NODE        700   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.545E-04   AT NODE       1351   DOF  2
+ LARGEST CORRECTION TO DISP.        3.690E-03   AT NODE        768   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2174,397 +974,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.414E+06   TIME AVG. FORCE       9.412E+05
- LARGEST RESIDUAL FORCE             -6.39       AT NODE        509   DOF  2
+ AVERAGE FORCE                      9.358E+05   TIME AVG. FORCE       7.923E+05
+ LARGEST RESIDUAL FORCE            -2.310E+07   AT NODE        604   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -6.971E-04   AT NODE       1896   DOF  2
+ LARGEST INCREMENT OF DISP.        -2.550E-03   AT NODE        491   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        4.574E-06   AT NODE        841   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   5.117E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.180E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  9.442E-03,  FRACTION OF STEP COMPLETED  0.455    
- STEP TIME COMPLETED       0.455    ,  TOTAL TIME COMPLETED         1.46    
-
-
-  INCREMENT    37 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.180E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.446E+06   TIME AVG. FORCE       9.548E+05
- LARGEST RESIDUAL FORCE            -5.090E+05   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.227E-04   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.601E-04   AT NODE       1186   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.446E+06   TIME AVG. FORCE       9.548E+05
- LARGEST RESIDUAL FORCE            -1.005E+04   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.471E-04   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.080E-05   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.446E+06   TIME AVG. FORCE       9.548E+05
- LARGEST RESIDUAL FORCE             0.724       AT NODE        498   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -8.473E-04   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -8.542E-07   AT NODE          6   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -8.469E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.475E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.180E-02,  FRACTION OF STEP COMPLETED  0.467    
- STEP TIME COMPLETED       0.467    ,  TOTAL TIME COMPLETED         1.47    
-
-
-  INCREMENT    38 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.475E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.484E+06   TIME AVG. FORCE       9.687E+05
- LARGEST RESIDUAL FORCE            -3.092E+06   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.022E-03   AT NODE        729   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.543E-04   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.484E+06   TIME AVG. FORCE       9.687E+05
- LARGEST RESIDUAL FORCE             1.037E+05   AT NODE          8   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.009E-03   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.736E-04   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.484E+06   TIME AVG. FORCE       9.687E+05
- LARGEST RESIDUAL FORCE             -190.       AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.010E-03   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.148E-05   AT NODE          8   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -2.104E-08
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -9.752E+05 AND OCCURS AT NODE        520 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.844E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.475E-02,  FRACTION OF STEP COMPLETED  0.482    
- STEP TIME COMPLETED       0.482    ,  TOTAL TIME COMPLETED         1.48    
-
-
-  INCREMENT    39 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.844E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.531E+06   TIME AVG. FORCE       9.832E+05
- LARGEST RESIDUAL FORCE             1.137E+07   AT NODE       1212   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.233E-03   AT NODE       1693   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        9.896E-04   AT NODE       1693   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.530E+06   TIME AVG. FORCE       9.831E+05
- LARGEST RESIDUAL FORCE             1.558E+06   AT NODE       1693   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.252E-03   AT NODE        132   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -7.832E-04   AT NODE       1693   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.530E+06   TIME AVG. FORCE       9.831E+05
- LARGEST RESIDUAL FORCE              2.24       AT NODE       1662   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.252E-03   AT NODE        132   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        9.374E-05   AT NODE       1693   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    1.347E-10
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.382E+06 AND OCCURS AT NODE        815 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    2.305E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.844E-02,  FRACTION OF STEP COMPLETED  0.500    
- STEP TIME COMPLETED       0.500    ,  TOTAL TIME COMPLETED         1.50    
-
-
-  INCREMENT    40 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.305E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.582E+06   TIME AVG. FORCE       9.981E+05
- LARGEST RESIDUAL FORCE             1.523E+07   AT NODE        360   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.843E-03   AT NODE        628   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.172E-03   AT NODE        360   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.579E+06   TIME AVG. FORCE       9.980E+05
- LARGEST RESIDUAL FORCE             3.524E+06   AT NODE        378   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.452E-03   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        9.061E-04   AT NODE        360   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.578E+06   TIME AVG. FORCE       9.980E+05
- LARGEST RESIDUAL FORCE              67.4       AT NODE        408   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.452E-03   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.189E-04   AT NODE        972   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -4.190E-09
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.406E+06 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    2.881E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.305E-02,  FRACTION OF STEP COMPLETED  0.523    
- STEP TIME COMPLETED       0.523    ,  TOTAL TIME COMPLETED         1.52    
-
-
-  INCREMENT    41 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.881E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.632E+06   TIME AVG. FORCE       1.013E+06
- LARGEST RESIDUAL FORCE            -3.081E+07   AT NODE       1844   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -2.706E-03   AT NODE       1186   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.207E-03   AT NODE        360   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.626E+06   TIME AVG. FORCE       1.013E+06
- LARGEST RESIDUAL FORCE             4.440E+06   AT NODE          7   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.745E-03   AT NODE       1866   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.024E-03   AT NODE        360   DOF  1
+ LARGEST CORRECTION TO DISP.        3.630E-03   AT NODE        700   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2582,12 +997,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      1.624E+06   TIME AVG. FORCE       1.013E+06
- LARGEST RESIDUAL FORCE            -7.430E+05   AT NODE        495   DOF  1
+ AVERAGE FORCE                      9.294E+05   TIME AVG. FORCE       7.915E+05
+ LARGEST RESIDUAL FORCE             4.023E+06   AT NODE        604   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.536E-03   AT NODE        405   DOF  2
+ LARGEST INCREMENT OF DISP.        -2.466E-03   AT NODE        406   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -5.248E-04   AT NODE        406   DOF  1
+ LARGEST CORRECTION TO DISP.       -1.991E-03   AT NODE         94   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2605,12 +1020,1018 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      1.624E+06   TIME AVG. FORCE       1.013E+06
- LARGEST RESIDUAL FORCE             1.278E+04   AT NODE        495   DOF  1
+ AVERAGE FORCE                      9.290E+05   TIME AVG. FORCE       7.915E+05
+ LARGEST RESIDUAL FORCE            -2.420E-03   AT NODE        498   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.542E-03   AT NODE        405   DOF  2
+ LARGEST INCREMENT OF DISP.        -2.466E-03   AT NODE        406   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.009E-04   AT NODE          8   DOF  1
+ LARGEST CORRECTION TO DISP.        2.549E-04   AT NODE         94   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.740E+06 AND OCCURS AT NODE       1641 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.495E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.996E-02,  FRACTION OF STEP COMPLETED  0.283    
+ STEP TIME COMPLETED       0.283    ,  TOTAL TIME COMPLETED         1.28    
+
+
+  INCREMENT     9 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.495E-02
+
+ ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
+             AT 1 POINTS
+ 
+
+ ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
+          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
+
+ ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
+             WITH A TIME INCREMENT OF 6.23772E-03
+
+
+  INCREMENT     9 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  6.238E-03
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      9.413E+05   TIME AVG. FORCE       8.081E+05
+ LARGEST RESIDUAL FORCE              146.       AT NODE        493   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -7.795E-04   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -4.381E-05   AT NODE       1667   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION   -1.697E-09
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   5.654E+05 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    7.797E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  6.238E-03,  FRACTION OF STEP COMPLETED  0.289    
+ STEP TIME COMPLETED       0.289    ,  TOTAL TIME COMPLETED         1.29    
+
+
+  INCREMENT    10 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  7.797E-03
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      9.595E+05   TIME AVG. FORCE       8.232E+05
+ LARGEST RESIDUAL FORCE              73.1       AT NODE       1671   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -9.492E-04   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        7.755E-05   AT NODE       1641   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION    1.092E-09
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   5.827E+05 AND OCCURS AT NODE        625 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    9.746E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  7.797E-03,  FRACTION OF STEP COMPLETED  0.297    
+ STEP TIME COMPLETED       0.297    ,  TOTAL TIME COMPLETED         1.30    
+
+
+  INCREMENT    11 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.746E-03
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      9.866E+05   TIME AVG. FORCE       8.381E+05
+ LARGEST RESIDUAL FORCE            -1.065E+05   AT NODE       1008   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.110E-03   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.449E-04   AT NODE        468   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      9.866E+05   TIME AVG. FORCE       8.381E+05
+ LARGEST RESIDUAL FORCE             -13.6       AT NODE       1008   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.110E-03   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.635E-06   AT NODE        319   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.087E+06 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.218E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  9.746E-03,  FRACTION OF STEP COMPLETED  0.307    
+ STEP TIME COMPLETED       0.307    ,  TOTAL TIME COMPLETED         1.31    
+
+
+  INCREMENT    12 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.218E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.017E+06   TIME AVG. FORCE       8.530E+05
+ LARGEST RESIDUAL FORCE             1.143E+06   AT NODE       1011   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.252E-03   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.999E-04   AT NODE        395   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.017E+06   TIME AVG. FORCE       8.530E+05
+ LARGEST RESIDUAL FORCE              64.1       AT NODE        300   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.252E-03   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -3.631E-05   AT NODE        395   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION   -2.037E-09
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.263E+06 AND OCCURS AT NODE       1641 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.523E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.218E-02,  FRACTION OF STEP COMPLETED  0.319    
+ STEP TIME COMPLETED       0.319    ,  TOTAL TIME COMPLETED         1.32    
+
+
+  INCREMENT    13 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.523E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.073E+06   TIME AVG. FORCE       8.700E+05
+ LARGEST RESIDUAL FORCE             1.135E+07   AT NODE         71   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.724E-03   AT NODE         71   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.044E-03   AT NODE         71   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.062E+06   TIME AVG. FORCE       8.691E+05
+ LARGEST RESIDUAL FORCE            -1.646E+03   AT NODE        780   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.349E-03   AT NODE       1482   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        7.719E-04   AT NODE         71   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION   -1.119E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.843E+06 AND OCCURS AT NODE        625 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.904E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.523E-02,  FRACTION OF STEP COMPLETED  0.334    
+ STEP TIME COMPLETED       0.334    ,  TOTAL TIME COMPLETED         1.33    
+
+
+  INCREMENT    14 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.904E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.147E+06   TIME AVG. FORCE       8.889E+05
+ LARGEST RESIDUAL FORCE             3.307E+07   AT NODE        561   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -2.766E-03   AT NODE        561   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.578E-03   AT NODE        561   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.131E+06   TIME AVG. FORCE       8.878E+05
+ LARGEST RESIDUAL FORCE             5.109E+06   AT NODE        388   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.752E-03   AT NODE        388   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.279E-03   AT NODE        388   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.131E+06   TIME AVG. FORCE       8.878E+05
+ LARGEST RESIDUAL FORCE             0.520       AT NODE        712   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.648E-03   AT NODE       1186   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.611E-04   AT NODE        388   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION    2.656E-11
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.701E+06 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.379E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.904E-02,  FRACTION OF STEP COMPLETED  0.353    
+ STEP TIME COMPLETED       0.353    ,  TOTAL TIME COMPLETED         1.35    
+
+
+  INCREMENT    15 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.379E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.244E+06   TIME AVG. FORCE       9.115E+05
+ LARGEST RESIDUAL FORCE             2.547E+07   AT NODE        388   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -3.581E-03   AT NODE         61   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.088E-03   AT NODE         92   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.222E+06   TIME AVG. FORCE       9.100E+05
+ LARGEST RESIDUAL FORCE             2.337E+07   AT NODE        659   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -3.605E-03   AT NODE         38   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.861E-03   AT NODE        489   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.219E+06   TIME AVG. FORCE       9.099E+05
+ LARGEST RESIDUAL FORCE             4.206E+06   AT NODE        434   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -2.028E-03   AT NODE        827   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -2.641E-03   AT NODE        489   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      1.219E+06   TIME AVG. FORCE       9.098E+05
+ LARGEST RESIDUAL FORCE            -2.708E-03   AT NODE        661   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -2.028E-03   AT NODE        827   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.224E-04   AT NODE        489   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   4.096E+06 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.974E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.379E-02,  FRACTION OF STEP COMPLETED  0.377    
+ STEP TIME COMPLETED       0.377    ,  TOTAL TIME COMPLETED         1.38    
+
+
+  INCREMENT    16 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.974E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 4 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.572E+06   TIME AVG. FORCE       9.512E+05
+ LARGEST RESIDUAL FORCE             2.064E+08   AT NODE        792   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.641E-02   AT NODE         55   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.469E-02   AT NODE         55   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 1 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+ ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
+             AT 1 POINTS
+ 
+
+ ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
+          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
+
+ ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
+             WITH A TIME INCREMENT OF 7.43594E-03
+
+
+  INCREMENT    16 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  7.436E-03
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.249E+06   TIME AVG. FORCE       9.311E+05
+ LARGEST RESIDUAL FORCE             -436.       AT NODE          3   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -6.456E-04   AT NODE        699   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -5.637E-05   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION   -6.953E-09
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.982E+05 AND OCCURS AT NODE        625 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    9.295E-03
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  7.436E-03,  FRACTION OF STEP COMPLETED  0.384    
+ STEP TIME COMPLETED       0.384    ,  TOTAL TIME COMPLETED         1.38    
+
+
+  INCREMENT    17 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  9.295E-03
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.286E+06   TIME AVG. FORCE       9.519E+05
+ LARGEST RESIDUAL FORCE            -6.519E-09   AT NODE        235   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -8.078E-04   AT NODE         65   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        8.421E-05   AT NODE        468   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -7.198E+05 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.162E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  9.295E-03,  FRACTION OF STEP COMPLETED  0.394    
+ STEP TIME COMPLETED       0.394    ,  TOTAL TIME COMPLETED         1.39    
+
+
+  INCREMENT    18 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.162E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.332E+06   TIME AVG. FORCE       9.730E+05
+ LARGEST RESIDUAL FORCE            -4.227E+05   AT NODE        132   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -9.850E-04   AT NODE        774   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.400E-04   AT NODE       1901   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.331E+06   TIME AVG. FORCE       9.730E+05
+ LARGEST RESIDUAL FORCE             6.148E+03   AT NODE        729   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -9.850E-04   AT NODE        774   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -2.093E-05   AT NODE        132   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.331E+06   TIME AVG. FORCE       9.730E+05
+ LARGEST RESIDUAL FORCE             -155.       AT NODE        132   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -9.850E-04   AT NODE        774   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -3.090E-07   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -9.628E+05 AND OCCURS AT NODE       1641 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.452E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.162E-02,  FRACTION OF STEP COMPLETED  0.405    
+ STEP TIME COMPLETED       0.405    ,  TOTAL TIME COMPLETED         1.41    
+
+
+  INCREMENT    19 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.452E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.384E+06   TIME AVG. FORCE       9.947E+05
+ LARGEST RESIDUAL FORCE             7.529E+05   AT NODE        509   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.179E-03   AT NODE        511   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.028E-04   AT NODE        407   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.384E+06   TIME AVG. FORCE       9.947E+05
+ LARGEST RESIDUAL FORCE            -8.622E+03   AT NODE        499   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.179E-03   AT NODE        511   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.972E-05   AT NODE        712   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.384E+06   TIME AVG. FORCE       9.947E+05
+ LARGEST RESIDUAL FORCE             -3.92       AT NODE        499   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.179E-03   AT NODE        511   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -3.567E-07   AT NODE        499   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.180E+06 AND OCCURS AT NODE        561 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.815E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.452E-02,  FRACTION OF STEP COMPLETED  0.420    
+ STEP TIME COMPLETED       0.420    ,  TOTAL TIME COMPLETED         1.42    
+
+
+  INCREMENT    20 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.815E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.452E+06   TIME AVG. FORCE       1.018E+06
+ LARGEST RESIDUAL FORCE             1.824E+06   AT NODE        990   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.396E-03   AT NODE         61   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.003E-04   AT NODE          4   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.452E+06   TIME AVG. FORCE       1.018E+06
+ LARGEST RESIDUAL FORCE             2.281E+05   AT NODE       1051   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.376E-03   AT NODE         62   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.163E-04   AT NODE        944   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.452E+06   TIME AVG. FORCE       1.018E+06
+ LARGEST RESIDUAL FORCE             1.836E+04   AT NODE       1051   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.376E-03   AT NODE         62   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.030E-05   AT NODE       1051   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      1.452E+06   TIME AVG. FORCE       1.018E+06
+ LARGEST RESIDUAL FORCE             -5.23       AT NODE          9   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.376E-03   AT NODE         62   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.817E-06   AT NODE        408   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.797E+06 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.269E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.815E-02,  FRACTION OF STEP COMPLETED  0.438    
+ STEP TIME COMPLETED       0.438    ,  TOTAL TIME COMPLETED         1.44    
+
+
+  INCREMENT    21 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.269E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.530E+06   TIME AVG. FORCE       1.042E+06
+ LARGEST RESIDUAL FORCE             3.420E+07   AT NODE         72   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -3.976E-03   AT NODE         72   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -2.734E-03   AT NODE         72   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.523E+06   TIME AVG. FORCE       1.042E+06
+ LARGEST RESIDUAL FORCE            -1.184E+03   AT NODE       1660   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.573E-03   AT NODE       1486   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.486E-03   AT NODE         72   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION   -2.260E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   2.942E+06 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.837E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.269E-02,  FRACTION OF STEP COMPLETED  0.461    
+ STEP TIME COMPLETED       0.461    ,  TOTAL TIME COMPLETED         1.46    
+
+
+  INCREMENT    22 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.837E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 3 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.615E+06   TIME AVG. FORCE       1.068E+06
+ LARGEST RESIDUAL FORCE            -2.526E+07   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -3.884E-03   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.796E-03   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.598E+06   TIME AVG. FORCE       1.067E+06
+ LARGEST RESIDUAL FORCE            -6.483E+06   AT NODE          6   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -2.385E-03   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -2.898E-03   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.598E+06   TIME AVG. FORCE       1.067E+06
+ LARGEST RESIDUAL FORCE            -6.802E+05   AT NODE        499   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.972E-03   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -6.743E-04   AT NODE          6   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      1.598E+06   TIME AVG. FORCE       1.067E+06
+ LARGEST RESIDUAL FORCE            -3.341E+04   AT NODE        501   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.985E-03   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -7.255E-05   AT NODE        405   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2628,106 +2049,25 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
 
 
- AVERAGE FORCE                      1.624E+06   TIME AVG. FORCE       1.013E+06
- LARGEST RESIDUAL FORCE             -1.71       AT NODE        709   DOF  1
+ AVERAGE FORCE                      1.598E+06   TIME AVG. FORCE       1.067E+06
+ LARGEST RESIDUAL FORCE             -71.4       AT NODE        501   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.542E-03   AT NODE        405   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.993E-03   AT NODE        405   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.396E-06   AT NODE          8   DOF  1
+ LARGEST CORRECTION TO DISP.       -7.574E-06   AT NODE        405   DOF  2
    INSTANCE: BLOCK-1                                                                         
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.578E+06 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -4.286E+06 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
 
  ITERATION SUMMARY FOR THE INCREMENT:   5 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  5 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  2.881E-02,  FRACTION OF STEP COMPLETED  0.552    
- STEP TIME COMPLETED       0.552    ,  TOTAL TIME COMPLETED         1.55    
+ TIME INCREMENT COMPLETED  2.837E-02,  FRACTION OF STEP COMPLETED  0.489    
+ STEP TIME COMPLETED       0.489    ,  TOTAL TIME COMPLETED         1.49    
 
 
-  INCREMENT    42 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.881E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.661E+06   TIME AVG. FORCE       1.029E+06
- LARGEST RESIDUAL FORCE            -4.456E+06   AT NODE        360   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.277E-03   AT NODE       1895   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        8.576E-04   AT NODE       1351   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.660E+06   TIME AVG. FORCE       1.029E+06
- LARGEST RESIDUAL FORCE            -5.865E+04   AT NODE        503   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.259E-03   AT NODE        374   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.323E-04   AT NODE       1901   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.660E+06   TIME AVG. FORCE       1.029E+06
- LARGEST RESIDUAL FORCE              91.5       AT NODE       1661   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.259E-03   AT NODE        374   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.522E-05   AT NODE         11   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -2.374E-08
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.564E+06 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.881E-02,  FRACTION OF STEP COMPLETED  0.581    
- STEP TIME COMPLETED       0.581    ,  TOTAL TIME COMPLETED         1.58    
-
-
-  INCREMENT    43 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.881E-02
+  INCREMENT    23 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.837E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -2743,12 +2083,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.680E+06   TIME AVG. FORCE       1.044E+06
- LARGEST RESIDUAL FORCE            -5.235E+06   AT NODE       1236   DOF  2
+ AVERAGE FORCE                      1.668E+06   TIME AVG. FORCE       1.093E+06
+ LARGEST RESIDUAL FORCE             2.643E+07   AT NODE       1641   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.164E-03   AT NODE        352   DOF  2
+ LARGEST INCREMENT OF DISP.        -2.814E-03   AT NODE       1641   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -7.089E-04   AT NODE       1351   DOF  2
+ LARGEST CORRECTION TO DISP.        1.594E-03   AT NODE       1047   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2766,116 +2106,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.680E+06   TIME AVG. FORCE       1.044E+06
- LARGEST RESIDUAL FORCE             1.263E+05   AT NODE          8   DOF  1
+ AVERAGE FORCE                      1.663E+06   TIME AVG. FORCE       1.093E+06
+ LARGEST RESIDUAL FORCE            -5.218E+06   AT NODE       1641   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.043E-03   AT NODE        452   DOF  2
+ LARGEST INCREMENT OF DISP.        -1.900E-03   AT NODE        516   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.933E-04   AT NODE        352   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.680E+06   TIME AVG. FORCE       1.044E+06
- LARGEST RESIDUAL FORCE             2.322E+04   AT NODE        665   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.043E-03   AT NODE        452   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.796E-05   AT NODE          8   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
-
-
- AVERAGE FORCE                      1.680E+06   TIME AVG. FORCE       1.044E+06
- LARGEST RESIDUAL FORCE             -86.0       AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.043E-03   AT NODE        452   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -6.672E-06   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.068E+06 AND OCCURS AT NODE        520 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    3.602E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.881E-02,  FRACTION OF STEP COMPLETED  0.610    
- STEP TIME COMPLETED       0.610    ,  TOTAL TIME COMPLETED         1.61    
-
-
-  INCREMENT    44 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.602E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.695E+06   TIME AVG. FORCE       1.059E+06
- LARGEST RESIDUAL FORCE            -2.393E+07   AT NODE       1675   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -1.650E-03   AT NODE       1687   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.349E-03   AT NODE       1132   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.689E+06   TIME AVG. FORCE       1.058E+06
- LARGEST RESIDUAL FORCE             6.242E+06   AT NODE       1675   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.203E-04   AT NODE          3   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.906E-03   AT NODE       1132   DOF  1
+ LARGEST CORRECTION TO DISP.        1.549E-03   AT NODE       1641   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2893,12 +2129,152 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      1.689E+06   TIME AVG. FORCE       1.058E+06
- LARGEST RESIDUAL FORCE             3.277E+06   AT NODE       1132   DOF  1
+ AVERAGE FORCE                      1.662E+06   TIME AVG. FORCE       1.093E+06
+ LARGEST RESIDUAL FORCE              36.7       AT NODE        502   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.201E-04   AT NODE          3   DOF  1
+ LARGEST INCREMENT OF DISP.        -1.788E-03   AT NODE       1671   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        5.039E-04   AT NODE       1675   DOF  1
+ LARGEST CORRECTION TO DISP.        3.665E-04   AT NODE        516   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION   -2.576E-09
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -3.531E+06 AND OCCURS AT NODE        383 INSTANCE BLOCK-1                                                                         
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.837E-02,  FRACTION OF STEP COMPLETED  0.517    
+ STEP TIME COMPLETED       0.517    ,  TOTAL TIME COMPLETED         1.52    
+
+
+  INCREMENT    24 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.837E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.713E+06   TIME AVG. FORCE       1.119E+06
+ LARGEST RESIDUAL FORCE             6.503E+06   AT NODE       1047   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.680E-03   AT NODE       1047   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -6.715E-04   AT NODE       1047   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.711E+06   TIME AVG. FORCE       1.119E+06
+ LARGEST RESIDUAL FORCE             5.011E+03   AT NODE        494   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.640E-03   AT NODE        729   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.931E-04   AT NODE       1047   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION    3.030E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.840E+06 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    3.546E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.837E-02,  FRACTION OF STEP COMPLETED  0.546    
+ STEP TIME COMPLETED       0.546    ,  TOTAL TIME COMPLETED         1.55    
+
+
+  INCREMENT    25 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.546E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.769E+06   TIME AVG. FORCE       1.145E+06
+ LARGEST RESIDUAL FORCE             3.460E+07   AT NODE       1114   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -3.121E-03   AT NODE       1114   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.462E-03   AT NODE       1161   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.755E+06   TIME AVG. FORCE       1.144E+06
+ LARGEST RESIDUAL FORCE             9.323E+06   AT NODE       1161   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.910E-03   AT NODE       1161   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -2.818E-03   AT NODE       1161   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.754E+06   TIME AVG. FORCE       1.144E+06
+ LARGEST RESIDUAL FORCE            -2.838E+06   AT NODE       1161   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -1.624E-03   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        8.591E-04   AT NODE       1161   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2916,27 +2292,27 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      1.689E+06   TIME AVG. FORCE       1.058E+06
- LARGEST RESIDUAL FORCE              1.81       AT NODE        498   DOF  2
+ AVERAGE FORCE                      1.753E+06   TIME AVG. FORCE       1.144E+06
+ LARGEST RESIDUAL FORCE              146.       AT NODE        505   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.201E-04   AT NODE          3   DOF  1
+ LARGEST INCREMENT OF DISP.        -1.636E-03   AT NODE        406   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.860E-04   AT NODE       1132   DOF  1
+ LARGEST CORRECTION TO DISP.       -2.867E-04   AT NODE       1161   DOF  2
    INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    1.577E-10
+ ESTIMATE OF DISP.    CORRECTION    1.475E-08
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.111E+06 AND OCCURS AT NODE        520 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    4.502E-02
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.852E+06 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    4.432E-02
 
  ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  3.602E-02,  FRACTION OF STEP COMPLETED  0.646    
- STEP TIME COMPLETED       0.646    ,  TOTAL TIME COMPLETED         1.65    
+ TIME INCREMENT COMPLETED  3.546E-02,  FRACTION OF STEP COMPLETED  0.581    
+ STEP TIME COMPLETED       0.581    ,  TOTAL TIME COMPLETED         1.58    
 
 
-  INCREMENT    45 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.502E-02
+  INCREMENT    26 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.432E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -2944,24 +2320,48 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED USER TIME (SEC)      =  0.10000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
  
 
  ***WARNING: THE SYSTEM MATRIX HAS 1 NEGATIVE EIGENVALUES.
              EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
 
+ ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
+             AT 1 POINTS
+ 
+
+ ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
+          OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
+
+ ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
+             WITH A TIME INCREMENT OF 1.10804E-02
+
+
+  INCREMENT    26 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  1.108E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.675E+06   TIME AVG. FORCE       1.072E+06
- LARGEST RESIDUAL FORCE             1.575E+07   AT NODE        815   DOF  2
+ AVERAGE FORCE                      1.765E+06   TIME AVG. FORCE       1.168E+06
+ LARGEST RESIDUAL FORCE             3.803E+05   AT NODE        495   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.862E-03   AT NODE        628   DOF  2
+ LARGEST INCREMENT OF DISP.         4.360E-04   AT NODE        411   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.566E-03   AT NODE       1136   DOF  2
+ LARGEST CORRECTION TO DISP.        8.409E-05   AT NODE          8   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -2979,12 +2379,291 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.668E+06   TIME AVG. FORCE       1.072E+06
- LARGEST RESIDUAL FORCE            -6.731E+06   AT NODE       1011   DOF  2
+ AVERAGE FORCE                      1.765E+06   TIME AVG. FORCE       1.168E+06
+ LARGEST RESIDUAL FORCE             -195.       AT NODE          6   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.863E-04   AT NODE        400   DOF  2
+ LARGEST INCREMENT OF DISP.         4.361E-04   AT NODE        411   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.699E-03   AT NODE        628   DOF  2
+ LARGEST CORRECTION TO DISP.       -1.252E-05   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION    6.433E-09
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   5.708E+05 AND OCCURS AT NODE        639 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.385E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.108E-02,  FRACTION OF STEP COMPLETED  0.592    
+ STEP TIME COMPLETED       0.592    ,  TOTAL TIME COMPLETED         1.59    
+
+
+  INCREMENT    27 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.385E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.775E+06   TIME AVG. FORCE       1.190E+06
+ LARGEST RESIDUAL FORCE             5.404E+04   AT NODE        148   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.429E-04   AT NODE          1   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.267E-04   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.775E+06   TIME AVG. FORCE       1.190E+06
+ LARGEST RESIDUAL FORCE             -44.2       AT NODE        496   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.429E-04   AT NODE          1   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        4.486E-06   AT NODE        409   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -7.088E+05 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.731E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.385E-02,  FRACTION OF STEP COMPLETED  0.606    
+ STEP TIME COMPLETED       0.606    ,  TOTAL TIME COMPLETED         1.61    
+
+
+  INCREMENT    28 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.731E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.779E+06   TIME AVG. FORCE       1.211E+06
+ LARGEST RESIDUAL FORCE            -2.636E+05   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.734E-04   AT NODE         14   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.713E-04   AT NODE        406   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.779E+06   TIME AVG. FORCE       1.211E+06
+ LARGEST RESIDUAL FORCE             2.236E+04   AT NODE        498   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.734E-04   AT NODE         14   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -2.634E-05   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.779E+06   TIME AVG. FORCE       1.211E+06
+ LARGEST RESIDUAL FORCE             -6.47       AT NODE          6   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.734E-04   AT NODE         14   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -3.432E-06   AT NODE          6   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   8.735E+05 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.164E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.731E-02,  FRACTION OF STEP COMPLETED  0.623    
+ STEP TIME COMPLETED       0.623    ,  TOTAL TIME COMPLETED         1.62    
+
+
+  INCREMENT    29 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.164E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.779E+06   TIME AVG. FORCE       1.231E+06
+ LARGEST RESIDUAL FORCE            -1.676E+06   AT NODE        665   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.627E-04   AT NODE         11   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.653E-04   AT NODE       1836   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.779E+06   TIME AVG. FORCE       1.231E+06
+ LARGEST RESIDUAL FORCE            -4.849E+04   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.635E-04   AT NODE         11   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.264E-04   AT NODE        665   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          1
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.779E+06   TIME AVG. FORCE       1.231E+06
+ LARGEST RESIDUAL FORCE             -61.0       AT NODE        405   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.635E-04   AT NODE         11   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -5.632E-06   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.433E+06 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.705E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.164E-02,  FRACTION OF STEP COMPLETED  0.645    
+ STEP TIME COMPLETED       0.645    ,  TOTAL TIME COMPLETED         1.65    
+
+
+  INCREMENT    30 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.705E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.777E+06   TIME AVG. FORCE       1.249E+06
+ LARGEST RESIDUAL FORCE             1.429E+06   AT NODE        509   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         6.696E-04   AT NODE         89   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -4.947E-04   AT NODE        473   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.776E+06   TIME AVG. FORCE       1.249E+06
+ LARGEST RESIDUAL FORCE             8.754E+03   AT NODE        495   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         6.696E-04   AT NODE         89   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.066E-04   AT NODE        830   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3002,12 +2681,93 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      1.667E+06   TIME AVG. FORCE       1.072E+06
- LARGEST RESIDUAL FORCE             2.241E+04   AT NODE        499   DOF  2
+ AVERAGE FORCE                      1.776E+06   TIME AVG. FORCE       1.249E+06
+ LARGEST RESIDUAL FORCE              20.7       AT NODE        495   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.858E-04   AT NODE        400   DOF  2
+ LARGEST INCREMENT OF DISP.         6.696E-04   AT NODE         89   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        4.197E-04   AT NODE        628   DOF  2
+ LARGEST CORRECTION TO DISP.        2.832E-06   AT NODE        407   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.215E+06 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    3.381E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.705E-02,  FRACTION OF STEP COMPLETED  0.672    
+ STEP TIME COMPLETED       0.672    ,  TOTAL TIME COMPLETED         1.67    
+
+
+  INCREMENT    31 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.381E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.745E+06   TIME AVG. FORCE       1.265E+06
+ LARGEST RESIDUAL FORCE             3.511E+06   AT NODE        469   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -9.671E-04   AT NODE        411   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -5.575E-04   AT NODE        546   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.744E+06   TIME AVG. FORCE       1.265E+06
+ LARGEST RESIDUAL FORCE             9.670E+04   AT NODE       1051   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -9.763E-04   AT NODE        411   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        4.104E-04   AT NODE        469   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.743E+06   TIME AVG. FORCE       1.265E+06
+ LARGEST RESIDUAL FORCE             1.265E+04   AT NODE       1661   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.        -9.762E-04   AT NODE        411   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.527E-05   AT NODE        408   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3025,39 +2785,181 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      1.667E+06   TIME AVG. FORCE       1.072E+06
- LARGEST RESIDUAL FORCE              110.       AT NODE        502   DOF  1
+ AVERAGE FORCE                      1.743E+06   TIME AVG. FORCE       1.265E+06
+ LARGEST RESIDUAL FORCE             -6.50       AT NODE        707   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.        -9.852E-04   AT NODE        400   DOF  2
+ LARGEST INCREMENT OF DISP.        -9.762E-04   AT NODE        411   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -9.513E-06   AT NODE        404   DOF  1
+ LARGEST CORRECTION TO DISP.        2.498E-06   AT NODE       1661   DOF  1
    INSTANCE: BLOCK-1                                                                         
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   4.058E+06 AND OCCURS AT NODE       1780 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    5.628E-02
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.079E+06 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    4.227E-02
 
  ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  4.502E-02,  FRACTION OF STEP COMPLETED  0.691    
- STEP TIME COMPLETED       0.691    ,  TOTAL TIME COMPLETED         1.69    
+ TIME INCREMENT COMPLETED  3.381E-02,  FRACTION OF STEP COMPLETED  0.706    
+ STEP TIME COMPLETED       0.706    ,  TOTAL TIME COMPLETED         1.71    
 
 
-  INCREMENT    46 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.628E-02
+  INCREMENT    32 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.227E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.671E+06   TIME AVG. FORCE       1.278E+06
+ LARGEST RESIDUAL FORCE            -1.089E+07   AT NODE        774   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         2.781E-03   AT NODE        774   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.979E-03   AT NODE         67   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.664E+06   TIME AVG. FORCE       1.277E+06
+ LARGEST RESIDUAL FORCE             8.499E+05   AT NODE        493   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         2.294E-03   AT NODE         65   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.292E-03   AT NODE         67   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.664E+06   TIME AVG. FORCE       1.277E+06
+ LARGEST RESIDUAL FORCE            -9.313E-09   AT NODE        518   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         2.294E-03   AT NODE         65   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        9.171E-05   AT NODE        493   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -4.129E+06 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    5.284E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.227E-02,  FRACTION OF STEP COMPLETED  0.748    
+ STEP TIME COMPLETED       0.748    ,  TOTAL TIME COMPLETED         1.75    
+
+
+  INCREMENT    33 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  5.284E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.581E+06   TIME AVG. FORCE       1.287E+06
+ LARGEST RESIDUAL FORCE             1.063E+08   AT NODE       1249   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.078E-02   AT NODE        377   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -8.253E-03   AT NODE       1249   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 2 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.551E+06   TIME AVG. FORCE       1.286E+06
+ LARGEST RESIDUAL FORCE             5.360E+07   AT NODE        876   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.531E-02   AT NODE        366   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.419E-02   AT NODE        366   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
  ***WARNING: THE PLASTICITY/CREEP/CONNECTOR FRICTION ALGORITHM DID NOT CONVERGE 
-             AT 2 POINTS
+             AT 1 POINTS
  
 
  ***NOTE: MATERIAL CALCULATIONS FAILED TO CONVERGE OR WERE NOT ATTEMPTED AT ONE 
           OR MORE POINTS. CONVERGENCE IS JUDGED UNLIKELY.
 
  ***WARNING: CONVERGENCE JUDGED UNLIKELY.  INCREMENT WILL BE ATTEMPTED AGAIN 
-             WITH A TIME INCREMENT OF 1.40696E-02
+             WITH A TIME INCREMENT OF 1.32089E-02
 
 
-  INCREMENT    46 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  1.407E-02
+  INCREMENT    33 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  1.321E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -3065,20 +2967,55 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.651E+06   TIME AVG. FORCE       1.085E+06
- LARGEST RESIDUAL FORCE             1.139E+05   AT NODE        712   DOF  2
+ AVERAGE FORCE                      1.630E+06   TIME AVG. FORCE       1.288E+06
+ LARGEST RESIDUAL FORCE            -7.451E-09   AT NODE         96   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         5.350E-04   AT NODE         66   DOF  2
+ LARGEST INCREMENT OF DISP.         9.046E-04   AT NODE        774   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.164E-04   AT NODE         93   DOF  2
+ LARGEST CORRECTION TO DISP.        1.434E-04   AT NODE         14   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM RESPONSE WAS LINEAR IN THIS INCREMENT
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   3.827E+05 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.651E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   1 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  1 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.321E-02,  FRACTION OF STEP COMPLETED  0.761    
+ STEP TIME COMPLETED       0.761    ,  TOTAL TIME COMPLETED         1.76    
+
+
+  INCREMENT    34 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.651E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.583E+06   TIME AVG. FORCE       1.297E+06
+ LARGEST RESIDUAL FORCE             6.819E+05   AT NODE         14   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.235E-03   AT NODE         55   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -2.182E-04   AT NODE         14   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3096,71 +3033,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.651E+06   TIME AVG. FORCE       1.085E+06
- LARGEST RESIDUAL FORCE              56.5       AT NODE        501   DOF  1
+ AVERAGE FORCE                      1.583E+06   TIME AVG. FORCE       1.297E+06
+ LARGEST RESIDUAL FORCE            -2.528E+04   AT NODE        990   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         5.350E-04   AT NODE         66   DOF  2
+ LARGEST INCREMENT OF DISP.         1.235E-03   AT NODE         55   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -5.968E-06   AT NODE          6   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -2.960E-09
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   6.383E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.759E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.407E-02,  FRACTION OF STEP COMPLETED  0.705    
- STEP TIME COMPLETED       0.705    ,  TOTAL TIME COMPLETED         1.70    
-
-
-  INCREMENT    47 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.759E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.623E+06   TIME AVG. FORCE       1.096E+06
- LARGEST RESIDUAL FORCE            -4.962E+05   AT NODE         74   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         8.641E-04   AT NODE        461   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.139E-04   AT NODE       1351   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.623E+06   TIME AVG. FORCE       1.096E+06
- LARGEST RESIDUAL FORCE             2.842E+04   AT NODE        498   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         8.641E-04   AT NODE        461   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -4.409E-05   AT NODE         74   DOF  1
+ LARGEST CORRECTION TO DISP.        5.646E-05   AT NODE         10   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3178,26 +3056,26 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      1.623E+06   TIME AVG. FORCE       1.096E+06
- LARGEST RESIDUAL FORCE             -10.5       AT NODE          6   DOF  2
+ AVERAGE FORCE                      1.583E+06   TIME AVG. FORCE       1.297E+06
+ LARGEST RESIDUAL FORCE            -7.916E-09   AT NODE        997   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         8.641E-04   AT NODE        461   DOF  2
+ LARGEST INCREMENT OF DISP.         1.235E-03   AT NODE         55   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -4.468E-06   AT NODE          6   DOF  1
+ LARGEST CORRECTION TO DISP.        1.171E-06   AT NODE       1661   DOF  1
    INSTANCE: BLOCK-1                                                                         
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -7.224E+05 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    2.198E-02
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   5.907E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.064E-02
 
  ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  1.759E-02,  FRACTION OF STEP COMPLETED  0.722    
- STEP TIME COMPLETED       0.722    ,  TOTAL TIME COMPLETED         1.72    
+ TIME INCREMENT COMPLETED  1.651E-02,  FRACTION OF STEP COMPLETED  0.778    
+ STEP TIME COMPLETED       0.778    ,  TOTAL TIME COMPLETED         1.78    
 
 
-  INCREMENT    48 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.198E-02
+  INCREMENT    35 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.064E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -3213,12 +3091,94 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.569E+06   TIME AVG. FORCE       1.106E+06
- LARGEST RESIDUAL FORCE            -1.611E+06   AT NODE        706   DOF  2
+ AVERAGE FORCE                      1.518E+06   TIME AVG. FORCE       1.303E+06
+ LARGEST RESIDUAL FORCE            -1.520E+06   AT NODE        405   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.369E-03   AT NODE        462   DOF  2
+ LARGEST INCREMENT OF DISP.         1.616E-03   AT NODE         55   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.258E-04   AT NODE        408   DOF  2
+ LARGEST CORRECTION TO DISP.       -3.531E-04   AT NODE        406   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.517E+06   TIME AVG. FORCE       1.303E+06
+ LARGEST RESIDUAL FORCE            -6.379E+03   AT NODE       1683   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.616E-03   AT NODE         55   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.556E-04   AT NODE        406   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ ESTIMATE OF DISP.    CORRECTION    6.530E-07
+ FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -8.650E+05 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    2.580E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  2.064E-02,  FRACTION OF STEP COMPLETED  0.799    
+ STEP TIME COMPLETED       0.799    ,  TOTAL TIME COMPLETED         1.80    
+
+
+  INCREMENT    36 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.580E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.447E+06   TIME AVG. FORCE       1.307E+06
+ LARGEST RESIDUAL FORCE            -2.121E+06   AT NODE        813   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.871E-03   AT NODE        452   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -3.390E-04   AT NODE       1240   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.447E+06   TIME AVG. FORCE       1.307E+06
+ LARGEST RESIDUAL FORCE             5.296E+04   AT NODE        493   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.871E-03   AT NODE        452   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.389E-04   AT NODE        813   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3233,111 +3193,29 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.569E+06   TIME AVG. FORCE       1.106E+06
- LARGEST RESIDUAL FORCE            -9.313E-09   AT NODE        772   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.369E-03   AT NODE        462   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.243E-04   AT NODE       1106   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -7.667E+05 AND OCCURS AT NODE       1675 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    2.748E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.198E-02,  FRACTION OF STEP COMPLETED  0.744    
- STEP TIME COMPLETED       0.744    ,  TOTAL TIME COMPLETED         1.74    
-
-
-  INCREMENT    49 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.748E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.492E+06   TIME AVG. FORCE       1.114E+06
- LARGEST RESIDUAL FORCE            -6.159E+06   AT NODE       1693   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.932E-03   AT NODE         55   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        7.290E-04   AT NODE       1693   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.491E+06   TIME AVG. FORCE       1.114E+06
- LARGEST RESIDUAL FORCE             4.623E+05   AT NODE        506   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.928E-03   AT NODE         55   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -4.628E-04   AT NODE       1693   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      1.490E+06   TIME AVG. FORCE       1.114E+06
- LARGEST RESIDUAL FORCE              1.43       AT NODE        109   DOF  2
+ AVERAGE FORCE                      1.447E+06   TIME AVG. FORCE       1.307E+06
+ LARGEST RESIDUAL FORCE              10.3       AT NODE        492   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.928E-03   AT NODE         55   DOF  2
+ LARGEST INCREMENT OF DISP.         1.871E-03   AT NODE        452   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.812E-05   AT NODE        494   DOF  1
+ LARGEST CORRECTION TO DISP.       -3.984E-06   AT NODE        709   DOF  2
    INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -1.179E-10
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.413E+06 AND OCCURS AT NODE       1212 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    3.435E-02
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.218E+06 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    3.225E-02
 
  ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
    0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  2.748E-02,  FRACTION OF STEP COMPLETED  0.772    
- STEP TIME COMPLETED       0.772    ,  TOTAL TIME COMPLETED         1.77    
+ TIME INCREMENT COMPLETED  2.580E-02,  FRACTION OF STEP COMPLETED  0.824    
+ STEP TIME COMPLETED       0.824    ,  TOTAL TIME COMPLETED         1.82    
 
 
-  INCREMENT    50 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.435E-02
+  INCREMENT    37 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.225E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -3345,20 +3223,20 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.404E+06   TIME AVG. FORCE       1.120E+06
- LARGEST RESIDUAL FORCE            -2.340E+07   AT NODE       1083   DOF  2
+ AVERAGE FORCE                      1.376E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE             1.945E+06   AT NODE        319   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         3.578E-03   AT NODE       1083   DOF  2
+ LARGEST INCREMENT OF DISP.         2.426E-03   AT NODE       1711   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.671E-03   AT NODE        923   DOF  2
+ LARGEST CORRECTION TO DISP.        5.271E-04   AT NODE         14   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3368,43 +3246,20 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.396E+06   TIME AVG. FORCE       1.119E+06
- LARGEST RESIDUAL FORCE             9.851E+06   AT NODE       1083   DOF  2
+ AVERAGE FORCE                      1.375E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE            -1.226E+05   AT NODE        712   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.588E-03   AT NODE       1871   DOF  2
+ LARGEST INCREMENT OF DISP.         2.362E-03   AT NODE        907   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.307E-03   AT NODE       1083   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.396E+06   TIME AVG. FORCE       1.119E+06
- LARGEST RESIDUAL FORCE            -2.634E+06   AT NODE       1359   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.354E-03   AT NODE         75   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        8.133E-04   AT NODE       1083   DOF  2
+ LARGEST CORRECTION TO DISP.        1.898E-04   AT NODE        319   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3419,30 +3274,29 @@
        ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      1.396E+06   TIME AVG. FORCE       1.119E+06
- LARGEST RESIDUAL FORCE             0.282       AT NODE        141   DOF  2
+ AVERAGE FORCE                      1.375E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE              7.77       AT NODE       1662   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.354E-03   AT NODE         75   DOF  2
+ LARGEST INCREMENT OF DISP.         2.362E-03   AT NODE        907   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.396E-04   AT NODE       1359   DOF  2
+ LARGEST CORRECTION TO DISP.       -1.449E-05   AT NODE        840   DOF  2
    INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    2.566E-11
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.906E+06 AND OCCURS AT NODE       1212 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    4.294E-02
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.305E+06 AND OCCURS AT NODE       1186 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    4.031E-02
 
- ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+ ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  3.435E-02,  FRACTION OF STEP COMPLETED  0.806    
- STEP TIME COMPLETED       0.806    ,  TOTAL TIME COMPLETED         1.81    
+ TIME INCREMENT COMPLETED  3.225E-02,  FRACTION OF STEP COMPLETED  0.857    
+ STEP TIME COMPLETED       0.857    ,  TOTAL TIME COMPLETED         1.86    
 
 
-  INCREMENT    51 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.294E-02
+  INCREMENT    38 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.031E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -3456,18 +3310,18 @@
        ELAPSED WALLCLOCK TIME (SEC) =          0
  
 
- ***WARNING: THE SYSTEM MATRIX HAS 1 NEGATIVE EIGENVALUES.
+ ***WARNING: THE SYSTEM MATRIX HAS 8 NEGATIVE EIGENVALUES.
              EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      1.309E+06   TIME AVG. FORCE       1.123E+06
- LARGEST RESIDUAL FORCE            -1.122E+07   AT NODE       1305   DOF  2
+ AVERAGE FORCE                      1.325E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE            -5.564E+07   AT NODE        665   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         3.554E-03   AT NODE       1305   DOF  2
+ LARGEST INCREMENT OF DISP.         3.755E-02   AT NODE        406   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.857E-03   AT NODE       1901   DOF  2
+ LARGEST CORRECTION TO DISP.        3.689E-02   AT NODE        406   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3485,12 +3339,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      1.306E+06   TIME AVG. FORCE       1.123E+06
- LARGEST RESIDUAL FORCE            -1.225E+07   AT NODE       1901   DOF  2
+ AVERAGE FORCE                      1.298E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE             3.793E+07   AT NODE        665   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         4.463E-03   AT NODE       1901   DOF  2
+ LARGEST INCREMENT OF DISP.         4.517E-03   AT NODE          8   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.116E-03   AT NODE       1901   DOF  2
+ LARGEST CORRECTION TO DISP.        3.750E-02   AT NODE        406   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3508,12 +3362,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      1.305E+06   TIME AVG. FORCE       1.123E+06
- LARGEST RESIDUAL FORCE             1.455E+07   AT NODE       1901   DOF  2
+ AVERAGE FORCE                      1.298E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE             1.932E+07   AT NODE        729   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         3.441E-03   AT NODE        352   DOF  2
+ LARGEST INCREMENT OF DISP.         5.646E-03   AT NODE        407   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -4.113E-03   AT NODE       1901   DOF  2
+ LARGEST CORRECTION TO DISP.        5.502E-03   AT NODE        665   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3531,12 +3385,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      1.306E+06   TIME AVG. FORCE       1.123E+06
- LARGEST RESIDUAL FORCE             9.053E+06   AT NODE        352   DOF  2
+ AVERAGE FORCE                      1.295E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE            -1.071E+07   AT NODE        663   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         3.578E-03   AT NODE       1901   DOF  2
+ LARGEST INCREMENT OF DISP.         4.252E-03   AT NODE        663   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.228E-03   AT NODE       1901   DOF  2
+ LARGEST CORRECTION TO DISP.       -2.555E-03   AT NODE        407   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3546,20 +3400,20 @@
 
      CHECK POINT  END OF SOLVER       
 
-       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED USER TIME (SEC)      =   0.0000    
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
 
 
- AVERAGE FORCE                      1.306E+06   TIME AVG. FORCE       1.123E+06
- LARGEST RESIDUAL FORCE            -8.161E+06   AT NODE        352   DOF  2
+ AVERAGE FORCE                      1.295E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE            -5.274E+06   AT NODE        665   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         4.053E-03   AT NODE        352   DOF  2
+ LARGEST INCREMENT OF DISP.         3.789E-03   AT NODE        665   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.797E-03   AT NODE       1901   DOF  2
+ LARGEST CORRECTION TO DISP.       -1.338E-03   AT NODE        663   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3577,41 +3431,12 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
 
 
- AVERAGE FORCE                      1.306E+06   TIME AVG. FORCE       1.123E+06
- LARGEST RESIDUAL FORCE             1.009E+07   AT NODE        352   DOF  2
+ AVERAGE FORCE                      1.294E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE            -1.822E+06   AT NODE        505   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         4.862E-03   AT NODE       1901   DOF  2
+ LARGEST INCREMENT OF DISP.         3.317E-03   AT NODE       1139   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        4.081E-03   AT NODE       1901   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
- 
-
- ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
-
-
-  INCREMENT    51 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  1.073E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.372E+06   TIME AVG. FORCE       1.124E+06
- LARGEST RESIDUAL FORCE             9.964E+04   AT NODE       1051   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         7.216E-04   AT NODE       1186   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        5.886E-05   AT NODE       1715   DOF  2
+ LARGEST CORRECTION TO DISP.       -6.522E-04   AT NODE        665   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3626,297 +3451,15 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     7
 
 
- AVERAGE FORCE                      1.372E+06   TIME AVG. FORCE       1.124E+06
- LARGEST RESIDUAL FORCE              2.94       AT NODE        709   DOF  2
+ AVERAGE FORCE                      1.293E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE            -6.053E+05   AT NODE        132   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         7.216E-04   AT NODE       1186   DOF  2
+ LARGEST INCREMENT OF DISP.         3.313E-03   AT NODE       1139   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        4.844E-06   AT NODE        408   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.499E+05 AND OCCURS AT NODE        685 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.342E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.073E-02,  FRACTION OF STEP COMPLETED  0.817    
- STEP TIME COMPLETED       0.817    ,  TOTAL TIME COMPLETED         1.82    
-
-
-  INCREMENT    52 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.342E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.343E+06   TIME AVG. FORCE       1.129E+06
- LARGEST RESIDUAL FORCE             2.485E+05   AT NODE        501   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         9.692E-04   AT NODE       1003   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.050E-04   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.344E+06   TIME AVG. FORCE       1.129E+06
- LARGEST RESIDUAL FORCE             1.484E+04   AT NODE          8   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         9.696E-04   AT NODE       1003   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.808E-05   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =  0.10000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          1
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.343E+06   TIME AVG. FORCE       1.129E+06
- LARGEST RESIDUAL FORCE              1.52       AT NODE        505   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         9.696E-04   AT NODE       1003   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.038E-06   AT NODE          8   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.613E+05 AND OCCURS AT NODE       1780 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    1.677E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.342E-02,  FRACTION OF STEP COMPLETED  0.830    
- STEP TIME COMPLETED       0.830    ,  TOTAL TIME COMPLETED         1.83    
-
-
-  INCREMENT    53 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.677E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.313E+06   TIME AVG. FORCE       1.132E+06
- LARGEST RESIDUAL FORCE            -7.332E+05   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.325E-03   AT NODE       1285   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.298E-04   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.313E+06   TIME AVG. FORCE       1.132E+06
- LARGEST RESIDUAL FORCE            -1.205E+04   AT NODE        505   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.325E-03   AT NODE       1285   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -6.960E-05   AT NODE        404   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.313E+06   TIME AVG. FORCE       1.132E+06
- LARGEST RESIDUAL FORCE            -0.641       AT NODE        495   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.325E-03   AT NODE       1285   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -9.566E-07   AT NODE        406   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   4.984E+05 AND OCCURS AT NODE       1780 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    2.097E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  1.677E-02,  FRACTION OF STEP COMPLETED  0.847    
- STEP TIME COMPLETED       0.847    ,  TOTAL TIME COMPLETED         1.85    
-
-
-  INCREMENT    54 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.097E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.278E+06   TIME AVG. FORCE       1.135E+06
- LARGEST RESIDUAL FORCE            -8.281E+05   AT NODE        131   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.742E-03   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -2.162E-04   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.278E+06   TIME AVG. FORCE       1.135E+06
- LARGEST RESIDUAL FORCE            -8.382E-09   AT NODE        900   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.736E-03   AT NODE       1222   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -4.689E-05   AT NODE        131   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   6.855E+05 AND OCCURS AT NODE        563 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    2.621E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.097E-02,  FRACTION OF STEP COMPLETED  0.868    
- STEP TIME COMPLETED       0.868    ,  TOTAL TIME COMPLETED         1.87    
-
-
-  INCREMENT    55 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.621E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
- 
-
- ***WARNING: THE SYSTEM MATRIX HAS 1 NEGATIVE EIGENVALUES.
-             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.224E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE            -9.589E+06   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         3.404E-03   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.248E-03   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.223E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE            -1.147E+07   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         3.373E-03   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.540E-03   AT NODE          6   DOF  2
+ LARGEST CORRECTION TO DISP.        2.030E-04   AT NODE        132   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -3931,182 +3474,79 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     8
 
 
- AVERAGE FORCE                      1.222E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE            -8.335E+05   AT NODE        499   DOF  1
+ AVERAGE FORCE                      1.294E+06   TIME AVG. FORCE       1.309E+06
+ LARGEST RESIDUAL FORCE             -74.3       AT NODE        505   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.358E-03   AT NODE        405   DOF  2
+ LARGEST INCREMENT OF DISP.         3.312E-03   AT NODE       1139   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.154E-03   AT NODE          6   DOF  2
+ LARGEST CORRECTION TO DISP.       -6.417E-05   AT NODE        132   DOF  2
    INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
-
-
- AVERAGE FORCE                      1.221E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE             2.952E+04   AT NODE          8   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.358E-03   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.331E-04   AT NODE        406   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
-
-
- AVERAGE FORCE                      1.221E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE             -17.6       AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.358E-03   AT NODE        405   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        3.842E-06   AT NODE          8   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   9.175E+05 AND OCCURS AT NODE       1011 INSTANCE BLOCK-1                                                                         
-
- ITERATION SUMMARY FOR THE INCREMENT:   5 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  5 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.621E-02,  FRACTION OF STEP COMPLETED  0.894    
- STEP TIME COMPLETED       0.894    ,  TOTAL TIME COMPLETED         1.89    
-
-
-  INCREMENT    56 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.621E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
- 
-
- ***WARNING: THE SYSTEM MATRIX HAS 1 NEGATIVE EIGENVALUES.
-             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.135E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE            -1.871E+06   AT NODE        505   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.474E-03   AT NODE        505   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -7.843E-04   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =  0.10000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.137E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE            -1.325E+07   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         3.747E-03   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        2.373E-03   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
-
-
- AVERAGE FORCE                      1.134E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE             1.552E+06   AT NODE        493   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.421E-03   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.502E-03   AT NODE          8   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
-
-
- AVERAGE FORCE                      1.134E+06   TIME AVG. FORCE       1.136E+06
- LARGEST RESIDUAL FORCE            -4.960E+03   AT NODE        495   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.426E-03   AT NODE          7   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        1.159E-04   AT NODE        493   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION   -3.706E-07
+ ESTIMATE OF DISP.    CORRECTION   -7.874E-09
  FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -6.643E+05 AND OCCURS AT NODE       1098 INSTANCE BLOCK-1                                                                         
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.906E+06 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
 
- ITERATION SUMMARY FOR THE INCREMENT:   4 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  4 ARE EQUILIBRIUM ITERATIONS.
+ ITERATION SUMMARY FOR THE INCREMENT:   8 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  8 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  2.621E-02,  FRACTION OF STEP COMPLETED  0.921    
- STEP TIME COMPLETED       0.921    ,  TOTAL TIME COMPLETED         1.92    
+ TIME INCREMENT COMPLETED  4.031E-02,  FRACTION OF STEP COMPLETED  0.897    
+ STEP TIME COMPLETED       0.897    ,  TOTAL TIME COMPLETED         1.90    
 
 
-  INCREMENT    57 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.621E-02
+  INCREMENT    39 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.031E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 1 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.183E+06   TIME AVG. FORCE       1.305E+06
+ LARGEST RESIDUAL FORCE             3.247E+07   AT NODE        411   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         4.158E-03   AT NODE         14   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -3.585E-03   AT NODE        411   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.180E+06   TIME AVG. FORCE       1.305E+06
+ LARGEST RESIDUAL FORCE             1.993E+07   AT NODE        492   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         3.659E-03   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -3.395E-03   AT NODE        492   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -4119,123 +3559,15 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.20000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      1.025E+06   TIME AVG. FORCE       1.134E+06
- LARGEST RESIDUAL FORCE             6.500E+05   AT NODE        148   DOF  1
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.202E-03   AT NODE         55   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.949E-04   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      1.025E+06   TIME AVG. FORCE       1.134E+06
- LARGEST RESIDUAL FORCE            -1.024E-08   AT NODE       1437   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.202E-03   AT NODE         55   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -9.667E-05   AT NODE          4   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
-
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -7.343E+05 AND OCCURS AT NODE       1212 INSTANCE BLOCK-1                                                                         
-          TIME INCREMENT MAY NOW INCREASE TO    3.276E-02
-
- ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
-
- TIME INCREMENT COMPLETED  2.621E-02,  FRACTION OF STEP COMPLETED  0.947    
- STEP TIME COMPLETED       0.947    ,  TOTAL TIME COMPLETED         1.95    
-
-
-  INCREMENT    58 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  3.276E-02
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
- 
-
- ***WARNING: THE SYSTEM MATRIX HAS 1 NEGATIVE EIGENVALUES.
-             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
-
-
- AVERAGE FORCE                      8.866E+05   TIME AVG. FORCE       1.130E+06
- LARGEST RESIDUAL FORCE            -7.925E+06   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         3.016E-03   AT NODE        406   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.683E-03   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
-
-
- AVERAGE FORCE                      8.972E+05   TIME AVG. FORCE       1.130E+06
- LARGEST RESIDUAL FORCE             5.756E+07   AT NODE        498   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         8.476E-03   AT NODE          6   DOF  2
-   INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.        9.172E-03   AT NODE          6   DOF  1
-   INSTANCE: BLOCK-1                                                                         
-          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
-
-  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
-
-     CHECK POINT   START OF SOLVER    
-
-     CHECK POINT  END OF SOLVER       
-
-       ELAPSED USER TIME (SEC)      =   0.0000    
-       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
-       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
-       ELAPSED WALLCLOCK TIME (SEC) =          0
-
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
 
 
- AVERAGE FORCE                      8.841E+05   TIME AVG. FORCE       1.130E+06
- LARGEST RESIDUAL FORCE            -3.623E+06   AT NODE        705   DOF  1
+ AVERAGE FORCE                      1.176E+06   TIME AVG. FORCE       1.305E+06
+ LARGEST RESIDUAL FORCE             5.179E+06   AT NODE         14   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.908E-03   AT NODE         63   DOF  2
+ LARGEST INCREMENT OF DISP.         3.662E-03   AT NODE        406   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -7.090E-03   AT NODE          6   DOF  1
+ LARGEST CORRECTION TO DISP.        2.006E-03   AT NODE        492   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -4253,14 +3585,71 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
 
 
- AVERAGE FORCE                      8.835E+05   TIME AVG. FORCE       1.130E+06
- LARGEST RESIDUAL FORCE             6.516E+05   AT NODE        498   DOF  2
+ AVERAGE FORCE                      1.175E+06   TIME AVG. FORCE       1.305E+06
+ LARGEST RESIDUAL FORCE             1.457E+06   AT NODE        411   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.908E-03   AT NODE         63   DOF  2
+ LARGEST INCREMENT OF DISP.         3.663E-03   AT NODE        406   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -3.385E-04   AT NODE        498   DOF  2
+ LARGEST CORRECTION TO DISP.       -1.022E-03   AT NODE        411   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
+
+
+ AVERAGE FORCE                      1.175E+06   TIME AVG. FORCE       1.305E+06
+ LARGEST RESIDUAL FORCE             3.721E+04   AT NODE        507   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         3.663E-03   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        2.437E-04   AT NODE        411   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
+
+
+ AVERAGE FORCE                      1.175E+06   TIME AVG. FORCE       1.305E+06
+ LARGEST RESIDUAL FORCE             -106.       AT NODE        177   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         3.663E-03   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        7.641E-06   AT NODE        507   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.719E+06 AND OCCURS AT NODE        520 INSTANCE BLOCK-1                                                                         
+
+ ITERATION SUMMARY FOR THE INCREMENT:   6 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  6 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  4.031E-02,  FRACTION OF STEP COMPLETED  0.937    
+ STEP TIME COMPLETED       0.937    ,  TOTAL TIME COMPLETED         1.94    
+
+
+  INCREMENT    40 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  4.031E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -4272,30 +3661,147 @@
        ELAPSED SYSTEM TIME (SEC)    =   0.0000    
        ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 5 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.015E+06   TIME AVG. FORCE       1.298E+06
+ LARGEST RESIDUAL FORCE            -1.609E+07   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         5.165E-03   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -2.176E-03   AT NODE         12   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+ 
+
+ ***WARNING: THE SYSTEM MATRIX HAS 2 NEGATIVE EIGENVALUES.
+             EXPLANATIONS ARE SUGGESTED AFTER THE FIRST OCCURRENCE OF THIS MESSAGE.
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.016E+06   TIME AVG. FORCE       1.298E+06
+ LARGEST RESIDUAL FORCE            -1.860E+07   AT NODE          6   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         6.115E-03   AT NODE          6   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        4.178E-03   AT NODE          6   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+
+
+ AVERAGE FORCE                      1.011E+06   TIME AVG. FORCE       1.298E+06
+ LARGEST RESIDUAL FORCE            -3.449E+06   AT NODE          7   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         3.758E-03   AT NODE        404   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -4.641E-03   AT NODE          6   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     4
+
+
+ AVERAGE FORCE                      1.012E+06   TIME AVG. FORCE       1.298E+06
+ LARGEST RESIDUAL FORCE            -4.462E+06   AT NODE          6   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         3.654E-03   AT NODE          6   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        1.646E-03   AT NODE          6   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
 
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     5
 
 
- AVERAGE FORCE                      8.836E+05   TIME AVG. FORCE       1.130E+06
- LARGEST RESIDUAL FORCE             -968.       AT NODE          5   DOF  1
+ AVERAGE FORCE                      1.011E+06   TIME AVG. FORCE       1.298E+06
+ LARGEST RESIDUAL FORCE            -3.379E+06   AT NODE        405   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         2.908E-03   AT NODE         63   DOF  2
+ LARGEST INCREMENT OF DISP.         3.689E-03   AT NODE          7   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -8.796E-05   AT NODE          6   DOF  1
+ LARGEST CORRECTION TO DISP.        1.524E-03   AT NODE        405   DOF  1
    INSTANCE: BLOCK-1                                                                         
- ESTIMATE OF DISP.    CORRECTION    1.306E-07
- FORCE     EQUILIB. ACCEPTED BASED ON SMALL RESIDUAL AND ESTIMATED CORRECTION
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.049E+06 AND OCCURS AT NODE       1780 INSTANCE BLOCK-1                                                                         
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
- ITERATION SUMMARY FOR THE INCREMENT:   5 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  5 ARE EQUILIBRIUM ITERATIONS.
+     CHECK POINT   START OF SOLVER    
 
- TIME INCREMENT COMPLETED  3.276E-02,  FRACTION OF STEP COMPLETED  0.979    
- STEP TIME COMPLETED       0.979    ,  TOTAL TIME COMPLETED         1.98    
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     6
 
 
-  INCREMENT    59 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  2.051E-02
+ AVERAGE FORCE                      1.012E+06   TIME AVG. FORCE       1.298E+06
+ LARGEST RESIDUAL FORCE            -5.216E+06   AT NODE        405   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         4.087E-03   AT NODE          6   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.971E-03   AT NODE        405   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+ 
+
+ ***NOTE: THE SOLUTION APPEARS TO BE DIVERGING. CONVERGENCE IS JUDGED UNLIKELY.
+
+
+  INCREMENT    40 STARTS. ATTEMPT NUMBER  2, TIME INCREMENT  1.008E-02
 
   NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
 
@@ -4311,12 +3817,127 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
 
 
- AVERAGE FORCE                      8.039E+05   TIME AVG. FORCE       1.125E+06
- LARGEST RESIDUAL FORCE             3.344E+05   AT NODE        711   DOF  2
+ AVERAGE FORCE                      1.137E+06   TIME AVG. FORCE       1.301E+06
+ LARGEST RESIDUAL FORCE            -3.870E+04   AT NODE        763   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.787E-03   AT NODE        461   DOF  2
+ LARGEST INCREMENT OF DISP.         8.680E-04   AT NODE        665   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.981E-04   AT NODE          8   DOF  1
+ LARGEST CORRECTION TO DISP.        4.779E-05   AT NODE        406   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.137E+06   TIME AVG. FORCE       1.301E+06
+ LARGEST RESIDUAL FORCE            -0.133       AT NODE        178   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         8.680E-04   AT NODE        665   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -9.042E-07   AT NODE        763   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.559E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.008E-02,  FRACTION OF STEP COMPLETED  0.947    
+ STEP TIME COMPLETED       0.947    ,  TOTAL TIME COMPLETED         1.95    
+
+
+  INCREMENT    41 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.008E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.095E+06   TIME AVG. FORCE       1.296E+06
+ LARGEST RESIDUAL FORCE             3.616E+04   AT NODE        500   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         8.441E-04   AT NODE         61   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        3.746E-05   AT NODE        406   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      1.095E+06   TIME AVG. FORCE       1.296E+06
+ LARGEST RESIDUAL FORCE            -0.145       AT NODE          4   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         8.441E-04   AT NODE         61   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.002E-06   AT NODE        764   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   1.042E+05 AND OCCURS AT NODE       1047 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.260E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.008E-02,  FRACTION OF STEP COMPLETED  0.957    
+ STEP TIME COMPLETED       0.957    ,  TOTAL TIME COMPLETED         1.96    
+
+
+  INCREMENT    42 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.260E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      1.040E+06   TIME AVG. FORCE       1.290E+06
+ LARGEST RESIDUAL FORCE            -1.495E+04   AT NODE       1050   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.085E-03   AT NODE         62   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -5.651E-05   AT NODE          8   DOF  2
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -4334,12 +3955,47 @@
                CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      8.039E+05   TIME AVG. FORCE       1.125E+06
- LARGEST RESIDUAL FORCE             1.863E+04   AT NODE        176   DOF  2
+ AVERAGE FORCE                      1.040E+06   TIME AVG. FORCE       1.290E+06
+ LARGEST RESIDUAL FORCE              1.51       AT NODE       1659   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.787E-03   AT NODE        461   DOF  2
+ LARGEST INCREMENT OF DISP.         1.085E-03   AT NODE         62   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.932E-05   AT NODE        711   DOF  1
+ LARGEST CORRECTION TO DISP.       -5.180E-07   AT NODE       1050   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   2.290E+05 AND OCCURS AT NODE        628 INSTANCE BLOCK-1                                                                         
+          TIME INCREMENT MAY NOW INCREASE TO    1.575E-02
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.260E-02,  FRACTION OF STEP COMPLETED  0.970    
+ STEP TIME COMPLETED       0.970    ,  TOTAL TIME COMPLETED         1.97    
+
+
+  INCREMENT    43 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.575E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      9.686E+05   TIME AVG. FORCE       1.282E+06
+ LARGEST RESIDUAL FORCE             1.105E+05   AT NODE        732   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.437E-03   AT NODE         65   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -9.697E-05   AT NODE          9   DOF  1
    INSTANCE: BLOCK-1                                                                         
           FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
 
@@ -4354,24 +4010,81 @@
        ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
        ELAPSED WALLCLOCK TIME (SEC) =          0
 
-               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     3
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
 
 
- AVERAGE FORCE                      8.039E+05   TIME AVG. FORCE       1.125E+06
- LARGEST RESIDUAL FORCE             -139.       AT NODE        492   DOF  2
+ AVERAGE FORCE                      9.687E+05   TIME AVG. FORCE       1.282E+06
+ LARGEST RESIDUAL FORCE              18.5       AT NODE        504   DOF  1
    INSTANCE: BLOCK-1                                                                         
- LARGEST INCREMENT OF DISP.         1.787E-03   AT NODE        461   DOF  2
+ LARGEST INCREMENT OF DISP.         1.437E-03   AT NODE         65   DOF  2
    INSTANCE: BLOCK-1                                                                         
- LARGEST CORRECTION TO DISP.       -1.407E-06   AT NODE        838   DOF  2
+ LARGEST CORRECTION TO DISP.       -5.920E-06   AT NODE        661   DOF  1
    INSTANCE: BLOCK-1                                                                         
           THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
 
-  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS   4.206E+05 AND OCCURS AT NODE        330 INSTANCE BLOCK-1                                                                         
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -2.893E+05 AND OCCURS AT NODE        516 INSTANCE BLOCK-1                                                                         
 
- ITERATION SUMMARY FOR THE INCREMENT:   3 TOTAL ITERATIONS, OF WHICH
-   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  3 ARE EQUILIBRIUM ITERATIONS.
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
 
- TIME INCREMENT COMPLETED  2.051E-02,  FRACTION OF STEP COMPLETED   1.00    
+ TIME INCREMENT COMPLETED  1.575E-02,  FRACTION OF STEP COMPLETED  0.986    
+ STEP TIME COMPLETED       0.986    ,  TOTAL TIME COMPLETED         1.99    
+
+
+  INCREMENT    44 STARTS. ATTEMPT NUMBER  1, TIME INCREMENT  1.421E-02
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =   0.0000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =   0.0000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     1
+
+
+ AVERAGE FORCE                      9.060E+05   TIME AVG. FORCE       1.274E+06
+ LARGEST RESIDUAL FORCE             3.737E+04   AT NODE          7   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.322E-03   AT NODE         64   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.        7.093E-05   AT NODE          8   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+          FORCE     EQUILIBRIUM NOT ACHIEVED WITHIN TOLERANCE.
+
+  NUMBER OF EQUATIONS =     3802     NUMBER OF FLOATING PT. OPERATIONS =  2.02E+07
+
+     CHECK POINT   START OF SOLVER    
+
+     CHECK POINT  END OF SOLVER       
+
+       ELAPSED USER TIME (SEC)      =  0.10000    
+       ELAPSED SYSTEM TIME (SEC)    =   0.0000    
+       ELAPSED TOTAL CPU TIME (SEC) =  0.10000    
+       ELAPSED WALLCLOCK TIME (SEC) =          0
+
+               CONVERGENCE CHECKS FOR EQUILIBRIUM ITERATION     2
+
+
+ AVERAGE FORCE                      9.057E+05   TIME AVG. FORCE       1.274E+06
+ LARGEST RESIDUAL FORCE             -298.       AT NODE          4   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST INCREMENT OF DISP.         1.322E-03   AT NODE         64   DOF  2
+   INSTANCE: BLOCK-1                                                                         
+ LARGEST CORRECTION TO DISP.       -1.833E-06   AT NODE          4   DOF  1
+   INSTANCE: BLOCK-1                                                                         
+          THE FORCE     EQUILIBRIUM EQUATIONS HAVE CONVERGED
+
+  MAXIMUM HALF-INCREMENT FORCE RESIDUAL IS  -1.841E+05 AND OCCURS AT NODE        520 INSTANCE BLOCK-1                                                                         
+
+ ITERATION SUMMARY FOR THE INCREMENT:   2 TOTAL ITERATIONS, OF WHICH
+   0 ARE SEVERE DISCONTINUITY ITERATIONS AND  2 ARE EQUILIBRIUM ITERATIONS.
+
+ TIME INCREMENT COMPLETED  1.421E-02,  FRACTION OF STEP COMPLETED   1.00    
  STEP TIME COMPLETED        1.00    ,  TOTAL TIME COMPLETED         2.00    
 
 
@@ -4380,25 +4093,25 @@
 
 
      ANALYSIS SUMMARY:
-     TOTAL OF         60  INCREMENTS
-                      10  CUTBACKS IN AUTOMATIC INCREMENTATION
-                     144  ITERATIONS INCLUDING CONTACT ITERATIONS IF PRESENT
-                     146  PASSES THROUGH THE EQUATION SOLVER OF WHICH 
-                     146  INVOLVE MATRIX DECOMPOSITION, INCLUDING
+     TOTAL OF         45  INCREMENTS
+                       8  CUTBACKS IN AUTOMATIC INCREMENTATION
+                     141  ITERATIONS INCLUDING CONTACT ITERATIONS IF PRESENT
+                     143  PASSES THROUGH THE EQUATION SOLVER OF WHICH 
+                     143  INVOLVE MATRIX DECOMPOSITION, INCLUDING
                        2  DECOMPOSITION(S) OF THE MASS MATRIX
                        1  REORDERING OF EQUATIONS TO MINIMIZE WAVEFRONT
                        0  ADDITIONAL RESIDUAL EVALUATIONS FOR LINE SEARCHES
                        0  ADDITIONAL OPERATOR EVALUATIONS FOR LINE SEARCHES
                        4  WARNING MESSAGES DURING USER INPUT PROCESSING
-                      22  WARNING MESSAGES DURING ANALYSIS
+                      24  WARNING MESSAGES DURING ANALYSIS
                        0  ANALYSIS WARNINGS ARE NUMERICAL PROBLEM MESSAGES
-                       6  ANALYSIS WARNINGS ARE NEGATIVE EIGENVALUE MESSAGES
+                      14  ANALYSIS WARNINGS ARE NEGATIVE EIGENVALUE MESSAGES
                        0  ERROR MESSAGES
 
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   26.900    
-       SYSTEM TIME (SEC)    =   1.1000    
-       TOTAL CPU TIME (SEC) =   28.000    
-       WALLCLOCK TIME (SEC) =         31
+       USER TIME (SEC)      =   23.800    
+       SYSTEM TIME (SEC)    =   1.0000    
+       TOTAL CPU TIME (SEC) =   24.800    
+       WALLCLOCK TIME (SEC) =         27

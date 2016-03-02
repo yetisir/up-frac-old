@@ -1,6 +1,6 @@
 1
 
-   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:17:39
+   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:50:07
    For use by  under license from Dassault Systemes or its subsidiary.
 
 
@@ -205,13 +205,13 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =  0.30000    
+       USER TIME (SEC)      =  0.10000    
        SYSTEM TIME (SEC)    =   0.0000    
-       TOTAL CPU TIME (SEC) =  0.30000    
+       TOTAL CPU TIME (SEC) =  0.10000    
        WALLCLOCK TIME (SEC) =          1
 1
 
-   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:17:50
+   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:50:19
    For use by  under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -299,7 +299,7 @@
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
 1
 
-   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:17:51
+   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:50:19
    For use by  under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    2  INCREMENT    1
@@ -414,13 +414,13 @@
 
                               ANALYSIS COMPLETE
                               WITH      4 WARNING MESSAGES ON THE DAT FILE
-                              AND      22 WARNING MESSAGES ON THE MSG FILE
-                                        6 WARNINGS ARE FOR NEGATIVE EIGENVALUES
+                              AND      24 WARNING MESSAGES ON THE MSG FILE
+                                       14 WARNINGS ARE FOR NEGATIVE EIGENVALUES
 
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   26.900    
-       SYSTEM TIME (SEC)    =   1.1000    
-       TOTAL CPU TIME (SEC) =   28.000    
-       WALLCLOCK TIME (SEC) =         31
+       USER TIME (SEC)      =   23.800    
+       SYSTEM TIME (SEC)    =   1.0000    
+       TOTAL CPU TIME (SEC) =   24.800    
+       WALLCLOCK TIME (SEC) =         27
