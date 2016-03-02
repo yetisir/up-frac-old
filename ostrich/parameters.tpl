@@ -38,14 +38,16 @@ def power(lista, listb):
 def fWrite(stuff):
     with open('log.txt', 'a') as f:
         f.write(str(stuff)+'\n')
+
+mName = 'voronoi10(c)'
     
 partName = 'Block'
 gridPoints = [[0, 0], [10, 0], [10, 10], [0, 10], [0, 0]]
 
 materialName = 'Material-1'
 density = 2700000.0
-elasticModulus = 12000000000.0
-poissonsRatio = 0.3 #0.3
+elasticModulus = 10029120000.0
+poissonsRatio = 0.2389403 #0.3
 
 #****Concrete Damage Plasticity
 dilationAngle = 10 #this will be same as UDEC
@@ -55,25 +57,29 @@ variableK = 6.700000E-01 #default
 viscousParameter = 0 #default
 
 numStrainPoints = 100
-inelasticStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0226546490851)
+inelasticStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0126506482045)
 h = $h
 k = $k
 d = $dd
+b = 1e6
 a = (d - k)/h**2
 compressiveYeildStress = add(multiply(a, power(subtract(inelasticStrain, h), 2)), k)
+compressiveYeildStress = [b if x < b else x for x in compressiveYeildStress]
 compressiveDamageScaling = $cd
 E = elasticModulus
-ei = inelasticStrain[-1]
-# m = compressiveDamageScaling*(b + 2*E*ei - (b**2 + 4*a**2*ei**2 + 4*E*b*ei + 4*a*b*ei + 4*E*a*ei**2)**(1/2) + 2*a*ei)/(2*(E*ei**2 + a*ei**2))
-m = compressiveDamageScaling*((3*d*ei**2 + d*h**2 - 3*ei**2*k - math.sqrt(9*d**2*ei**4 + d**2*h**4 + 9*ei**4*k**2 - 8*d**2*ei*h**3 - 24*d**2*ei**3*h - 24*ei**3*h*k**2 + 22*d**2*ei**2*h**2 + 16*ei**2*h**2*k**2 - 18*d*ei**4*k + 4*E*d*ei*h**4 + 8*d*ei*h**3*k + 48*d*ei**3*h*k - 8*E*d*ei**2*h**3 + 4*E*d*ei**3*h**2 + 8*E*ei**2*h**3*k - 4*E*ei**3*h**2*k - 38*d*ei**2*h**2*k) - 4*d*ei*h + 4*ei*h*k + 2*E*ei*h**2)/(2*(2*d*ei**3 - 2*ei**3*k + E*ei**2*h**2 - 2*d*ei**2*h + 2*ei**2*h*k)))
+m = divide(1, add(divide(compressiveYeildStress, E), inelasticStrain))
+m = min(m)*compressiveDamageScaling
 compressiveDamage = multiply(m, inelasticStrain)
 
-crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0226546490851)
-N = 30000000.0
-tLambda = -250.0
+if '(t)' in mName:
+	crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0126506482045)
+elif '(c)' in mName:
+	crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.000914634404845)
+N = 2241357.0
+tLambda = -2210.0
 tensileYeildStress = multiply(N, exp(multiply(tLambda, crackingStrain)))
-tensileDamageScaling = 0.95
-n = multiply(tensileDamageScaling, multiply(divide(log(subtract(1.005, divide(crackingStrain, add(divide(tensileYeildStress, elasticModulus), crackingStrain)))), log(add(1, crackingStrain))), -1))
+tensileDamageScaling = 0.9284359
+n = multiply(tensileDamageScaling, multiply(divide(log(subtract(1.00, divide(crackingStrain, add(divide(tensileYeildStress, elasticModulus), crackingStrain)))), log(add(1, crackingStrain))), -1))
 n[0] = elasticModulus/N
 n = min(n)
 tensileDamage = subtract(1, divide(1, power(add(1, crackingStrain), n)))
@@ -83,8 +89,10 @@ tensileDamage = subtract(1, divide(1, power(add(1, crackingStrain), n)))
 sectionName = 'Block'
 sectionLocation = (10/2, 10/2, 0.0)
 
-simulationTime = 8
-numberOfSteps = simulationTime*10
+simulationTime = 20
+numberOfSteps = 50
+
+confiningStress = -10000000.0
 
 try:
     from abaqusConstants import *
@@ -98,9 +106,9 @@ try:
     boundaries = {'Bottom': (10/2, 0.0, 0.0), 'Top':(10/2, 10, 0.0), 'Left':(0.0, 10/2, 0.0), 'Right':(10, 10/2, 0.0)}
 
     steps = ('Initial', 'Step-1', 'Step-2')
-    v = (((UNSET, SET, UNSET), ), ((UNSET, 0.05, UNSET), ), ((SET, UNSET, UNSET), ), ((UNSET, UNSET, UNSET), ))
+    v = 0.01
     vNames = (('Bottom', ), ('Top', ), ('Left', ), ('Right', ))
-    velocityTable = ((0, -1), (3.2, -1), (4.8, 1), (8, 1))
+    velocityTable = ((0, -1), (8.0, -1), (12.0, 1), (20, 1))
 
     largeDef=ON
 except ImportError: pass

@@ -85,7 +85,7 @@ def createInstance(name, part):
     p = mdb.models['Model-1'].parts[part]
     a.Instance(name=name, part=p, dependent=ON)
 
-def applyBoundaryCondition(name, instance, step, location, v):
+def applyVelocityBoundaryCondition(name, instance, step, location, v):
     a = mdb.models['Model-1'].rootAssembly
     edges1 = a.instances[instance].edges.findAt((location, ))
     region = a.Set(edges=edges1, name=name)
@@ -95,16 +95,34 @@ def applyBoundaryCondition(name, instance, step, location, v):
         smooth=SOLVER_DEFAULT, data=velocityTable)
     mdb.models['Model-1'].VelocityBC(name=name, createStepName=step, 
         region=region, v1=v[0], v2=v[1], vr3=v[2], amplitude='Amp-1', 
-        localCsys=None, distributionType=UNIFORM, fieldName='')          
+        localCsys=None, distributionType=UNIFORM, fieldName='')  
 
-def createStaticStep(name):
-    mdb.models['Model-1'].StaticStep(name=name, previous='Initial', timePeriod=simulationTime,
+def applyDisplacementBoundaryCondition(name, instance, step, location, u):
+    a = mdb.models['Model-1'].rootAssembly
+    edges1 = a.instances[instance].edges.findAt((location, ))
+    region = a.Set(edges=edges1, name=name)
+    mdb.models['Model-1'].DisplacementBC(name=name, createStepName=step, 
+        region=region, u1=u[0], u2=u[1], ur3=u[2], amplitude=UNSET, 
+        distributionType=UNIFORM, fieldName='', localCsys=None)    
+        
+def applyConfiningStress(name, instance, step, location, stress):
+    a = mdb.models['Model-1'].rootAssembly
+    edges1 = a.instances[instance].edges.findAt((location, ))
+    region = a.Surface(side1Edges=edges1, name=name)
+    mdb.models['Model-1'].TabularAmplitude(name='Amp-2', timeSpan=STEP, 
+        smooth=SOLVER_DEFAULT, data=((0.0, 0.0), (5, 1)))
+    mdb.models['Model-1'].Pressure(name=name, createStepName=step, 
+        region=region, distributionType=UNIFORM, field='', magnitude=stress, 
+        amplitude='Amp-2')
+
+def createStaticStep(name, previous):
+    mdb.models['Model-1'].StaticStep(name=name, previous=previous, timePeriod=simulationTime,
                                      maxNumInc=1000, initialInc=0.5, minInc=0.001,
                                      maxInc=0.5, matrixSolver=DIRECT,
                                      matrixStorage=UNSYMMETRIC, nlgeom=largeDef)
 
-def createExplicitDynamicStep(name):
-    mdb.models['Model-1'].ExplicitDynamicsStep(name=name, previous='Initial', 
+def createExplicitDynamicStep(name, previous):
+    mdb.models['Model-1'].ExplicitDynamicsStep(name=name, previous=previous, 
                                                 timePeriod=simulationTime)
 
 def applyGravity(magnitude, stepName):
@@ -118,18 +136,22 @@ def buildModel():
     meshPart(meshSize, partName, sectionLocation, elementType, elementShape)
     createInstance(instanceName, partName)
 
-    # for j in range(len(v[0])):
-        # applyBoundaryCondition(vNames[0][j], instanceName, steps[0],
-            # boundaries[vNames[0][j]], v[0][j])
-    createExplicitDynamicStep(steps[1])
-    
-    for i in range(len(v)):
-        for j in range(len(v[i])):
-            applyBoundaryCondition(vNames[i][j], instanceName, steps[1],
-                boundaries[vNames[i][j]], v[i][j])
-		
+    createExplicitDynamicStep(steps[1], steps[0])
+    createExplicitDynamicStep(steps[2],steps[1])
+
     #applyGravity(gravityMagnitude, stepName)
+    if confiningStress != 0:
+        applyConfiningStress('Right', instanceName, steps[1], boundaries['Right'], -confiningStress)
+        applyConfiningStress('Left', instanceName, steps[1], boundaries['Left'], -confiningStress)
    
+    applyDisplacementBoundaryCondition('Bottom', instanceName, steps[1], boundaries['Bottom'],
+        (UNSET, SET, SET))
+    applyDisplacementBoundaryCondition('Top', instanceName, steps[1], boundaries['Top'], 
+        (UNSET, SET, SET))
+    mdb.models['Model-1'].boundaryConditions['Top'].setValuesInStep(stepName=steps[2], u2=FREED)
+
+    applyVelocityBoundaryCondition('vTop', instanceName, steps[2], boundaries['Top'], (UNSET, v, SET))
+
 def getStress(jobName, stepName, instanceName):
     odb = openOdb(jobName+'.odb')
     allElements = odb.rootAssembly.instances[instanceName].elements    
@@ -152,11 +174,13 @@ def getStrain(jobName, stepName, instanceName):
     
     element = allElements[0]
     strainHistory = [[0 for x in range(3)] for x in range(len(allFrames))] 
+    strainShift = allFrames[0].fieldOutputs['LE'].getSubset(position=CENTROID).values[0].data
+
     for i in range(len(allFrames)):
         strain = allFrames[i].fieldOutputs['LE'].getSubset(position=CENTROID).values[0].data
-        strainHistory[i][0] = strain[0]
-        strainHistory[i][1] = strain[1]
-        strainHistory[i][2] = strain[3]
+        strainHistory[i][0] = strain[0]#-strainShift[0]
+        strainHistory[i][1] = strain[1]#-strainShift[1]
+        strainHistory[i][2] = strain[3]#-strainShift[3]
     odb.close()
     return strainHistory
     
@@ -181,9 +205,9 @@ def main():
             activateLoadBalancing=False, multiprocessingMode=DEFAULT, numCpus=1, numGPUs=0)
     mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
     
-    timeHistory = getTime('Job-1', steps[1], instanceName)
-    stressHistory = getStress('Job-1', steps[1], instanceName)
-    strainHistory = getStrain('Job-1', steps[1], instanceName)
+    timeHistory = getTime('Job-1', steps[2], instanceName)
+    stressHistory = getStress('Job-1', steps[2], instanceName)
+    strainHistory = getStrain('Job-1', steps[2], instanceName)
     file = open('rawHistory.pkl', 'wb')
     pickle.dump(timeHistory, file)
     pickle.dump(stressHistory, file)

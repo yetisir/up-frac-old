@@ -1,0 +1,178 @@
+--------------------------------------------------------------------------
+ OSTRICH version 16.02.10 (Built Feb 10 2016 @ 10:08:27)
+
+ A computer program for model-independent calibration and optimization.
+
+ Author             L. Shawn Matott
+ Copyright (C) 2007 L. Shawn Matott
+
+ This program is free software; you can redistribute 
+ it and/or modify it under the terms of the GNU  
+ General Public License as published by the Free 
+ Software Foundation; either version 2 of the 
+ License, or(at your option) any later version. 
+
+ This program is distributed in the hope that it will 
+ be useful, but WITHOUT ANY WARRANTY; without even 
+ the implied warranty of MERCHANTABILITY or FITNESS 
+ FOR A PARTICULAR PURPOSE. See the GNU General Public 
+ License for more details. 
+
+ You should have received a copy of the GNU General 
+ Public License along with this program; if not, 
+ write to the Free Software Foundation, Inc., 59 
+ Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+--------------------------------------------------------------------------
+
+Ostrich Setup
+Model                  : simulationData.bat > OstExeOut.txt
+Algorithm              : Levenberg-Marquardt
+Objective Function     : WSSE
+Number of Parameters   : 5
+Number of Tied Params  : 0
+Number of Observations : 50
+Seed for Random Nums.  : 1456505789
+
+Ostrich Run Record
+iter  obj. function  $N            $tLambda      $td           $E            $nu           lambda
+0     1.461225E+14  3.000000E+06  -5.000000E+03  9.000000E-01  1.200000E+10  3.000000E-01  1.000000E+01
+1     1.447199E+13  3.141357E+06  -3.200000E+03  9.684359E-01  1.196639E+10  2.754870E-01  1.210000E+01
+2     2.137445E+12  2.241357E+06  -2.300000E+03  9.184359E-01  1.196596E+10  2.832284E-01  1.210000E+01
+3     1.933627E+12  2.241357E+06  -2.210000E+03  9.184359E-01  1.196596E+10  2.832284E-01  1.100000E+01
+4     7.904274E+11  2.241357E+06  -2.210000E+03  9.184359E-01  1.002912E+10  2.389403E-01  5.644739E+00
+5     7.770979E+11  2.241357E+06  -2.210000E+03  9.234359E-01  1.002912E+10  2.389403E-01  5.131581E+00
+6     7.689575E+11  2.241357E+06  -2.210000E+03  9.284359E-01  1.002912E+10  2.389403E-01  4.665074E+00
+7     7.689575E+11  2.241357E+06  -2.210000E+03  9.284359E-01  1.002912E+10  2.389403E-01  4.240976E+00
+
+Optimal Parameter Set
+Objective Function : 7.689575E+11
+$N                 : 2.241357E+06
+$tLambda           : -2.210000E+03
+$td                : 9.284359E-01
+$E                 : 1.002912E+10
+$nu                : 2.389403E-01
+
+Statistical Output
+
+Untransformed WSSE : 7.689575E+11
+
+Observation Residuals
+Observation    Measured       Simulated      Weight          Residual(Transformed and Weighted)   Sensitive?
+obs1          2.404609E+05  2.075769E+05  1.000000E+00  +3.288396E+04      YES
+obs2          4.607853E+05  4.151538E+05  1.000000E+00  +4.563143E+04      YES
+obs3          6.800377E+05  6.255402E+05  1.000000E+00  +5.449748E+04      YES
+obs4          8.858168E+05  8.389514E+05  1.000000E+00  +4.686545E+04      YES
+obs5          1.093638E+06  1.052363E+06  1.000000E+00  +4.127565E+04      YES
+obs6          1.251312E+06  1.270113E+06  1.000000E+00  -1.880048E+04      YES
+obs7          1.435599E+06  1.489240E+06  1.000000E+00  -5.364195E+04      YES
+obs8          1.570954E+06  1.705643E+06  1.000000E+00  -1.346884E+05      YES
+obs9          1.724503E+06  1.918997E+06  1.000000E+00  -1.944941E+05      YES
+obs10         1.894480E+06  2.132352E+06  1.000000E+00  -2.378722E+05      YES
+obs11         1.910957E+06  2.170566E+06  1.000000E+00  -2.596087E+05      YES
+obs12         1.901589E+06  2.098480E+06  1.000000E+00  -1.968916E+05      YES
+obs13         1.765072E+06  2.003844E+06  1.000000E+00  -2.387717E+05      YES
+obs14         1.846769E+06  1.862740E+06  1.000000E+00  -1.597066E+04      YES
+obs15         1.934006E+06  1.721636E+06  1.000000E+00  +2.123700E+05      YES
+obs16         1.405685E+06  1.596270E+06  1.000000E+00  -1.905856E+05      YES
+obs17         1.255141E+06  1.488782E+06  1.000000E+00  -2.336412E+05      YES
+obs18         1.208142E+06  1.386415E+06  1.000000E+00  -1.782724E+05      YES
+obs19         1.254353E+06  1.307164E+06  1.000000E+00  -5.281069E+04      YES
+obs20         1.175552E+06  1.227913E+06  1.000000E+00  -5.236112E+04      YES
+obs21         1.111292E+06  1.170634E+06  1.000000E+00  -5.934185E+04      YES
+obs22         1.137065E+06  1.115946E+06  1.000000E+00  +2.111917E+04      YES
+obs23         1.137792E+06  1.062128E+06  1.000000E+00  +7.566381E+04      YES
+obs24         1.155747E+06  1.031655E+06  1.000000E+00  +1.240920E+05      YES
+obs25         1.161296E+06  1.001183E+06  1.000000E+00  +1.601135E+05      YES
+obs26         1.154101E+06  9.827377E+05  1.000000E+00  +1.713629E+05      YES
+obs27         1.130613E+06  9.683214E+05  1.000000E+00  +1.622914E+05      YES
+obs28         1.093481E+06  9.439844E+05  1.000000E+00  +1.494962E+05      YES
+obs29         1.042933E+06  9.048914E+05  1.000000E+00  +1.380414E+05      YES
+obs30         9.778482E+05  8.657984E+05  1.000000E+00  +1.120498E+05      YES
+obs31         9.065443E+05  8.161682E+05  1.000000E+00  +9.037605E+04      YES
+obs32         8.359566E+05  7.645918E+05  1.000000E+00  +7.136482E+04      YES
+obs33         7.657361E+05  7.130154E+05  1.000000E+00  +5.272071E+04      YES
+obs34         6.963387E+05  6.614518E+05  1.000000E+00  +3.488685E+04      YES
+obs35         6.262864E+05  6.098897E+05  1.000000E+00  +1.639673E+04      YES
+obs36         5.595483E+05  5.595882E+05  1.000000E+00  -3.982444E+01      YES
+obs37         4.929929E+05  5.095090E+05  1.000000E+00  -1.651608E+04      YES
+obs38         4.256952E+05  4.594298E+05  1.000000E+00  -3.373459E+04      YES
+obs39         3.606442E+05  4.093341E+05  1.000000E+00  -4.868987E+04      YES
+obs40         2.951313E+05  3.592323E+05  1.000000E+00  -6.410104E+04      YES
+obs41         2.270852E+05  3.089798E+05  1.000000E+00  -8.189455E+04      YES
+obs42         1.688650E+05  2.586565E+05  1.000000E+00  -8.979156E+04      YES
+obs43         1.005124E+05  2.083333E+05  1.000000E+00  -1.078209E+05      YES
+obs44         6.832713E+04  1.577456E+05  1.000000E+00  -8.941844E+04      YES
+obs45         -1.708960E+03  1.070221E+05  1.000000E+00  -1.087310E+05      YES
+obs46         -7.371998E+04  2.377707E+04  1.000000E+00  -9.749705E+04      YES
+obs47         -1.417339E+05  -7.323148E+04  1.000000E+00  -6.850246E+04      YES
+obs48         -2.204442E+05  -1.702400E+05  1.000000E+00  -5.020418E+04      YES
+obs49         -2.973862E+05  -3.786817E+05  1.000000E+00  +8.129550E+04      YES
+obs50         -3.811833E+05  -6.071015E+05  1.000000E+00  +2.259182E+05      YES
+
+Correlation between raw measured and simulated observations (no transformation or weighting)
+Ry         :  0.984
+Ry-squared :  0.968
+
+Correlation between measured and simulated observations (with transformation and weighting)
+Rw         :  0.984
+Rw-squared :  0.968
+
+Error Variance and Standard Error of the Regression
+S^2 : 1.708794E+10
+S   : 1.307209E+05
+
+Parameter Variance-Covariance
+               $N             $tLambda       $td            $E             $nu            
+$N            +4.519719E+09  -6.440519E+06  -2.058067E+02  +3.024530E+12  +5.633254E+02  
+$tLambda      -6.440519E+06  +1.480341E+04  +9.436004E-02  -3.826748E+09  +1.646267E-01  
+$td           -2.058067E+02  +9.436004E-02  +1.556371E-04  +2.091796E+06  -2.421283E-04  
+$E            +3.024530E+12  -3.826748E+09  +2.091796E+06  +1.450512E+17  -9.003892E+06  
+$nu           +5.633254E+02  +1.646267E-01  -2.421283E-04  -9.003892E+06  +1.325933E-03  
+
+Parameter Standard Error
+$N             : 6.722886E+04 
+$tLambda       : 1.216693E+02 
+$td            : 1.247546E-02 
+$E             : 3.808559E+08 
+$nu            : 3.641337E-02 
+
+Parameter Correlation
+               $N            $tLambda      $td           $E            $nu           
+$N            +1.000         -0.787         -0.245         +0.118         +0.230         
+$tLambda      -0.787         +1.000         +0.062         -0.083         +0.037         
+$td           -0.245         +0.062         +1.000         +0.440         -0.533         
+$E            +0.118         -0.083         +0.440         +1.000         -0.649         
+$nu           +0.230         +0.037         -0.533         -0.649         +1.000         
+
+Algorithm Metrics
+Algorithm         : Levenberg-Marquardt
+Max Iterations    : 20
+Actual Iterations : 7
+Convergence Val   : 0.000100
+LPRCV             : 0.300000
+LRRCV             : 0.010000
+Max Lambda Trials : 10
+Move Limit        : 0.100000
+Total Alg Evals   : 30
+Total Evals       : 71
+Upper Violations  : 0
+Lower Violations  : 14
+Move Limit Viols  : 29
+LPRCV : Lambda-Phi Ratio Convergence Value
+LRRCV : Lambda Relative Reduction Convergence Value
+Total Evals             : 71
+Telescoping Strategy    : none
+
+Finite Difference Metrics
+Difference Type    : Forward
+Increment Type    : Range-Relative
+Finite Difference Increments
+$N           : 0.010000
+$tLambda     : 0.010000
+$td          : 0.010000
+$E           : 0.010000
+$nu          : 0.010000
+Finite Difference Mimumum Increment : 1.000000E-10
+Jacobian Evals     : 40
+Optimal Step Evals : 0
+Statistics Evals   : 1

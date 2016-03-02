@@ -1,0 +1,169 @@
+--------------------------------------------------------------------------
+ OSTRICH version 16.02.10 (Built Feb 10 2016 @ 10:08:27)
+
+ A computer program for model-independent calibration and optimization.
+
+ Author             L. Shawn Matott
+ Copyright (C) 2007 L. Shawn Matott
+
+ This program is free software; you can redistribute 
+ it and/or modify it under the terms of the GNU  
+ General Public License as published by the Free 
+ Software Foundation; either version 2 of the 
+ License, or(at your option) any later version. 
+
+ This program is distributed in the hope that it will 
+ be useful, but WITHOUT ANY WARRANTY; without even 
+ the implied warranty of MERCHANTABILITY or FITNESS 
+ FOR A PARTICULAR PURPOSE. See the GNU General Public 
+ License for more details. 
+
+ You should have received a copy of the GNU General 
+ Public License along with this program; if not, 
+ write to the Free Software Foundation, Inc., 59 
+ Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+--------------------------------------------------------------------------
+
+Ostrich Setup
+Model                  : simulationData.bat > OstExeOut.txt
+Algorithm              : Levenberg-Marquardt
+Objective Function     : WSSE
+Number of Parameters   : 4
+Number of Tied Params  : 0
+Number of Observations : 50
+Seed for Random Nums.  : 1456509352
+
+Ostrich Run Record
+iter  obj. function  $h            $k            $dd           $cd           lambda
+0     1.668072E+14  8.000000E-03  1.000000E+07  2.000000E+06  9.000000E-01  1.000000E+01
+1     7.398648E+13  5.797040E-03  1.021947E+07  2.377068E+06  9.487500E-01  7.513148E+00
+2     5.382432E+13  5.409187E-03  1.057716E+07  3.069959E+06  9.498437E-01  5.644739E+00
+3     5.382432E+13  5.409187E-03  1.057716E+07  3.069959E+06  9.498437E-01  5.131581E+00
+
+Optimal Parameter Set
+Objective Function : 5.382432E+13
+$h                 : 5.409187E-03
+$k                 : 1.057716E+07
+$dd                : 3.069959E+06
+$cd                : 9.498437E-01
+
+Statistical Output
+
+Untransformed WSSE : 5.382432E+13
+
+Observation Residuals
+Observation    Measured       Simulated      Weight          Residual(Transformed and Weighted)   Sensitive?
+obs1          -4.233731E+06  -2.308713E+06  1.000000E+00  -1.925018E+06      YES
+obs2          -6.393134E+06  -4.617425E+06  1.000000E+00  -1.775709E+06      YES
+obs3          -7.578232E+06  -6.293777E+06  1.000000E+00  -1.284455E+06      YES
+obs4          -8.595754E+06  -7.251514E+06  1.000000E+00  -1.344240E+06      YES
+obs5          -9.440273E+06  -8.209251E+06  1.000000E+00  -1.231021E+06      YES
+obs6          -1.025920E+07  -8.924721E+06  1.000000E+00  -1.334482E+06      YES
+obs7          -1.064335E+07  -9.613977E+06  1.000000E+00  -1.029370E+06      YES
+obs8          -1.123736E+07  -1.029562E+07  1.000000E+00  -9.417406E+05      YES
+obs9          -1.101031E+07  -1.096958E+07  1.000000E+00  -4.073067E+04      YES
+obs10         -1.103780E+07  -1.164354E+07  1.000000E+00  +6.057447E+05      YES
+obs11         -1.133997E+07  -1.216294E+07  1.000000E+00  +8.229764E+05      YES
+obs12         -1.194601E+07  -1.267688E+07  1.000000E+00  +7.308745E+05      YES
+obs13         -1.207963E+07  -1.307961E+07  1.000000E+00  +9.999779E+05      YES
+obs14         -1.255652E+07  -1.333852E+07  1.000000E+00  +7.819980E+05      YES
+obs15         -1.292240E+07  -1.359742E+07  1.000000E+00  +6.750207E+05      YES
+obs16         -1.296300E+07  -1.368003E+07  1.000000E+00  +7.170343E+05      YES
+obs17         -1.252812E+07  -1.374441E+07  1.000000E+00  +1.216287E+06      YES
+obs18         -1.265921E+07  -1.369503E+07  1.000000E+00  +1.035816E+06      YES
+obs19         -1.300331E+07  -1.342519E+07  1.000000E+00  +4.218764E+05      YES
+obs20         -1.353114E+07  -1.315535E+07  1.000000E+00  -3.757842E+05      YES
+obs21         -1.351017E+07  -1.241100E+07  1.000000E+00  -1.099167E+06      YES
+obs22         -1.314485E+07  -1.152741E+07  1.000000E+00  -1.617434E+06      YES
+obs23         -1.232506E+07  -1.082005E+07  1.000000E+00  -1.505009E+06      YES
+obs24         -1.110228E+07  -1.087764E+07  1.000000E+00  -2.246313E+05      YES
+obs25         -9.712452E+06  -1.093524E+07  1.000000E+00  +1.222789E+06      YES
+obs26         -8.641894E+06  -1.028235E+07  1.000000E+00  +1.640455E+06      YES
+obs27         -7.640320E+06  -9.365068E+06  1.000000E+00  +1.724748E+06      YES
+obs28         -6.748489E+06  -7.851682E+06  1.000000E+00  +1.103193E+06      YES
+obs29         -5.501643E+06  -5.357260E+06  1.000000E+00  -1.443825E+05      YES
+obs30         -4.288964E+06  -2.862839E+06  1.000000E+00  -1.426125E+06      YES
+obs31         -2.980980E+06  -1.298211E+06  1.000000E+00  -1.682769E+06      YES
+obs32         -1.848287E+06  -5.643356E+04  1.000000E+00  -1.791853E+06      YES
+obs33         -1.028936E+06  9.491634E+05  1.000000E+00  -1.978099E+06      YES
+obs34         -4.156654E+05  8.182400E+05  1.000000E+00  -1.233905E+06      YES
+obs35         -1.286241E+05  6.873166E+05  1.000000E+00  -8.159406E+05      YES
+obs36         1.243945E+04  6.272490E+05  1.000000E+00  -6.148095E+05      YES
+obs37         8.606210E+04  6.278543E+05  1.000000E+00  -5.417922E+05      YES
+obs38         1.176618E+05  6.376061E+05  1.000000E+00  -5.199443E+05      YES
+obs39         2.236889E+05  6.618093E+05  1.000000E+00  -4.381204E+05      YES
+obs40         2.575685E+05  6.860125E+05  1.000000E+00  -4.284441E+05      YES
+obs41         2.384418E+05  6.908201E+05  1.000000E+00  -4.523783E+05      YES
+obs42         2.921258E+05  6.598545E+05  1.000000E+00  -3.677287E+05      YES
+obs43         4.226365E+05  6.288888E+05  1.000000E+00  -2.062523E+05      YES
+obs44         3.817264E+05  6.532007E+05  1.000000E+00  -2.714744E+05      YES
+obs45         3.671361E+05  6.780767E+05  1.000000E+00  -3.109406E+05      YES
+obs46         2.908277E+05  6.701975E+05  1.000000E+00  -3.793699E+05      YES
+obs47         3.112043E+05  6.441438E+05  1.000000E+00  -3.329395E+05      YES
+obs48         3.036161E+05  6.323932E+05  1.000000E+00  -3.287770E+05      YES
+obs49         3.302651E+05  6.520102E+05  1.000000E+00  -3.217451E+05      YES
+obs50         2.468364E+05  6.716272E+05  1.000000E+00  -4.247908E+05      YES
+
+Correlation between raw measured and simulated observations (no transformation or weighting)
+Ry         :  0.987
+Ry-squared :  0.975
+
+Correlation between measured and simulated observations (with transformation and weighting)
+Rw         :  0.987
+Rw-squared :  0.975
+
+Error Variance and Standard Error of the Regression
+S^2 : 1.170094E+12
+S   : 1.081709E+06
+
+Parameter Variance-Covariance
+               $h             $k             $dd            $cd            
+$h            +2.105767E-08  -1.304167E+01  -5.727929E+00  -2.875899E-06  
+$k            -1.304167E+01  +6.453520E+10  -4.433054E+10  -8.332616E+02  
+$dd           -5.727929E+00  -4.433054E+10  +9.270481E+10  +1.332499E+04  
+$cd           -2.875899E-06  -8.332616E+02  +1.332499E+04  +4.768174E-03  
+
+Parameter Standard Error
+$h             : 1.451126E-04 
+$k             : 2.540378E+05 
+$dd            : 3.044746E+05 
+$cd            : 6.905196E-02 
+
+Parameter Correlation
+               $h            $k            $dd           $cd           
+$h            +1.000         -0.354         -0.130         -0.287         
+$k            -0.354         +1.000         -0.573         -0.048         
+$dd           -0.130         -0.573         +1.000         +0.634         
+$cd           -0.287         -0.048         +0.634         +1.000         
+
+Algorithm Metrics
+Algorithm         : Levenberg-Marquardt
+Max Iterations    : 20
+Actual Iterations : 3
+Convergence Val   : 0.000100
+LPRCV             : 0.300000
+LRRCV             : 0.010000
+Max Lambda Trials : 10
+Move Limit        : 0.100000
+Total Alg Evals   : 16
+Total Evals       : 33
+Upper Violations  : 12
+Lower Violations  : 0
+Move Limit Viols  : 12
+LPRCV : Lambda-Phi Ratio Convergence Value
+LRRCV : Lambda Relative Reduction Convergence Value
+Total Evals             : 33
+Telescoping Strategy    : none
+
+Finite Difference Metrics
+Difference Type    : Forward
+Increment Type    : Range-Relative
+Finite Difference Increments
+$h           : 0.010000
+$k           : 0.010000
+$dd          : 0.010000
+$cd          : 0.010000
+Finite Difference Mimumum Increment : 1.000000E-10
+Jacobian Evals     : 16
+Optimal Step Evals : 0
+Statistics Evals   : 1

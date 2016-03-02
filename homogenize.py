@@ -328,7 +328,8 @@ class Homogenize:
         return contacts
         
     def blockEdges(self, blocks, time = 0):
-        time = min(self.blockData.keys()) #should be removed, so plots can be at any time.
+        if time == 0:
+            time = min(self.blockData.keys()) #should be removed, so plots can be at any time.
         xEdge = []
         yEdge = []
         for block in blocks:
@@ -532,23 +533,24 @@ class Homogenize:
         # cornerX = [boundaryCornerData[time][corner]['x'] for corner in boundaryCornerData[time].keys()]
         # cornerY = [boundaryCornerData[time][corner]['y'] for corner in boundaryCornerData[time].keys()]
         
-        be = self.blockEdges(self.boundaryContactBlocks)
-        plt.figure(1)
-        plt.plot(be[0], be[1], 'b-', xxcro, yycro, 'g-', xxcro, yycro, 'go', xxb, yyb, 'y-')
-        boundary = plt.Circle((self.centre['x'], self.centre['y']),self.radius,color='r', fill=False)
-        plt.gcf().gca().add_artist(boundary)
-        plt.axis([0, 10, 0, 10])
+        # be = self.blockEdges(self.boundaryContactBlocks)
+        # plt.figure(1)
+        # plt.plot(be[0], be[1], 'b-')#, xxcro, yycro, 'g-', xxcro, yycro, 'go')
+        # boundary = plt.Circle((self.centre['x'], self.centre['y']),self.radius,color='r', fill=False)
+        # plt.gcf().gca().add_artist(boundary)
+        # plt.axis([0, 10, 0, 10])
+        # plt.axis('equal')
+        # plt.show(block = False)
+        
+        p = plt.figure(2)
+        be = self.blockEdges(self.blockData[time].keys(), time=time)
+        plt.plot(be[0], be[1], 'b-')
         plt.axis('equal')
+        plt.autoscale(tight=True)
         plt.show(block = False)
-        
-        #plt.figure(2)
-        #be = self.blockEdges(self.boundaryContactBlocks)
-        #plt.plot(be[0], be[1], 'b-', xxcro, yycro, 'g-', xxcro, yycro, 'go')
-        #plt.axis([0, 10, 0, 10])
-        #plt.axis('equal')
-        #plt.show(block = False)
 
-        
+        plt.xlabel('Horizontal (m)')
+        plt.ylabel('Vertical (m)')
         # # cornerX = [cornerData[time][corner]['x'] for corner in cornerData[time]]
         # # cornerY = [cornerData[time][corner]['y'] for corner in cornerData[time]]
             
@@ -620,7 +622,7 @@ if __name__ == '__main__':
         fileName = clargs[1]
     #else: error message
     #add other cl args for centre and radius
-    module = __import__('UDEC.modelData.'+fileName+'_modelData', globals(), locals(), ['*'])
+    module = __import__('UDEC.modelData.'+fileName[0:-3]+'_modelData', globals(), locals(), ['*'])
     for k in dir(module):
         locals()[k] = getattr(module, k)
     revCentre = {'x':mSize/2, 'y':mSize/2}
@@ -634,7 +636,7 @@ if __name__ == '__main__':
 
     with open(os.path.join('ostrich', 'observationUDEC.dat'), 'w') as f:
         f.write('time S11 S22 S12 LE11 LE22 LE12\n')
-        f.write('0.0 0.0 0.0 0.0 0.0 0.0 0.0\n')
+        f.write('0.0 '+str(confiningStress*1e6)+' '+str(stressHistory[0][1,1])+' 0.0 0.0 0.0 0.0\n')
         for i in range(len(stressHistory)):
             S11 = stressHistory[i][0,0]
             S22 = stressHistory[i][1,1]
@@ -655,5 +657,5 @@ if __name__ == '__main__':
     # plt.plot(yStress, yStrain)
     
     
-    #H.plot()
-    #plt.show()
+    # H.plot()
+    # plt.show()
