@@ -25,7 +25,7 @@ table 1 delete
 table 1 0 0 1 1 20 1
 table 2 delete
 table 2 0 0 10 0 20 1
-insitu stress 2.0,0.0,10.0 szz 4.0 range -0.3719,20.4381 -0.366,20.1904
+insitu stress -4.0,0.0,-10.0 szz -4.0 range -0.3719,20.4381 -0.366,20.1904
 
 boundary stress 0.0,0.0,-10.0 range -0.421,20.342 19.9152,20.3261
 solve

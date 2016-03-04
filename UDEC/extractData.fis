@@ -64,6 +64,10 @@ def setup
 	simulationTime = 0.0	;**important: make sure value is specified as float
 	numberOfSteps = 1
 	;--------------------------------------------------------------------------
+	fName = 'savFiles\'+modelName+'.sav'
+	command
+		save fName
+	endCommand
 	
 	numContactArray = (numContacts)*(numberOfSteps*2)+2
 	numBlockArray = (numBlocks)*(numberOfSteps)+2
@@ -95,7 +99,7 @@ def cycleModel
 	gridPointHeader = 'time gpIndex x y xDisp yDisp xForce yForce xVel yVel '
 	gridPointHeader = gridPointHeader+'block corner'
 	
-	zoneHeader = 'time zIndex S11 S22 S12 block gridPoints'
+	zoneHeader = 'time zIndex S11 S22 S12 S33 block gridPoints'
 	
 	domainHeader = 'time dIndex x y area porePressure'
 	
@@ -103,7 +107,7 @@ def cycleModel
 	blockTypes = 'f i f f f f f l l l l'
 	cornerTypes = 'f i i'
 	gridPointTypes = 'f i f f f f f f f f i i'
-	zoneTypes = 'f i f f f i l'
+	zoneTypes = 'f i f f f f i l'
 	domainTypes = 'f i f f f f'
 
 	;Initialize data arrays and insert headers
@@ -287,7 +291,8 @@ def cycleModel
 				S11 = string(fmem(zi+$KZS11))
 				S22 = string(fmem(zi+$KZS22))
 				S12 = string(fmem(zi+$KZS12))
-				newRecord = tt+' '+zIndex+' '+S11+' '+S22+' '+S12+' '
+				S33 = string(fmem(zi+$KZS33))
+				newRecord = tt+' '+zIndex+' '+S11+' '+S22+' '+S12+' '+S33+' '
 				newRecord = newRecord+bIndex+' '+zGridPoints
 				
 				zoneData(zCounter) = newRecord
@@ -345,10 +350,7 @@ def cycleModel
 	status = write(domainData, dCounter)
 	status = close
 	
-	fName = 'savFiles\'+modelName+'.sav'
-	command
-		save fName
-	endCommand
+
 end
 
 cycleModel
