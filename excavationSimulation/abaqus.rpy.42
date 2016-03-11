@@ -1,0 +1,605 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 6.13-1 replay file
+# Internal Version: 2013_05_15-22.28.56 126354
+# Run by Mike on Fri Mar 04 15:45:41 2016
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+#: Abaqus Error: 
+#: This error may have occurred due to a change to the Abaqus Scripting
+#: Interface. Please see the Abaqus Scripting Manual for the details of
+#: these changes. Also see the "Example environment files" section of 
+#: the Abaqus Site Guide for up-to-date examples of common tasks in the
+#: environment file.
+#: Execution of "onCaeGraphicsStartup()" in the site directory failed.
+#: Warning: Permission was denied for "abaqus.rpy"; "abaqus.rpy.42" will be used for this session's replay file.
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=116.270866394043, 
+    height=109.203125)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          6
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=1 )
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          6
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          6
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          6
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          6
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          6
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          4
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+cliCommand("""session.Spectrum(name="Spectrum-1", colors =('#4713EF',   '#2F6C8E', '#25838E', '#1E9C89', '#2EB37C', '#5CC863', '#98D83E', '#463480', '#3B518B',    '#DDE318', ))""")
+#: session.spectrums['Spectrum-1']
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    spectrum='Spectrum-1', maxValue=-296085, minValue=-1.45742E+007)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=OFF, maxValue=0, minAutoCompute=OFF, minValue=-1.5E+007)
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    visibleEdges=FEATURE)
+session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(triad=OFF, 
+    legend=OFF, title=OFF, state=OFF, annotations=OFF, compass=OFF)
+session.printToFile(
+    fileName='C:/Users/Mike/OneDrive/Documents/School Terms/School Term 6B/Research Documents/Up-Scaling DEM Simulations (ARMA 2016)/S22_CDM.png', 
+    format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S11'), )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-1E+007)
+session.printToFile(
+    fileName='C:/Users/Mike/OneDrive/Documents/School Terms/School Term 6B/Research Documents/Up-Scaling DEM Simulations (ARMA 2016)/S11_CDM.png', 
+    format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Min. Principal'), )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=ON, minAutoCompute=ON)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Max. Principal'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Mises'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          4
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          4
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=OFF, maxValue=0, minAutoCompute=OFF, minValue=-1.0e+007)
+session.printToFile(
+    fileName='C:/Users/Mike/OneDrive/Documents/School Terms/School Term 6B/Research Documents/Up-Scaling DEM Simulations (ARMA 2016)/S22_CDM.png', 
+    format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S11'), )
+session.printToFile(
+    fileName='C:/Users/Mike/OneDrive/Documents/School Terms/School Term 6B/Research Documents/Up-Scaling DEM Simulations (ARMA 2016)/S11_CDM.png', 
+    format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-1.5E+007)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-1.2E+007)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-1.1E+007)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-1E+007)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-1.5E+007)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-1E+007)
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          4
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='DAMAGEC', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=ON, minAutoCompute=ON)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Mises'), )
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          4
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=OFF, maxValue=0, minAutoCompute=OFF, minValue=-1.5E+007)
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          5
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    SYMBOLS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=239.743, 
+    farPlane=285.067, width=23.3119, height=23.246, cameraPosition=(10, 10, 
+    262.405), viewOffsetX=-0.000803381, viewOffsetY=0.00106958)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=98 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=97 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=96 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=95 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=94 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=93 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=92 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=91 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=90 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=89 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=88 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=87 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=86 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=85 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=84 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=83 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=82 )
+session.animationController.setValues(animationType=TIME_HISTORY, viewports=(
+    'Viewport: 1', ))
+session.animationController.play(duration=UNLIMITED)
+session.animationController.stop()
+session.animationController.showFirstFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.incrementFrame()
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       7
+#: Number of Node Sets:          7
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=99 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=98 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=97 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=96 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=95 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=94 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=93 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=92 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=91 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=90 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=89 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=88 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=87 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=86 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=85 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=84 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=1, frame=83 )
+session.animationController.setValues(animationType=TIME_HISTORY, viewports=(
+    'Viewport: 1', ))
+session.animationController.play(duration=UNLIMITED)
+session.animationController.stop()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.decrementFrame()
+session.animationController.showFirstFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.incrementFrame()
+session.animationController.showFirstFrame()
+session.animationController.incrementFrame()
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=ON, minAutoCompute=ON)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    animationAutoLimits=CURRENT_FRAME)
+session.animationController.incrementFrame()
+session.animationController.showLastFrame()
+session.animationController.setValues(animationType=NONE)
+session.animationController.setValues(animationType=TIME_HISTORY, viewports=(
+    'Viewport: 1', ))
+session.animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='DAMAGEC', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='PEEQ', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxValue=0.00165546, minValue=0, animationAutoLimits=ALL_FRAMES)
+session.viewports['Viewport: 1'].odbDisplay.commonOptions.setValues(
+    deformationScaling=UNIFORM, uniformScaleFactor=1)
+#: Warning: The output database 'C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb' disk file has changed.
+#: 
+#: The current plot operation has been canceled, re-open the file to view the results
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          6
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=OFF, maxValue=0, minAutoCompute=OFF, minValue=-1.5E+007)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='DAMAGET', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='DAMAGEC', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=ON, minAutoCompute=ON)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=OFF, minAutoCompute=OFF)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='PEEQ', outputPosition=INTEGRATION_POINT, )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Mises'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S11'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S12'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(legend=ON)
+cliCommand("""session.Spectrum(name="Spectrum-1", colors =('#4713EF',   '#2F6C8E', '#25838E', '#1E9C89', '#2EB37C', '#5CC863', '#98D83E', '#463480', '#3B518B',    '#DDE318', ))""")
+#: session.spectrums['Spectrum-1']
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    numIntervals=10)
+cliCommand("""    mdb.models['Model-1'].boundaryConditions['Top'].setValuesInStep(stepName=steps[2], u2=FREED)""")
+#*     
+#* mdb.models['Model-1'].boundaryConditions['Top'].setValuesInStep(stepName=steps[2], 
+#* u2=FREED)
+#*    ^
+#* IndentationError: unexpected indent
+cliCommand("""session.Spectrum(name="Spectrum-1", colors =('#4713EF',   '#2F6C8E', '#25838E', '#1E9C89', '#2EB37C', '#5CC863', '#98D83E', '#463480', '#3B518B',    '#DDE318', ))""")
+#: session.spectrums['Spectrum-1']
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S11'), )
+o1 = session.openOdb(
+    name='C:/Users/Mike/Documents/GitHub/Up-Frac/excavationSimulation/Job-1.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+cliCommand("""session.Spectrum(name="Spectrum-2", colors =('#4713EF',   '#2F6C8E', '#25838E', '#1E9C89', '#2EB37C', '#5CC863', '#98D83E', '#463480', '#3B518B',    '#DDE318', ))""")
+#: session.spectrums['Spectrum-2']
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    spectrum='Spectrum-2')
+session.Spectrum(name="Spectrum-3", colors =('#463480', '#3B518B', '#4713EF', 
+    '#2F6C8E', '#25838E', '#1E9C89', '#2EB37C', '#5CC863', '#98D83E', 
+    '#DDE318', ))
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    spectrum='Spectrum-3')
+session.Spectrum(name="Spectrum-4", colors =('#463480', '#4713EF', '#3B518B', 
+    '#2F6C8E', '#25838E', '#1E9C89', '#2EB37C', '#5CC863', '#98D83E', 
+    '#DDE318', ))
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    spectrum='Spectrum-4')
+session.Spectrum(name="Spectrum-5", colors =('#4713EF', '#463480', '#3B518B', 
+    '#2F6C8E', '#25838E', '#1E9C89', '#2EB37C', '#5CC863', '#98D83E', 
+    '#DDE318', ))
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    spectrum='Spectrum-5')
+session.Spectrum(name="Spectrum-6", colors =('#471365', '#463480', '#3B518B', 
+    '#2F6C8E', '#25838E', '#1E9C89', '#2EB37C', '#5CC863', '#98D83E', 
+    '#DDE318', ))
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    spectrum='Spectrum-6')
+session.viewports['Viewport: 1'].viewportAnnotationOptions.setValues(
+    legend=OFF)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S22'), )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-12E+007)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-0.2E+008)
+session.printToFile(
+    fileName='C:/Users/Mike/OneDrive/Documents/School Terms/School Term 6B/Research Documents/Up-Scaling DEM Simulations (ARMA 2016)/S22_CDM.png', 
+    format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S11'), )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    minValue=-1E+007)
+session.printToFile(
+    fileName='C:/Users/Mike/OneDrive/Documents/School Terms/School Term 6B/Research Documents/Up-Scaling DEM Simulations (ARMA 2016)/S11_CDM.png', 
+    format=PNG, canvasObjects=(session.viewports['Viewport: 1'], ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Pressure'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S33'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Mises'), )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=ON, minAutoCompute=ON)

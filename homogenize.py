@@ -6,34 +6,42 @@ import sys
 import matplotlib.pyplot as plt
 
 class Homogenize:
-    def __init__(self, fileName, centre, radius):
-        blockFileName = fileName + '___block.dat'
-        contactFileName = fileName + '___contact.dat'
-        cornerFileName = fileName + '___corner.dat'
-        zoneFileName = fileName + '___zone.dat'
-        gridPointFileName = fileName + '___gridPoint.dat'
-        domainFileName = fileName + '___domain.dat'
-        
-        print('-'*70)
-        print('Homogenization Initalization')
-        print('-'*70)
-        print('Preparing to load DEM data:')
-        print('\tLoading block data')
-        self.blockData = self.parseDataFile(blockFileName)
-        print('\tLoading contact data')
-        self.contactData = self.parseDataFile(contactFileName)
-        print('\tLoading corner data')
-        self.cornerData = self.parseDataFile(cornerFileName)
-        print('\tLoading zone data')
-        self.zoneData = self.parseDataFile(zoneFileName)
-        print('\tLoading gridPoint data')
-        self.gridPointData = self.parseDataFile(gridPointFileName)
-        print('\tLoading domain data')
-        self.domainData = self.parseDataFile(domainFileName)
-        print('Finished loading DEM data')
-        #print('-'*70)
-        print('')
-        
+    def __init__(self, centre, radius, dataClass=None, fileName=None, ):
+        if fileName:
+            blockFileName = fileName + '___block.dat'
+            contactFileName = fileName + '___contact.dat'
+            cornerFileName = fileName + '___corner.dat'
+            zoneFileName = fileName + '___zone.dat'
+            gridPointFileName = fileName + '___gridPoint.dat'
+            domainFileName = fileName + '___domain.dat'
+            
+            print('-'*70)
+            print('Homogenization Initalization')
+            print('-'*70)
+            print('Preparing to load DEM data:')
+            print('\tLoading block data')
+            self.blockData = self.parseDataFile(blockFileName)
+            print('\tLoading contact data')
+            self.contactData = self.parseDataFile(contactFileName)
+            print('\tLoading corner data')
+            self.cornerData = self.parseDataFile(cornerFileName)
+            print('\tLoading zone data')
+            self.zoneData = self.parseDataFile(zoneFileName)
+            print('\tLoading gridPoint data')
+            self.gridPointData = self.parseDataFile(gridPointFileName)
+            print('\tLoading domain data')
+            self.domainData = self.parseDataFile(domainFileName)
+            print('Finished loading DEM data')
+            #print('-'*70)
+            print('')
+        elif dataClass:
+            self.blockData = dataClass.blockData
+            self.contactData = dataClass.contactData
+            self.cornerData = dataClass.cornerData
+            self.zoneData = dataClass.zoneData
+            self.gridPointData = dataClass.gridPointData
+            self.domainData = dataClass.domainData
+
         self.centre = centre
         self.radius = radius
         
@@ -312,6 +320,12 @@ class Homogenize:
         for contact in contacts: corners += self.contactData[time][contact]['corners']
         return corners
         
+    def zonesInBlocks(self, blocks):
+        time = min(self.blockData.keys())
+        zones = []
+        for block in blocks: zones += self.blockData[time][block]['zones']
+        return zones
+
     def cornersOnBlocks(self, blocks):
         time = min(self.blockData.keys())
         corners = []
@@ -628,7 +642,7 @@ if __name__ == '__main__':
     revCentre = {'x':mSize/2, 'y':mSize/2}
     revRadius = mSize/2-bSize*2
     
-    H = Homogenize(fileName, revCentre, revRadius)
+    H = Homogenize(revCentre, revRadius, fileName=fileName)
     stressHistory = H.stress()
     strainHistory = H.strain()
     timeHistory = H.time()

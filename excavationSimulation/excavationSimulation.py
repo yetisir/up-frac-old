@@ -8,7 +8,7 @@ import pickle
 import subprocess
 
 simulationTime = 20
-meshSize = 0.5
+meshSize = 0.2
 sectionLocation = (1, 1, 0.0)
           
 def fWrite(stuff):
@@ -21,7 +21,7 @@ def sketchPart(name, gp):
         
     g = s.geometry
     s.rectangle(point1=(0.0, 0.0), point2=(20.0, 20.0))
-    s.CircleByCenterPerimeter(center=(10.0, 10.0), point1=(10, 8))
+    s.CircleByCenterPerimeter(center=(10.0, 10.0), point1=(10, 12))
 
     p = mdb.models['Model-1'].Part(name=name, dimensionality=TWO_D_PLANAR,
                                    type=DEFORMABLE_BODY)
@@ -102,8 +102,8 @@ def applyBoundaryCondition(instance):
         # distributionType=UNIFORM, sigma11=10.0e4, sigma22=30.0e4, sigma33=15.0e4, 
         # sigma12=20.0e4, sigma13=None, sigma23=None)
     mdb.models['Model-1'].GeostaticStress(name='Predefined Field-2', region=region, 
-        stressMag1=10000000.0, vCoord1=0.0, stressMag2=9800000.0, vCoord2=20.0, 
-        lateralCoeff1=0.2, lateralCoeff2=None)    
+        stressMag1=-10000000.0, vCoord1=0.0, stressMag2=-9800000.0, vCoord2=20.0, 
+        lateralCoeff1=0.4, lateralCoeff2=0.4)    
 
     edges1 = a.instances[instance].edges.findAt(((0, 10, 0), ))
     region = a.Set(edges=edges1, name='Set-2')
@@ -120,6 +120,14 @@ def applyBoundaryCondition(instance):
     mdb.models['Model-1'].DisplacementBC(name='BC-4', createStepName='Initial', 
         region=region, u1=UNSET, u2=SET, ur3=SET, amplitude=UNSET, 
         distributionType=UNIFORM, fieldName='', localCsys=None)   
+
+    # edges1 = a.instances[instance].edges.findAt(((10, 8, 0), ))
+    # region = a.Set(edges=edges1, name='Set-5')
+    # mdb.models['Model-1'].DisplacementBC(name='BC-5', createStepName='Initial', 
+        # region=region, u1=SET, u2=SET, ur3=SET, amplitude=UNSET, 
+        # distributionType=UNIFORM, fieldName='', localCsys=None)   
+    # mdb.models['Model-1'].boundaryConditions['BC-5'].setValuesInStep(stepName=steps[2], u2=FREED, u1=FREED)
+
         
     # edges1 = a.instances[instance].edges.findAt(((5, 0, 0), ))
     # region = a.Set(edges=edges1, name='Set-2')
@@ -129,11 +137,19 @@ def applyBoundaryCondition(instance):
         
     edges1 = a.instances[instance].edges.findAt(((10, 20, 0.0), ))
     region = a.Surface(side1Edges=edges1, name='Surf-1')
-    # mdb.models['Model-1'].TabularAmplitude(name='Amp-1', timeSpan=STEP, 
-        # smooth=SOLVER_DEFAULT, data=((0.0, 0.0), (simulationTime, 1)))
-    mdb.models['Model-1'].Pressure(name='Load-1', createStepName='Step-2', 
+    mdb.models['Model-1'].Pressure(name='Load-1', createStepName='Step-1', 
         region=region, distributionType=UNIFORM, field='', magnitude=10000000.0, 
         amplitude=UNSET)
+    # edges1 = a.instances[instance].edges.findAt(((0, 10, 0.0), ))
+    # region = a.Surface(side1Edges=edges1, name='Surf-2')
+    # mdb.models['Model-1'].Pressure(name='Load-2', createStepName='Step-1', 
+        # region=region, distributionType=UNIFORM, field='', magnitude=8000000.0, 
+        # amplitude=UNSET)
+    # edges1 = a.instances[instance].edges.findAt(((20, 10, 0.0), ))
+    # region = a.Surface(side1Edges=edges1, name='Surf-3')
+    # mdb.models['Model-1'].Pressure(name='Load-3', createStepName='Step-1', 
+        # region=region, distributionType=UNIFORM, field='', magnitude=8000000.0, 
+        # amplitude=UNSET)
 
     # edges1 = a.instances[instance].edges.findAt(((0, 5, 0.0), ))
     # region = a.Surface(side1Edges=edges1, name='Surf-4')

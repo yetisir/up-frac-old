@@ -1,6 +1,6 @@
 1
 
-   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:50:07
+   Abaqus 6.13-1                                  Date 04-Mar-2016   Time 20:26:41
    For use by  under license from Dassault Systemes or its subsidiary.
 
 
@@ -19,7 +19,7 @@
                    used or reproduced only in accordance with the terms
                    of such license.
  
-                          On machine YETI-PC 
+                          On machine YETIBOOK 
                           you are authorized to run
                           Abaqus/Standard until 31-Dec-2055
 
@@ -87,6 +87,7 @@
   *Elset, elset=ASSEMBLY_SET-3
   *Elset, elset=ASSEMBLY_SET-4
   *Elset, elset=ASSEMBLY__SURF-1_S1
+  *Elset, elset=ASSEMBLY__SURF-1_S2
   *Elset, elset=ASSEMBLY__SURF-1_S3
   *Elset, elset=ASSEMBLY__SURF-1_S4
   *surface, type=ELEMENT, name=ASSEMBLY_SURF-1
@@ -152,6 +153,7 @@
   *Step, name=Step-2, nlgeom=NO
   *Step, name=Step-1, nlgeom=NO
   *geostatic
+  *dsload
   *output, field
   *elementoutput, directions=YES
   *output, field, variable=PRESELECT
@@ -159,7 +161,6 @@
   *endstep
   *Step, name=Step-2, nlgeom=NO
   *dynamic
-  *dsload
   *output, field, frequency=1
   *elementoutput, directions=YES
   *output, field, variable=PRESELECT, frequency=1
@@ -186,15 +187,17 @@
 
      - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
 
+     - (RAMP) OR (STEP) - INDICATE USE OF DEFAULT AMPLITUDES ASSOCIATED WITH THE STEP
+
 
 
                             P R O B L E M   S I Z E
 
 
-          NUMBER OF ELEMENTS IS                                  1808
-          NUMBER OF NODES IS                                     1901
-          NUMBER OF NODES DEFINED BY THE USER                    1901
-          TOTAL NUMBER OF VARIABLES IN THE MODEL                 3802
+          NUMBER OF ELEMENTS IS                                 11896
+          NUMBER OF NODES IS                                    12128
+          NUMBER OF NODES DEFINED BY THE USER                   12128
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                24256
           (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
            VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
 
@@ -205,13 +208,13 @@
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =  0.10000    
+       USER TIME (SEC)      =   1.0000    
        SYSTEM TIME (SEC)    =   0.0000    
-       TOTAL CPU TIME (SEC) =  0.10000    
-       WALLCLOCK TIME (SEC) =          1
+       TOTAL CPU TIME (SEC) =   1.0000    
+       WALLCLOCK TIME (SEC) =          2
 1
 
-   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:50:19
+   Abaqus 6.13-1                                  Date 04-Mar-2016   Time 20:26:54
    For use by  under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    1  INCREMENT    1
@@ -229,7 +232,7 @@
 
                     TOTAL MASS OF MODEL
 
-                      1.0464001E+09
+                      1.0461253E+09
 
 
                     LOCATION OF THE CENTER OF MASS OF THE MODEL
@@ -240,25 +243,25 @@
                     MOMENT OF INERTIA ABOUT THE ORIGIN
                            I(ZZ)
 
-                      2.8129382E+11
+                      2.8116988E+11
 
 
                     PRODUCT OF INERTIA ABOUT THE ORIGIN
                            I(XY)
 
-                     -1.0463946E+11
+                     -1.0461247E+11
 
 
                     MOMENT OF INERTIA ABOUT THE CENTER OF MASS
                            I(ZZ)
 
-                      7.2013801E+10
+                      7.1944825E+10
 
 
                     PRODUCT OF INERTIA ABOUT THE CENTER OF MASS
                            I(XY)
 
-                       551654.4    
+                       54581.12    
   
                    M E M O R Y   E S T I M A T E
   
@@ -266,7 +269,7 @@
               OPERATIONS           REQUIRED          MINIMIZE I/O
              PER ITERATION         (MBYTES)           (MBYTES)
   
-     1         2.02E+007               18                 29
+     1         3.22E+008               27                 68
   
  NOTE:
       (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
@@ -299,7 +302,7 @@
       (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
 1
 
-   Abaqus 6.13-1                                  Date 02-Mar-2016   Time 08:50:19
+   Abaqus 6.13-1                                  Date 04-Mar-2016   Time 20:26:59
    For use by  under license from Dassault Systemes or its subsidiary.
 
                                                                                                STEP    2  INCREMENT    1
@@ -337,7 +340,7 @@
               OPERATIONS           REQUIRED          MINIMIZE I/O
              PER ITERATION         (MBYTES)           (MBYTES)
   
-     1         2.02E+007               18                 29
+     1         3.22E+008               24                 70
   
  NOTE:
       (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
@@ -375,7 +378,7 @@
               OPERATIONS           REQUIRED          MINIMIZE I/O
              PER ITERATION         (MBYTES)           (MBYTES)
   
-     1         2.02E+007               18                 29
+     1         3.22E+008               24                 70
   
  NOTE:
       (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
@@ -414,13 +417,11 @@
 
                               ANALYSIS COMPLETE
                               WITH      4 WARNING MESSAGES ON THE DAT FILE
-                              AND      24 WARNING MESSAGES ON THE MSG FILE
-                                       14 WARNINGS ARE FOR NEGATIVE EIGENVALUES
 
 
 
      JOB TIME SUMMARY
-       USER TIME (SEC)      =   23.800    
-       SYSTEM TIME (SEC)    =   1.0000    
-       TOTAL CPU TIME (SEC) =   24.800    
-       WALLCLOCK TIME (SEC) =         27
+       USER TIME (SEC)      =   10.200    
+       SYSTEM TIME (SEC)    =  0.30000    
+       TOTAL CPU TIME (SEC) =   10.500    
+       WALLCLOCK TIME (SEC) =         10
