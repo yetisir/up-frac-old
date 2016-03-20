@@ -1,0 +1,65 @@
+    def plotStressField(self):
+        times = sorted(self.blockData)
+        for i in range(len(times)):
+
+
+            S11 = [self.zoneData[time][zone]['S11'] for zone in self.zoneData[time].keys()]
+            S22 = [self.zoneData[time][zone]['S22'] for zone in self.zoneData[time].keys()]
+            S12 = [self.zoneData[time][zone]['S12'] for zone in self.zoneData[time].keys()]
+            zoneX = []
+            zoneY = []
+            for zone in self.zoneData[time].keys():
+                gridPoints = self.zoneData[time][zone]['gridPoints']
+                gridPointX = 0
+                gridPointY = 0
+                for gridPoint in gridPoints:
+                    gridPointX += self.gridPointData[time][gridPoint]['x']
+                    gridPointY += self.gridPointData[time][gridPoint]['y']
+                zoneX.append(gridPointX/len(gridPoints))
+                zoneY.append(gridPointY/len(gridPoints))
+            
+            import pickle
+            # X, Y, Z = grid(zoneX, zoneY, S22)
+            # pickle.dump([X, Y, Z], open('contourData.dat', 'wb'))
+            X, Y, Z = pickle.load(open('contourData.dat', 'rb'))
+            
+            newZ = []
+            for i in range(len(Z)):
+                newList = []
+                for j in range(len(Z[i])):
+                    newList.append(Z[i,j])
+                newZ.append(newList)
+            Z = newZ
+            
+            
+            sigma = 1
+            Z = gaussian_filter(Z, sigma)
+            Z = np.array(Z)
+            for i in range(len(X)):
+                for j in range(len(Y)):
+                    if math.sqrt((X[i,j]-10)**2 + (Y[i,j]-10)**2) < 2:
+                        Z[i,j] = np.nan
+
+
+            zmin = -20
+            zmax = 0
+            for i in range(len(Z)):
+                for j in range(len(Z[i])):
+                    if Z[i,j] > zmax:
+                        Z[i,j] = zmax
+                    elif Z[i,j] < zmin:
+                        Z[i,j] = zmin
+            ccc = matplotlib.colors.Colormap('viridis', 10)
+            Z[1,1] = -10
+            CS = plt.contourf(X, Y, Z, 10, cmap=plt.cm.viridis, vmin=-20,       vmax=0, origin='lower')
+            CB = plt.colorbar(CS)
+            CB.set_label('MPa')
+            # # # # # # # # # # # # # # # # # # # # # # # # # colormapIndex = []
+            # # # # # # # # # # # # # # # # # # # # # # # # # for i in range(10):
+                # # # # # # # # # # # # # # # # # # # # # # # # # colormapIndex.append(int(255/10*(i) +255/20))
+            # # # # # # # # # # # # # # # # # # # # # # # # # print(colormapIndex)
+            # # # # # # # # # # # # # # # # # # # # # # # # # print(plt.cm.viridis(colormapIndex))
+            # plt.axis('equal')
+            # plt.ylabel('Horizontal (m)')
+            # plt.xlabel('Vertical (m)')
+            # plt.show()

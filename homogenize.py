@@ -3,45 +3,13 @@ import numpy
 import math
 import copy
 import sys
-import matplotlib.pyplot as plt
+import Common
 
-class Homogenize:
+from DataSet import DataSet
+class Homogenize(DataSet):
     def __init__(self, centre, radius, dataClass=None, fileName=None, ):
-        if fileName:
-            blockFileName = fileName + '___block.dat'
-            contactFileName = fileName + '___contact.dat'
-            cornerFileName = fileName + '___corner.dat'
-            zoneFileName = fileName + '___zone.dat'
-            gridPointFileName = fileName + '___gridPoint.dat'
-            domainFileName = fileName + '___domain.dat'
-            
-            print('-'*70)
-            print('Homogenization Initalization')
-            print('-'*70)
-            print('Preparing to load DEM data:')
-            print('\tLoading block data')
-            self.blockData = self.parseDataFile(blockFileName)
-            print('\tLoading contact data')
-            self.contactData = self.parseDataFile(contactFileName)
-            print('\tLoading corner data')
-            self.cornerData = self.parseDataFile(cornerFileName)
-            print('\tLoading zone data')
-            self.zoneData = self.parseDataFile(zoneFileName)
-            print('\tLoading gridPoint data')
-            self.gridPointData = self.parseDataFile(gridPointFileName)
-            print('\tLoading domain data')
-            self.domainData = self.parseDataFile(domainFileName)
-            print('Finished loading DEM data')
-            #print('-'*70)
-            print('')
-        elif dataClass:
-            self.blockData = dataClass.blockData
-            self.contactData = dataClass.contactData
-            self.cornerData = dataClass.cornerData
-            self.zoneData = dataClass.zoneData
-            self.gridPointData = dataClass.gridPointData
-            self.domainData = dataClass.domainData
-
+        DataSet.__init__(self, dataClass=dataClass, fileName=fileName)
+        
         self.centre = centre
         self.radius = radius
         
@@ -51,47 +19,7 @@ class Homogenize:
             
         self.calculateHomogenizationParameters()
     
-    def parseDataFile(self, fileName):
-        file = open(os.path.join('UDEC', 'data', fileName))
-        header = file.readline()[0:-1].split(' ')
-        types = file.readline()[0:-1].split(' ')
-        data = {}
-        timeData = {}
-        firstLoop = 1
-        while 1:
-            record = file.readline()[0:].replace('\n', '').replace('  ', ' ').split(' ')
-            record.remove('')
-            if record == []: 
-                try:
-                    data[dictTime] = copy.copy(timeData)
-                except UnboundLocalError:
-                    pass
-                break
-            if firstLoop:
-                dictTime = float(record[0])
-                firstLoop = 0
-            
-            time = float(record[0])
-            if dictTime != time:
-                data[dictTime] = copy.copy(timeData)
-                dictTime = time
-            recordData = {}
-            for i in range(2, len(record)):
-                if types[i] == 'i':
-                    record[i] = int(record[i])
-                elif types[i] == 'f':
-                    record[i] = float(record[i])
-                elif types[i] == 'l':
-                    csv = record[i].split(',')
-                    for j in range(len(csv)):
-                        csv[j] = int(csv[j])
-                    record[i] = csv
-                recordData[header[i]] = record[i]
-            timeData[int(record[1])] = recordData
-            oldRecord = record
-
-        return data
-           
+    #Boundary Functions
     def blocksOnBoundary(self):
         time = min(self.blockData.keys())
         blocks = []
@@ -170,33 +98,8 @@ class Homogenize:
             distance = math.hypot(contact['x'] - self.centre['x'], contact['y'] - self.centre['y'])
             if distance <= self.radius: contact.append(contactIndex)
         return contacts
-        
-    def contactsBetweenBlocks(self, blocks1, blocks2):
-        time = min(self.blockData.keys())
-        contacts1 = self.contactsOnBlocks(blocks1)
-        contacts2 = self.contactsOnBlocks(blocks2)
-        
-        contacts = listIntersection(contacts1, contacts2)
-        return contacts
-
-    def blocksWithContacts(self, blocks, contacts):
-        time = min(self.contactData.keys())
-        newBlocks = []
-        for contact in contacts:
-            for block in self.contactData[time][contact]['blocks']:
-                if block in blocks:
-                    newBlocks.append(block)
-        return list(set(newBlocks))
-        
-    def blocksWithCorners(self, blocks, corners):
-        time = min(self.cornerData.keys())
-        newBlocks = []
-        for corner in corners:
-            for block in blocks:
-                if corner in self.blockData[time][block]['corners']:
-                    newBlocks.append(block)
-        return list(set(newBlocks))
-        
+    
+    #Manipulation Functions
     def orderBlocks(self, blocks, relaventContacts):
         blocks = copy.deepcopy(blocks)
         time = min(self.contactData.keys())
@@ -213,11 +116,11 @@ class Homogenize:
             j = 0
             success = 0
             while j < len(blockContacts):
-                relaventBlockContacts = listIntersection(blockContacts[j], relaventContacts)
+                relaventBlockContacts = Common.listIntersection(blockContacts[j], relaventContacts)
                 if i+1 > len(newBlockContacts):
                     i += -1
                     noSuccess += 1
-                elif listIntersection(newBlockContacts[i], relaventBlockContacts):
+                elif Common.listIntersection(newBlockContacts[i], relaventBlockContacts):
                     success += 1
                     if success > noSuccess:
                         newBlockContacts.append(blockContacts[j])
@@ -256,7 +159,7 @@ class Homogenize:
             yVec1 = y1-y2
             xVec2 = x3-x2
             yVec2 = y3-y2
-            vecAngle = angle(xVec1, yVec1, xVec2, yVec2)
+            vecAngle = Common.angle(xVec1, yVec1, xVec2, yVec2)
             vecSign = xVec1*yVec2-xVec2*yVec1
             directionSign += vecSign
         if directionSign > 0:
@@ -268,7 +171,7 @@ class Homogenize:
         
         for i in range(len(orderedBlocks)):
             allBlockCorners = self.blockData[time][orderedBlocks[i]]['corners']
-            blockCorners = listIntersection(corners, allBlockCorners)           
+            blockCorners = Common.listIntersection(corners, allBlockCorners)           
             orderedBlockCorners = []
             for corner in allBlockCorners:
                 if corner in blockCorners:
@@ -288,7 +191,7 @@ class Homogenize:
                 yVec1 = y1-y2
                 xVec2 = x3-x2
                 yVec2 = y3-y2
-                vecAngle = angle(xVec1, yVec1, xVec2, yVec2)
+                vecAngle = Common.angle(xVec1, yVec1, xVec2, yVec2)
                 vecSign = xVec1*yVec2-xVec2*yVec1
                 blockDirection += vecSign
             if math.copysign(1, blockDirection) != math.copysign(1, directionSign):
@@ -312,54 +215,6 @@ class Homogenize:
             blockCorners = blockCorners[index:] + blockCorners[:index]
             newCorners += blockCorners
         return newCorners
-    
-        
-    def cornersOnContacts(self, contacts):
-        time = min(self.contactData.keys())
-        corners = []
-        for contact in contacts: corners += self.contactData[time][contact]['corners']
-        return corners
-        
-    def zonesInBlocks(self, blocks):
-        time = min(self.blockData.keys())
-        zones = []
-        for block in blocks: zones += self.blockData[time][block]['zones']
-        return zones
-
-    def cornersOnBlocks(self, blocks):
-        time = min(self.blockData.keys())
-        corners = []
-        for block in blocks: corners += self.blockData[time][block]['corners']
-        return corners
-        
-    def contactsOnBlocks(self, blocks):
-        time = min(self.blockData.keys())
-        contacts = []
-        for block in blocks: 
-            for contact in self.contactData[time].keys():
-                if block in self.contactData[time][contact]['blocks']:
-                    contacts.append(contact)
-        return contacts
-        
-    def blockEdges(self, blocks, time = 0):
-        if time == 0:
-            time = min(self.blockData.keys()) #should be removed, so plots can be at any time.
-        xEdge = []
-        yEdge = []
-        for block in blocks:
-            blockCorners = self.blockData[time][block]['corners']
-            for blockCorner in blockCorners:
-                gridPointIndex = self.cornerData[time][blockCorner]['gridPoint']
-                gridPoint = self.gridPointData[time][gridPointIndex]
-                xEdge.append(gridPoint['x'])
-                yEdge.append(gridPoint['y'])
-            gridPointIndex = self.cornerData[time][blockCorners[0]]['gridPoint']
-            gridPoint = self.gridPointData[time][gridPointIndex]
-            xEdge.append(gridPoint['x'])
-            yEdge.append(gridPoint['y'])
-            xEdge.append(None)
-            yEdge.append(None)
-        return (xEdge, yEdge)
         
     def duplicateCorners(self, corners, blocks):
         time = min(self.blockData.keys())
@@ -383,29 +238,13 @@ class Homogenize:
         time = min(self.blockData.keys())
         blocks = self.blockData[time].keys()
         return self.cornersOnBlocks(blocks)
-        
-    def cornerCoordinates(self, corners, time):
-        points = []
-        for corner in corners:
-            gridPoint = self.cornerData[time][corner]['gridPoint']
-            x = self.gridPointData[time][gridPoint]['x']
-            y = self.gridPointData[time][gridPoint]['y']
-            points.append([x,y])
-        return points
 
-    def gridPointCoordinates(self, gridPoints, time):
-        points = []
-        for gridPoint in gridPoints:
-            x = self.gridPointData[time][gridPoint]['x']
-            y = self.gridPointData[time][gridPoint]['y']
-            points.append([x,y])
-        return points
-        
+    #Homogenization Functions
     def calculateHomogenizationParameters(self):
         print('-'*70)
         print('Calculating Homogenization Parameters')
         print('-'*70)
-        print('Preparing to calculate homogenization parameters:')
+        print('Processing Homogenization Data:')
         print('\tCalculating boundary blocks')
         self.boundaryBlocks = self.blocksOnBoundary()
         print('\tCalculating inside blocks')
@@ -428,7 +267,7 @@ class Homogenize:
             print('\tCalculating boundary block corners')
             self.boundaryBlockCorners = self.cornersOnBlocks(self.boundaryContactBlocks)
             print('\tCalculating boundary corners')
-            self.boundaryCorners = listIntersection(self.boundaryContactCorners, self.boundaryBlockCorners)
+            self.boundaryCorners = Common.listIntersection(self.boundaryContactCorners, self.boundaryBlockCorners)
             print('\tCalculating missing boundary corners')
             self.allBoundaryCorners = self.duplicateCorners(self.boundaryCorners, self.boundaryContactBlocks)
             print('\tCalculating boundary block order')
@@ -442,20 +281,16 @@ class Homogenize:
             self.boundaryCornersOrdered = self.singleElementCorners()
             print('\tCalculating inside boundary blocks')
             self.insideBoundaryBlocks = self.outsideBlocks
-           
-        print('Finished calculating homogenization parameters')
-        
+                   
     def stress(self):
         print('Assessing homogenized stress fields:')
         sigmaHistory = []
         for time in sorted(self.blockData.keys()):
             print('\tAt time {}s'.format(time))
             sigma = numpy.array([[0.,0.],[0.,0.]])
-            #area = 0
             for blockIndex in self.insideBoundaryBlocks:
                 block = self.blockData[time][blockIndex]
                 zones = block['zones']
-                #area += block['area']
                 for zoneIndex in zones:
                     zone = self.zoneData[time][zoneIndex]
                     S11 = zone['S11']
@@ -467,9 +302,13 @@ class Homogenize:
                     for gridPoint in gridPoints:
                         gpCoordinates = [self.gridPointData[time][gridPoint][var] for var in ['x', 'y']]
                         gp.append(gpCoordinates)
-                    zoneArea = triangleArea(gp)
+                    zoneArea = Common.triangleArea(gp)
                     sigma += numpy.multiply(zoneArea,S)
-            totalArea = area(self.cornerCoordinates(self.boundaryCornersOrdered, time))
+
+                xx = self.cornerX(self.boundaryCornersOrdered, time)
+                yy = self.cornerY(self.boundaryCornersOrdered, time)
+
+                totalArea = Common.area(list(zip(self.cornerX(self.boundaryCornersOrdered, time), self.cornerY(self.boundaryCornersOrdered, time))))
             sigmaHistory.append(sigma/totalArea*1e6)
         print('Finished assessing homogenized stress field')
         print('')
@@ -510,127 +349,10 @@ class Homogenize:
         self.timeHistory = t
         return t
         
-    def plot(self):
-        # cornerX = []
-        # cornerY = []
-        # time = min(cornerData.keys())   
-        time = min(self.blockData.keys()) #should be removed, so plots can be at any time.
-
-        
-        xxb = [self.blockData[time][block]['x'] for block in self.boundaryBlocksOrdered]
-        yyb = [self.blockData[time][block]['y'] for block in self.boundaryBlocksOrdered]
-        # xxo = [outsideBlockData[time][block]['x'] for block in outsideBlockData[time].keys()]
-        # yyo = [outsideBlockData[time][block]['y'] for block in outsideBlockData[time].keys()]
-        xxc = [self.contactData[time][contact]['x'] for contact in self.boundaryContacts]
-        yyc = [self.contactData[time][contact]['y'] for contact in self.boundaryContacts]
-        xxcr = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in self.boundaryCorners]
-        yycr = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in self.boundaryCorners]
-        xxcro = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in self.boundaryCornersOrdered]
-        yycro = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in self.boundaryCornersOrdered]
-        
-        # b = 51899
-        # c = blockData[time][b]['contacts']
-        # bb = []
-        # for i in c:
-            # bb += contactData[time][i]['blocks']
-        # cr = cornersOnBlocks(blockData, [b])
-        cc = self.outsideBlocks
-        xxcc = [self.blockData[time][contact]['x'] for contact in cc]
-        yycc = [self.blockData[time][contact]['y'] for contact in cc]
-        # cc = self.boundaryContactCorners
-        # xxcc = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in cc]
-        # yycc = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in cc]
-        # print(c)
-        # print(bb)
-        # print(cr)
-        # print(cc)
-        # cornerX = [boundaryCornerData[time][corner]['x'] for corner in boundaryCornerData[time].keys()]
-        # cornerY = [boundaryCornerData[time][corner]['y'] for corner in boundaryCornerData[time].keys()]
-        
-        # be = self.blockEdges(self.boundaryContactBlocks)
-        # plt.figure(1)
-        # plt.plot(be[0], be[1], 'b-')#, xxcro, yycro, 'g-', xxcro, yycro, 'go')
-        # boundary = plt.Circle((self.centre['x'], self.centre['y']),self.radius,color='r', fill=False)
-        # plt.gcf().gca().add_artist(boundary)
-        # plt.axis([0, 10, 0, 10])
-        # plt.axis('equal')
-        # plt.show(block = False)
-        
-        p = plt.figure(2)
-        be = self.blockEdges(self.blockData[time].keys(), time=time)
-        plt.plot(be[0], be[1], 'b-')
-        plt.axis('equal')
-        plt.autoscale(tight=True)
-        plt.show(block = False)
-
-        plt.xlabel('Horizontal (m)')
-        plt.ylabel('Vertical (m)')
-        # # cornerX = [cornerData[time][corner]['x'] for corner in cornerData[time]]
-        # # cornerY = [cornerData[time][corner]['y'] for corner in cornerData[time]]
-            
-        
-        
-def triangleArea(gp):
-    distance = lambda p1,p2: math.hypot(p1[0]-p2[0], p1[1]-p2[1])
-    side_a = distance(gp[0], gp[1])
-    side_b = distance(gp[1], gp[2])
-    side_c = distance(gp[2], gp[0])
-    s = 0.5 * (side_a + side_b + side_c)
-    return math.sqrt(s * (s - side_a) * (s - side_b) * (s - side_c))
-    
-def listIntersection(a, b):
-    return list(set(a) & set(b))
-    
-def area(p):
-    return 0.5 * abs(sum(x0*y1 - x1*y0 for ((x0, y0), (x1, y1)) in segments(p)))
-
-def segments(p):
-    return zip(p, p[1:] + [p[0]])
-
-def angle(x1, y1, x2, y2):
-    inner_product = x1*x2 + y1*y2
-    len1 = math.hypot(x1, y1)
-    len2 = math.hypot(x2, y2)
-    cosine = inner_product/(len1*len2)
-    if abs(cosine) > 1:
-        cosine = math.copysign(1, cosine)
-    return math.acos(cosine)
-
-
-def createOstIn(H, parameters):
-    import ostrich.ostIn
-    observations = ''
-    numObservations = len(H.timeHistory)
-    for i in range(numObservations):
-        for j in range(len(parameters)):
-            if parameters[j] == 'S11':
-                o = H.stressHistory[i][0, 0]
-                c = 2
-            elif parameters[j] == 'S22':
-                o = H.stressHistory[i][1, 1]
-                c = 3
-            elif parameters[j] == 'S12':
-                o = H.stressHistory[i][0, 1]
-                c = 4
-            elif parameters[j] == 'LE11':
-                o = H.strainHistory[i][0, 0]
-                c = 5
-            elif parameters[j] == 'LE22':
-                o = H.strainHistory[i][1, 1]
-                c = 6
-            elif parameters[j] == 'LE12':
-                o = H.strainHistory[i][0, 1]
-                c = 7
-            l = i+2
-            obsNo = i*len(parameters)+j+1
-            newObservation = 'obs{} \t\t{:10f} \t1 \toutput.dat \tOST_NULL \t{} \t\t{}\n'.format(obsNo, o, l, c)
-            observations += newObservation
-    with open(os.path.join('ostrich', 'OstIn.txt'), 'w') as f:
-        f.write(ostrich.ostIn.topText+observations+ostrich.ostIn.bottomText)
-        
 if __name__ == '__main__':
-    os.system('cls')
-    
+    # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
+    # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])
+           
     clargs = sys.argv
     if len(clargs) >= 2:
         fileName = clargs[1]
@@ -646,30 +368,3 @@ if __name__ == '__main__':
     stressHistory = H.stress()
     strainHistory = H.strain()
     timeHistory = H.time()
-    
-
-    with open(os.path.join('ostrich', 'observationUDEC.dat'), 'w') as f:
-        f.write('time S11 S22 S12 LE11 LE22 LE12\n')
-        f.write('0.0 '+str(confiningStress*1e6)+' '+str(stressHistory[0][1,1])+' 0.0 0.0 0.0 0.0\n')
-        for i in range(len(stressHistory)):
-            S11 = stressHistory[i][0,0]
-            S22 = stressHistory[i][1,1]
-            S12 = stressHistory[i][0,1]
-            LE11 = strainHistory[i][0,0]
-            LE22 = strainHistory[i][1,1]
-            LE12 = strainHistory[i][0,1]
-            time = timeHistory[i]
-            record = [time, S11, S22, S12, LE11, LE22, LE12]
-            record = ' '.join(map(str, record))
-            f.write(record + '\n')
-
-    os.system('python createParameters.py ' + fileName)
-    createOstIn(H, relVars)
-
-    # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
-    # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])
-    # plt.plot(yStress, yStrain)
-    
-    
-    # H.plot()
-    # plt.show()

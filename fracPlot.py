@@ -1,91 +1,128 @@
 import os
 import numpy as np
 import math
-import copy
 import sys
 import matplotlib
-matplotlib.use('Agg')
+import pickle
+import Common
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from numpy import linspace, meshgrid
-from matplotlib.mlab import griddata
+from matplotlib import colorbar, patches
 from scipy.ndimage.filters import gaussian_filter
-from matplotlib import colors
+from collections import OrderedDict
 
-#TODO put duplicate methods (Plot and Homogenize) in a parent class
-class Plot:
-    def __init__(self, fileName):
-        blockFileName = fileName + '___block.dat'
-        contactFileName = fileName + '___contact.dat'
-        cornerFileName = fileName + '___corner.dat'
-        zoneFileName = fileName + '___zone.dat'
-        gridPointFileName = fileName + '___gridPoint.dat'
-        domainFileName = fileName + '___domain.dat'
+from DataSet import DataSet
+class FracPlot(DataSet):
+    def __init__(self, plotName, fileName=None, dataClass=None, showPlots=True):
+        DataSet.__init__(self, fileName=fileName, dataClass=dataClass)
+
+        print('-'*70)
+        print('Establishing {} Plot'.format(plotName))
+        print('-'*70)
         
-        print('-'*70)
-        print('Frac Plot Initalization')
-        print('-'*70)
-        print('Preparing to load DEM data:')
-        print('\tLoading block data')
-        self.blockData = self.parseDataFile(blockFileName)
-        print('\tLoading contact data')
-        self.contactData = self.parseDataFile(contactFileName)
-        print('\tLoading corner data')
-        self.cornerData = self.parseDataFile(cornerFileName)
-        print('\tLoading zone data')
-        self.zoneData = self.parseDataFile(zoneFileName)
-        print('\tLoading gridPoint data')
-        self.gridPointData = self.parseDataFile(gridPointFileName)
-        print('\tLoading domain data')
-        self.domainData = self.parseDataFile(domainFileName)
-        print('Finished loading DEM data')
-        #print('-'*70)
-        print('')
+        self.plotName = plotName
+        
+        #TODO: fix this to acocmodate non-colorbar plots
+        self.figure = plt.figure(figsize=(6,5))
+        self.axes = self.figure.add_axes([0.1, 0.1, 0.825*5/6, 0.825])
+        self.colorBarAxes = self.figure.add_axes([0.825, 0.1, 0.05, 0.825])
+        
+        self.animationImages = [[] for _ in range(len(self.blockData.keys()))]
+        
+        if showPlots != True:
+            matplotlib.use('Agg')
+
+        time = min(self.blockData.keys())
+        self.blocks = self.blockData[time].keys()
+        self.zones = self.zoneData[time].keys()
+        self.corners = self.cornerData[time].keys()
+        self.contacts = self.contactData[time].keys()
+        self.gridPoints = self.gridPointData[time].keys()
+        self.domains = self.domainData[time].keys()
+  
+    #Axis Functions    
+    def setAxis_Full(self):
+        axisLimits = self.limits()
     
-    def parseDataFile(self, fileName):
-        file = open(os.path.join('UDEC', 'data', fileName))
-        header = file.readline()[0:-1].split(' ')
-        types = file.readline()[0:-1].split(' ')
-        data = {}
-        timeData = {}
-        firstLoop = 1
-        while 1:
-            record = file.readline()[0:].replace('\n', '').replace('  ', ' ').split(' ')
-            record.remove('')
-            if record == []: 
-                try:
-                    data[dictTime] = copy.copy(timeData)
-                except UnboundLocalError:
-                    pass
-                break
-            if firstLoop:
-                dictTime = float(record[0])
-                firstLoop = 0
-            
-            time = float(record[0])
-            if dictTime != time:
-                data[dictTime] = copy.copy(timeData)
-                dictTime = time
-            recordData = {}
-            for i in range(2, len(record)):
-                if types[i] == 'i':
-                    record[i] = int(record[i])
-                elif types[i] == 'f':
-                    record[i] = float(record[i])
-                elif types[i] == 'l':
-                    csv = record[i].split(',')
-                    for j in range(len(csv)):
-                        csv[j] = int(csv[j])
-                    record[i] = csv
-                recordData[header[i]] = record[i]
-            timeData[int(record[1])] = recordData
-            oldRecord = record
-
-        return data
+        self.axes.axis('equal')
+        self.axes.set_xlim(axisLimits[0], axisLimits[1])
+        self.axes.set_ylim(axisLimits[2], axisLimits[3])
+        self.labelAxis()     
         
+    def setAxis_Zoom(self, centre=(0.5,0.5), zoom=4):
+        axisLimits = self.limits()
+    
+        self.axes.axis('equal')
+        
+        xMin = axisLimits[0]
+        xMax = axisLimits[1]
+        yMin = axisLimits[2]
+        yMax = axisLimits[3]
+        
+        xLen = xMax - xMin
+        yLen = yMax - yMin
+        
+        xCen = centre[0]*xLen + xMin
+        yCen = centre[0]*yLen + yMin
+        
+        xOff = xLen/2/zoom
+        yOff = yLen/2/zoom
+        
+        self.axes.set_xlim(xCen - xOff, xCen + xOff)
+        self.axes.set_ylim(yCen - yOff, yCen + yOff)
+        self.labelAxis()
+        
+    def labelAxis(self):
+        self.axes.set_xlabel('Horizontal (m)')
+        self.axes.set_ylabel('Vertical (m)')     
+
+    def addLegend(self):
+        handles, labels = self.axes.get_legend_handles_labels()
+        by_label = OrderedDict(zip(labels, handles))
+        times = sorted(self.blockData)
+        for i in range(len(times)):
+            self.animationImages[i].append(self.axes.legend(by_label.values(), by_label.keys()))
+        
+    #Viewing Functions
+    def animate(self, interval=50, delay=1000):
+        delayFrames = int(delay/interval)
+        ai = self.animationImages
+        for i in range(delayFrames):
+            ai.append(self.animationImages[-1])
+        im_ani = animation.ArtistAnimation(self.figure, ai, interval=50, blit=True)
+        print ('Encoding Video File:')
+        self.saveVideo(im_ani)
+        print('\tDone')
+        plt.show()
+
+    def firstFrame(self):
+        self.axes.cla()
+        for i in range(len(self.animationImages[0])):
+            self.axes.add_artist(self.animationImages[0][i])
+        plt.show()
+
+    def lastFrame(self):
+        self.axes.cla()
+        for i in range(len(self.animationImages[-1])):
+            self.axes.add_artist(self.animationImages[-1][i])
+        self.saveFigure()
+        plt.show()
+        
+    def saveFigure(self, plot):
+        fileName = os.path.join('figures', self.fileName+'_'+self.plotName) 
+        self.figure.savefig(fileName+'.svg', format='svg')
+        self.figure.savefig(fileName+'.png', format='png')
+
+    def saveVideo(self, ani):
+        Writer = animation.writers['ffmpeg']
+        writer = Writer(fps=15, bitrate=1800)
+        fileName = os.path.join('figures', self.fileName+'_'+self.plotName) 
+        ani.save(fileName+'.mp4', writer=writer)
+
+    #Model Functions
     def blockEdges(self, blocks, time = 0):
         if time == 0:
-            time = min(self.blockData.keys()) #should be removed, so plots can be at any time.
+            time = min(self.blockData.keys())
         xEdge = []
         yEdge = []
         for block in blocks:
@@ -105,7 +142,7 @@ class Plot:
         
     def zoneEdges(self, zones, time = 0):
         if time == 0:
-            time = min(self.blockData.keys()) #should be removed, so plots can be at any time.
+            time = min(self.zoneData.keys())
         xEdge = []
         yEdge = []
         for zone in zones:
@@ -120,318 +157,160 @@ class Plot:
             xEdge.append(None)
             yEdge.append(None)
         return (xEdge, yEdge)
-        
-    def grid(self, x, y, z, resX=100, resY=100):
-        "Convert 3 column data to matplotlib grid"
-        xi = linspace(min(x), max(x), resX)
-        yi = linspace(min(y), max(y), resY)
-        Z = griddata(x, y, z, xi, yi)
-        X, Y = meshgrid(xi, yi)
-        return X, Y, Z
-        
-    def plotStressField(self):
-       
-        ##### Plot for smoothed DEM stress feild
-        time = max(self.blockData.keys()) #should be removed, so plots can be at any time.
-        S11 = [self.zoneData[time][zone]['S11'] for zone in self.zoneData[time].keys()]
-        S22 = [self.zoneData[time][zone]['S22'] for zone in self.zoneData[time].keys()]
-        S12 = [self.zoneData[time][zone]['S12'] for zone in self.zoneData[time].keys()]
-        zoneX = []
-        zoneY = []
-        for zone in self.zoneData[time].keys():
-            gridPoints = self.zoneData[time][zone]['gridPoints']
-            gridPointX = 0
-            gridPointY = 0
-            for gridPoint in gridPoints:
-                gridPointX += self.gridPointData[time][gridPoint]['x']
-                gridPointY += self.gridPointData[time][gridPoint]['y']
-            zoneX.append(gridPointX/len(gridPoints))
-            zoneY.append(gridPointY/len(gridPoints))
-        
-        import pickle
-        # X, Y, Z = self.grid(zoneX, zoneY, S22)
-        # pickle.dump([X, Y, Z], open('contourData.dat', 'wb'))
-        X, Y, Z = pickle.load(open('contourData.dat', 'rb'))
-        
-        newZ = []
-        for i in range(len(Z)):
-            newList = []
-            for j in range(len(Z[i])):
-                newList.append(Z[i,j])
-            newZ.append(newList)
-        Z = newZ
-        
-        
-        sigma = 1
-        Z = gaussian_filter(Z, sigma)
-        Z = np.array(Z)
-        for i in range(len(X)):
-            for j in range(len(Y)):
-                if math.sqrt((X[i,j]-10)**2 + (Y[i,j]-10)**2) < 2:
-                    Z[i,j] = np.nan
 
-
-        zmin = -20
-        zmax = 0
-        for i in range(len(Z)):
-            for j in range(len(Z[i])):
-                if Z[i,j] > zmax:
-                    Z[i,j] = zmax
-                elif Z[i,j] < zmin:
-                    Z[i,j] = zmin
-        ccc = colors.Colormap('viridis', 10)
-        Z[1,1] = -10
-        CS = plt.contourf(X, Y, Z, 10, cmap=plt.cm.viridis, vmin=-20,       vmax=0, origin='lower')
-        CB = plt.colorbar(CS)
-        CB.set_label('MPa')
-        colormapIndex = []
-        for i in range(10):
-            colormapIndex.append(int(255/10*(i) +255/20))
-        print(colormapIndex)
-        print(plt.cm.viridis(colormapIndex))
-        plt.axis('equal')
-        plt.ylabel('Horizontal (m)')
-        plt.xlabel('Vertical (m)')
-        plt.show()
-
-    def plotBlocks(self):        
-        minTime = min(self.blockData.keys())   
-        maxTime = max(self.blockData.keys())   
-
-        def updateBlocks(num, line):
-            if num > len(self.blockData.keys())-1:
-                num = len(self.blockData.keys())-1
-            time = sorted(self.blockData)[num]
-            be = self.blockEdges(self.blockData[time].keys(), time=time)
-            line.set_data(be)
-            return line,
-        fig1 = plt.figure(1)
-        l, = plt.plot([], [], 'b-')
-        fig1.hold(True)
-        plt.plot([7,9,9,7,7], [7.2,7.2,8.8,8.8,7.2], 'r-')
-        fig1.hold(False)
-#        plt.axis('equal')
-        plt.axis('equal')
-        plt.xlim(7, 9)
-        plt.ylim(7, 9)
-
-        plt.xlabel('Horizontal (m)')
-        plt.ylabel('Vertical (m)')
+    #Plotting Functions
+    def plotBlocks(self):
+        times = sorted(self.blockData)
+        print('Plotting block boundaries:')
+        for i in range(len(times)):
+            blockEdges = self.blockEdges(self.blocks, time=times[i])
+            self.animationImages[i] += self.axes.plot(blockEdges[0], blockEdges[1], 'b-', label='Block Boundaries')
+        print('\tDone')
         
-        Writer = animation.writers['ffmpeg']
-        writer = Writer(fps=15, bitrate=1800)
-        line_ani = animation.FuncAnimation(fig1, updateBlocks, len(self.blockData.keys())*2, fargs=(l,), interval=50, blit=True)
-        #plt.show()
-        line_ani.save('figures/blockCompression_small.mp4', writer=writer)
-        plt.savefig('figures/blockCompression_small.svg', format='svg')
-         
-    def plotHomogenizationAnimation(self):        
-        minTime = min(self.blockData.keys())   
-        maxTime = max(self.blockData.keys())   
-        from homogenize import Homogenize
-        H = Homogenize({'x':5, 'y':5}, 4.1, dataClass = self)
-        blocks = H.boundaryContactBlocks
-        revCorners = H.boundaryCornersOrdered
-        revGridPoints = [self.cornerData[minTime][corner]['gridPoint'] for corner in revCorners]
-        revCornerX = [self.gridPointData[minTime][gridPoint]['x'] for gridPoint in revGridPoints]
-        revCornerY = [self.gridPointData[minTime][gridPoint]['y'] for gridPoint in revGridPoints]
+    def plotZones(self):        
+        times = sorted(self.blockData)
+        print('Plotting zone boundaries:')
+        for i in range(len(times)):
+            zoneEdges = self.zoneEdges(self.zones, time=times[i])
+            self.animationImages[i] += self.axes.plot(zoneEdges[0], zoneEdges[1], 'g:', label='Zone Boundaries')
+        print('\tDone')
+                
+    def plotCircle(self, radius, centre, label='Circle', color='r'):
+        times = sorted(self.blockData)
+        for i in range(len(times)):
+            self.animationImages[i].append(self.axes.add_patch(patches.Circle((centre['x'], centre['y']), radius, color=color, fill=False, label=label)))
 
-        def updateBlocks(num, blockPlot, homoArea):
-            if num > len(self.blockData.keys())-1:
-                num = len(self.blockData.keys())-1
-            time = sorted(self.blockData)[num]
-            be = self.blockEdges(blocks, time=time)
-            blockPlot.set_data(be)
+    def plotLine(self, x, y, label='Line', linestyle='k-', linewidth=2, marker='.', markersize=10):        
+        times = sorted(self.blockData)
+        for i in range(len(times)):
+            self.animationImages[i] += self.axes.plot(x, y, linestyle, label=label, linewidth=linewidth, marker=marker, markersize=markersize)
             
-            revGridPoints = [self.cornerData[time][corner]['gridPoint'] for corner in revCorners]
-            revCornerX = [self.gridPointData[time][gridPoint]['x'] for gridPoint in revGridPoints]
-            revCornerY = [self.gridPointData[time][gridPoint]['y'] for gridPoint in revGridPoints]
-            homoArea.set_data([revCornerX, revCornerY])
-            return blockPlot, homoArea
-        fig1 = plt.figure(1)
-        blockPlot, = plt.plot([], [], 'b-')
-        fig1.hold(True)
-        homoAreaInit = plt.plot(revCornerX,revCornerY,'k-', label='Homogenization Domain Boundary', linewidth=1)
-        homoArea, = plt.plot([],[],'k-', label='Homogenization Domain Boundary', linewidth=2, marker='.', markersize=10)
-        plt.plot([7.5,8.5,8.5,7.5,7.5], [7.6,7.6,8.4,8.4,7.6], 'r-')
-        fig1.hold(False)
-#        plt.axis('equal')
-        plt.axis('equal')
-        # plt.xlim(7.5, 8.5)
-        # plt.ylim(7.5, 8.5)
-        plt.xlim(-1, 11)
-        plt.ylim(-1, 11)
-        plt.xlabel('Horizontal (m)')
-        plt.ylabel('Vertical (m)')
+    def plotZoomBox(self, centre=(0.5, 0.5), zoom=4, label=None, linestyle='c-'):        
+        axisLimits = self.limits()    
+        xMin = axisLimits[0]
+        xMax = axisLimits[1]
+        yMin = axisLimits[2]
+        yMax = axisLimits[3]
         
-        Writer = animation.writers['ffmpeg']
-        writer = Writer(fps=15, bitrate=1800)
-        line_ani = animation.FuncAnimation(fig1, updateBlocks, len(self.blockData.keys())*2, fargs=(blockPlot,homoArea), interval=50, blit=True)
-        #plt.show()
-        line_ani.save('figures/homogenizationCompression.mp4', writer=writer)
-        plt.savefig('figures/homogenizationCompression.svg', format='svg')
-        plt.savefig('figures/homogenizationCompression.png', format='png')
-         
-    def plotZoneBlocks(self):        
-        # cornerX = []
-        # cornerY = []
-        time = max(self.blockData.keys())   
+        xLen = xMax - xMin
+        yLen = yMax - yMin
         
-        # xxb = [self.blockData[time][block]['x'] for block in self.boundaryBlocksOrdered]
-        # yyb = [self.blockData[time][block]['y'] for block in self.boundaryBlocksOrdered]
-        # # xxo = [outsideBlockData[time][block]['x'] for block in outsideBlockData[time].keys()]
-        # # yyo = [outsideBlockData[time][block]['y'] for block in outsideBlockData[time].keys()]
-        # xxc = [self.contactData[time][contact]['x'] for contact in self.boundaryContacts]
-        # yyc = [self.contactData[time][contact]['y'] for contact in self.boundaryContacts]
-        # xxcr = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in self.boundaryCorners]
-        # yycr = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in self.boundaryCorners]
-        # xxcro = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in self.boundaryCornersOrdered]
-        # yycro = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in self.boundaryCornersOrdered]
+        xCen = centre[0]*xLen + xMin
+        yCen = centre[0]*yLen + yMin
         
-        # # b = 51899
-        # # c = blockData[time][b]['contacts']
-        # # bb = []
-        # # for i in c:
-            # # bb += contactData[time][i]['blocks']
-        # # cr = cornersOnBlocks(blockData, [b])
-        # cc = self.outsideBlocks
-        # xxcc = [self.blockData[time][contact]['x'] for contact in cc]
-        # yycc = [self.blockData[time][contact]['y'] for contact in cc]
-        # cc = self.boundaryContactCorners
-        # xxcc = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in cc]
-        # yycc = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in cc]
-        # print(c)
-        # print(bb)
-        # print(cr)
-        # print(cc)
-        # cornerX = [boundaryCornerData[time][corner]['x'] for corner in boundaryCornerData[time].keys()]
-        # cornerY = [boundaryCornerData[time][corner]['y'] for corner in boundaryCornerData[time].keys()]
+        xOff = xLen/2/zoom
+        yOff = yLen/2/zoom
         
-        # be = self.blockEdges(self.boundaryContactBlocks)
-        # plt.figure(1)
-        # plt.plot(be[0], be[1], 'b-')#, xxcro, yycro, 'g-', xxcro, yycro, 'go')
-        # boundary = plt.Circle((self.centre['x'], self.centre['y']),self.radius,color='r', fill=False)
-        # plt.gcf().gca().add_artist(boundary)
-        # plt.axis([0, 10, 0, 10])
-        # plt.axis('equal')
-        # plt.show(block = False)
-        minTime = min(self.blockData.keys())   
-        maxTime = max(self.blockData.keys())   
+        xMinNew = xCen - xOff
+        xMaxNew = xCen + xOff
+        yMinNew = yCen - yOff
+        yMaxNew = yCen + yOff
+        x = [xMinNew, xMaxNew, xMaxNew, xMinNew, xMinNew]
+        y = [yMinNew, yMinNew, yMaxNew, yMaxNew, yMinNew]
+        
+        self.plotLine(x, y, linestyle=linestyle, marker=None, label=label)
             
-        
-        fig1 = plt.figure(1)
-        from homogenize import Homogenize
-        H = Homogenize({'x':5, 'y':5}, 4.1, dataClass = self)
-        blocks = H.insideBoundaryBlocks
-        bData = self.blockEdges(blocks, time=maxTime)
-        zones = H.zonesInBlocks(blocks)
-        zData = self.zoneEdges(zones, time=maxTime)
-        zonePlot = plt.plot(zData[0], zData[1], 'g:', label='Zone Boundaries')
-        fig1.hold(True)
+    def plotStressField(self, stressType, stressLimits='automatic', loadData=True, sigma=1):
+        times = sorted(self.blockData)
+        cmap = plt.cm.viridis
+        allX = []
+        allY = []
+        allZ = []
+        filePath = os.path.join('homogenizeData', self.fileName+'_'+stressType+'.dat')
+        calculate = True
+        if loadData == True:
+            try:
+                print('Attempting to load interpolated {} stress grid from binary:'.format(stressType))
+                allX, allY, allZ = pickle.load(open(filePath, 'rb'))
+                calculate = False
+                print('\tSuccess')
+            except:
+                print('\tFailed')
 
-        blockPlot = plt.plot(bData[0], bData[1], 'b-', label='Block Boundaries')
-        fig1.hold(False)
-        
-        boundary = plt.Circle((H.centre['x'], H.centre['y']),H.radius,color='r', fill=False, label='REV Boundary')
-        plt.gcf().gca().add_artist(boundary)
-        revCorners = H.boundaryCornersOrdered
-        revGridPoints = [self.cornerData[time][corner]['gridPoint'] for corner in revCorners]
-        revCornerX = [self.gridPointData[time][gridPoint]['x'] for gridPoint in revGridPoints]
-        revCornerY = [self.gridPointData[time][gridPoint]['y'] for gridPoint in revGridPoints]
-        revBoundary = plt.plot([],[],'r-', label='REV Boundary')
-        homoArea = plt.plot(revCornerX,revCornerY,'k-', label='Homogenization Domain Boundary', linewidth=2)
+        if calculate == True:
+            print('Interpolating {} stress grid:'.format(stressType))
+            print('\tFor Frame #', end='')
+            for i in range(len(times)):
+                time = times[i]
+                numString = str(i+1)+'/'+str(len(times))
+                print(numString, end='')
+                print('\b'*len(numString), end='')
+                sys.stdout.flush()
+                
+                S11 = np.array(self.zoneS11(self.zoneData[time].keys(), time))
+                S22 = np.array(self.zoneS22(self.zoneData[time].keys(), time))
+                #S33 = np.array(self.zoneS33(self.zoneData[time].keys(), time))
+                S12 = np.array(self.zoneS12(self.zoneData[time].keys(), time))
+                if stressType == 'S11':
+                    stress = S11
+                elif stressType == 'S22':
+                    stress = S22
+                elif stressType == 'S33':
+                    stress = S33
+                elif stressType == 'S12':
+                    stress = S12
+                elif stressType == 'mises':
+                    stress = 'blah'
+                elif stressType == 'MaxP':
+                    stress = 'blah'
+                elif stressType == 'MinP':
+                    stress = 'blah'
+                elif stressType == 'IntP':
+                    stress = 'blah'
 
+                zoneX = []
+                zoneY = []
+                for zone in self.zoneData[time].keys():
+                    gridPoints = self.zoneData[time][zone]['gridPoints']
+                    gridPointX = 0
+                    gridPointY = 0
+                    for gridPoint in gridPoints:
+                        gridPointX += self.gridPointData[time][gridPoint]['x']
+                        gridPointY += self.gridPointData[time][gridPoint]['y']
+                    zoneX.append(gridPointX/len(gridPoints))
+                    zoneY.append(gridPointY/len(gridPoints))
+                
+                X, Y, Z = Common.grid(zoneX, zoneY, stress)
+                allX.append(X)
+                allY.append(Y)
+                allZ.append(Z)
+            print('')
+            print('Saving interpolated {} stress grid to binary:'.format(stressType))
+            pickle.dump([allX, allY, allZ], open(filePath, 'wb'))
+            print('\tDone')
 
-        plt.axis('equal')
-        plt.xlim(7, 9)
-        plt.ylim(7, 9)
-        plt.legend()
-        plt.xlabel('Horizontal (m)')
-        plt.ylabel('Vertical (m)')
+        if stressLimits == 'automatic':
+            print('Assessing {} stress limits:'.format(stressType))
+            zmin = min([min([num for num in list(frame.flatten()) if isinstance(num, float)]) for frame in allZ])
+            zmax = max([max([num for num in list(frame.flatten()) if isinstance(num, float)]) for frame in allZ])
+            print('\tDone')
+        else:
+            zmin = stressLimits[0]
+            zmax = stressLimits[1]
         
-        plt.savefig('figures/blockZones_small.svg', format='svg')
-        plt.savefig('figures/blockZones_small.png', format='png')
+        print('Smoothing {} stress field:'.format(stressType))
+        print('\tFor Frame #', end='')
+
+        for i in range(len(times)):
+            numString = str(i+1)+'/'+str(len(times))
+            print(numString, end='')
+            print('\b'*len(numString), end='')
+            sys.stdout.flush()
+            time = times[i]
  
-    def plotHomogenizationArea(self):        
-        # cornerX = []
-        # cornerY = []
-        time = min(self.blockData.keys())   
-        
-        # xxb = [self.blockData[time][block]['x'] for block in self.boundaryBlocksOrdered]
-        # yyb = [self.blockData[time][block]['y'] for block in self.boundaryBlocksOrdered]
-        # # xxo = [outsideBlockData[time][block]['x'] for block in outsideBlockData[time].keys()]
-        # # yyo = [outsideBlockData[time][block]['y'] for block in outsideBlockData[time].keys()]
-        # xxc = [self.contactData[time][contact]['x'] for contact in self.boundaryContacts]
-        # yyc = [self.contactData[time][contact]['y'] for contact in self.boundaryContacts]
-        # xxcr = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in self.boundaryCorners]
-        # yycr = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in self.boundaryCorners]
-        # xxcro = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in self.boundaryCornersOrdered]
-        # yycro = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in self.boundaryCornersOrdered]
-        
-        # # b = 51899
-        # # c = blockData[time][b]['contacts']
-        # # bb = []
-        # # for i in c:
-            # # bb += contactData[time][i]['blocks']
-        # # cr = cornersOnBlocks(blockData, [b])
-        # cc = self.outsideBlocks
-        # xxcc = [self.blockData[time][contact]['x'] for contact in cc]
-        # yycc = [self.blockData[time][contact]['y'] for contact in cc]
-        # cc = self.boundaryContactCorners
-        # xxcc = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['x'] for corner in cc]
-        # yycc = [self.gridPointData[time][self.cornerData[time][corner]['gridPoint']]['y'] for corner in cc]
-        # print(c)
-        # print(bb)
-        # print(cr)
-        # print(cc)
-        # cornerX = [boundaryCornerData[time][corner]['x'] for corner in boundaryCornerData[time].keys()]
-        # cornerY = [boundaryCornerData[time][corner]['y'] for corner in boundaryCornerData[time].keys()]
-        
-        # be = self.blockEdges(self.boundaryContactBlocks)
-        # plt.figure(1)
-        # plt.plot(be[0], be[1], 'b-')#, xxcro, yycro, 'g-', xxcro, yycro, 'go')
-        # boundary = plt.Circle((self.centre['x'], self.centre['y']),self.radius,color='r', fill=False)
-        # plt.gcf().gca().add_artist(boundary)
-        # plt.axis([0, 10, 0, 10])
-        # plt.axis('equal')
-        # plt.show(block = False)
-        minTime = min(self.blockData.keys())   
-        maxTime = max(self.blockData.keys())   
-            
-        
-        fig1 = plt.figure(1)
-        from homogenize import Homogenize
-        H = Homogenize({'x':5, 'y':5}, 4.1, dataClass = self)
-        blocks = H.blockData[minTime].keys()
-        #blocks = H.boundaryContactBlocks
-        bData = self.blockEdges(blocks, time=minTime)
+            X = allX[i]         
+            Y = allY[i]
+            Z = allZ[i]
+            Z = gaussian_filter(Z, sigma)
+            im = self.axes.contourf(X, Y, Z, 10, cmap=cmap, vmin=zmin, vmax=zmax, origin='lower')
+            self.animationImages[i] += im.collections
 
-        fig1.hold(True)
-
-        blockPlot = plt.plot(bData[0], bData[1], 'b-', label='Block Boundaries')
-        box = plt.plot([7,9,9,7,7], [7.2,7.2,8.8,8.8,7.2], 'r-')
-        fig1.hold(False)
-        
-        boundary = plt.Circle((H.centre['x'], H.centre['y']),H.radius,color='r', fill=False, label='REV Boundary')
-        plt.gcf().gca().add_artist(boundary)
-        revCorners = H.boundaryCornersOrdered
-        revGridPoints = [self.cornerData[time][corner]['gridPoint'] for corner in revCorners]
-        revCornerX = [self.gridPointData[time][gridPoint]['x'] for gridPoint in revGridPoints]
-        revCornerY = [self.gridPointData[time][gridPoint]['y'] for gridPoint in revGridPoints]
-        revBoundary = plt.plot([],[],'r-', label='REV Boundary')
-        homoArea = plt.plot(revCornerX,revCornerY,'k-', label='Homogenization Domain Boundary', linewidth=5)
-
-
-        plt.axis('equal')
-        plt.ylim(7, 9)
-        plt.xlim(7, 9)
-        #plt.legend()
-        plt.xlabel('Horizontal (m)')
-        plt.ylabel('Vertical (m)')
-        
-        plt.savefig('figures/homogenizationArea_small.svg', format='svg')
-        plt.savefig('figures/homogenizationArea_small.png', format='png')
-        
+        print('\nPlotting {} stress field:'.format(stressType))
+        norm = matplotlib.colors.Normalize(vmin=zmin, vmax=zmax)
+        colorBar = colorbar.ColorbarBase(self.colorBarAxes, cmap=cmap, norm=norm)
+        colorBar.set_label('MPa')      
+        print('\tDone')
+    
 if __name__ == '__main__':
     os.system('cls')
     
@@ -439,15 +318,11 @@ if __name__ == '__main__':
     if len(clargs) >= 2:
         fileName = clargs[1]
         
-    P = Plot(fileName)
-    P.plotHomogenizationAnimation()
-    #else: error message
-    #add other cl args for shoosing variables and recalculation
-
-    # yStress = list([stressHistory[t][1,1] for t in range(len(stressHistory))])
-    # yStrain = list([strainHistory[t][1,1] for t in range(len(strainHistory))])
-    # plt.plot(yStress, yStrain)
-    
-    
-    # H.plot()
-    # plt.show()
+    P = FracPlot('test', fileName=fileName)
+    P.setAxis_Zoom()  
+    P.plotStressField('S22', sigma=1)
+    P.plotZones()
+    P.plotBlocks()
+    P.addLegend()
+    P.animate()
+            

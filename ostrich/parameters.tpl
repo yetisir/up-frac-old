@@ -39,7 +39,7 @@ def fWrite(stuff):
     with open('log.txt', 'a') as f:
         f.write(str(stuff)+'\n')
 
-mName = 'voronoi10(c)'
+mName = 'voronoi(c)'
     
 partName = 'Block'
 gridPoints = [[0, 0], [10, 0], [10, 10], [0, 10], [0, 0]]
@@ -57,7 +57,7 @@ variableK = 6.700000E-01 #default
 viscousParameter = 0 #default
 
 numStrainPoints = 100
-inelasticStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0126506482045)
+inelasticStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0293071700239)
 h = $h
 k = $k
 d = $dd
@@ -72,9 +72,9 @@ m = min(m)*compressiveDamageScaling
 compressiveDamage = multiply(m, inelasticStrain)
 
 if '(t)' in mName:
-	crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0126506482045)
+	crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.0293071700239)
 elif '(c)' in mName:
-	crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.000914634404845)
+	crackingStrain = divide(range(0, numStrainPoints+1), numStrainPoints/0.000456774923467)
 N = 2241357.0
 tLambda = -2210.0
 tensileYeildStress = multiply(N, exp(multiply(tLambda, crackingStrain)))
@@ -92,7 +92,7 @@ sectionLocation = (10/2, 10/2, 0.0)
 simulationTime = 20
 numberOfSteps = 50
 
-confiningStress = -10000000.0
+confiningStress = 0.0
 
 try:
     from abaqusConstants import *
